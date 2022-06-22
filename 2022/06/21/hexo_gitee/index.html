@@ -273,7 +273,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    356
+                    322
                 </div>
                 
 
@@ -298,17 +298,17 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="一、配置Hexo"><a href="#一、配置Hexo" class="headerlink" title="一、配置Hexo"></a>一、配置Hexo</h2><ol>
+                <h2 id="一、配置环境"><a href="#一、配置环境" class="headerlink" title="一、配置环境"></a>一、配置环境</h2><ol>
 <li>安装git</li>
 <li>安装node.js</li>
 <li>安装hexo</li>
 </ol>
-<h2 id="二、本地运行"><a href="#二、本地运行" class="headerlink" title="二、本地运行"></a>二、本地运行</h2><pre class="line-numbers language-none"><code class="language-none">&#x2F;&#x2F;git窗口
-cd &lt;folder&gt; &#x2F;&#x2F;进入blog所在文件夹
-hexo init   &#x2F;&#x2F;初始化
-npm install &#x2F;&#x2F;安装依赖
-hexo generate &#x2F;&#x2F;构建
-hexo server &#x2F;&#x2F;本地测试<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="二、本地运行"><a href="#二、本地运行" class="headerlink" title="二、本地运行"></a>二、本地运行</h2><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">//git窗口</span>
+cd <span class="token operator">&lt;</span>folder<span class="token operator">></span> <span class="token comment">//进入blog所在文件夹</span>
+hexo init   <span class="token comment">//初始化</span>
+npm install <span class="token comment">//安装依赖</span>
+hexo g <span class="token comment">//构建</span>
+hexo s <span class="token comment">//本地测试</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h2 id="三、修改主题"><a href="#三、修改主题" class="headerlink" title="三、修改主题"></a>三、修改主题</h2><ol>
 <li><p>github中搜索主题并下载压缩包</p>
@@ -318,15 +318,14 @@ hexo server &#x2F;&#x2F;本地测试<span aria-hidden="true" class="line-numbers
 <li><p>修改theme下的配置文件_config.yml</p>
 <ul>
 <li><p><a target="_blank" rel="noopener" href="https://github.com/blinkfox/hexo-theme-matery/blob/develop/README_CN.md">参考</a>非常详细</p>
-</li>
-<li><pre class="line-numbers language-none"><code class="language-none">&#x2F;&#x2F;新建分类页
-hexo new page &quot;categories&quot;
-&#x2F;&#x2F;新建标签
-hexo new page &quot;tags&quot;
-&#x2F;&#x2F;新建about
-hexo new page &quot;about&quot;
-&#x2F;&#x2F;新建404页
-hexo new page 404<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">//新建分类页</span>
+hexo <span class="token keyword">new</span> <span class="token class-name">page</span> <span class="token string">"categories"</span>
+<span class="token comment">//新建标签</span>
+hexo <span class="token keyword">new</span> <span class="token class-name">page</span> <span class="token string">"tags"</span>
+<span class="token comment">//新建about</span>
+hexo <span class="token keyword">new</span> <span class="token class-name">page</span> <span class="token string">"about"</span>
+<span class="token comment">//新建404页</span>
+hexo <span class="token keyword">new</span> <span class="token class-name">page</span> <span class="token number">404</span>   <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
 <li><p>菜单导航配置</p>
 </li>
 <li><p>二级菜单配置</p>
@@ -346,39 +345,49 @@ hexo new page 404<span aria-hidden="true" class="line-numbers-rows"><span></span
 </ul>
 </li>
 <li><p>重新本地运行</p>
-<ul>
-<li>```<br>hexo generate<br>hexo server<pre class="line-numbers language-none"><code class="language-none">
-
-## 四、部署到github
-
-1. 安装插件
-
-   - &#96;&#96;&#96;
-     npm install hexo-deployer-git --save <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
-</ul>
-</li>
-<li><p>生成密钥添加到Github</p>
-<ul>
-<li>```<br>git config user.name<br>git config user.email<br>git config –global user.name “name”<br>git config –global user.email “email”<br>ssh -keygen -t rsa -C “email”<br>cd ~/.ssh<br>ls<br>vim id_rsa.pub<br>copy<br>在github的setting的ssh key中粘贴查询：<a target="_blank" rel="noopener" href="https://ipaddress.com/website/github.com%E7%9A%84ipv4%E5%9C%B0%E5%9D%80">https://ipaddress.com/website/github.com的ipv4地址</a><br>添加 C:\Windows\System32\drivers\etc\hosts<br>140.82.112.4 github.comgit bash<br>ssh -T <a href="mailto:&#103;&#105;&#116;&#x40;&#x67;&#105;&#x74;&#104;&#x75;&#x62;&#x2e;&#99;&#111;&#x6d;">&#103;&#105;&#116;&#x40;&#x67;&#105;&#x74;&#104;&#x75;&#x62;&#x2e;&#99;&#111;&#x6d;</a><pre class="line-numbers language-none"><code class="language-none">
-3. 修改hexo的配置文件_config.yml
-
-   - &#96;&#96;&#96;
-     deploy:
-       type: &#39;git&#39;
-       repo: git@github.com:01zic&#x2F;01zic.github.io.git
-       branch:main<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
-</ul>
-</li>
-<li><p>部署到github(git bash)</p>
-<ul>
-<li><pre><code>hexo clean
-hexo g
-hexo d
-</code></pre>
-</li>
-</ul>
 </li>
 </ol>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">hexo g
+hexo s<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<h2 id="四、部署到github"><a href="#四、部署到github" class="headerlink" title="四、部署到github"></a>四、部署到github</h2><ol>
+<li>安装插件</li>
+</ol>
+  <pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">npm install hexo<span class="token operator">-</span>deployer<span class="token operator">-</span>git <span class="token operator">--</span>save <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<ol start="2">
+<li>生成密钥添加到Github</li>
+</ol>
+  <pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">git config user<span class="token punctuation">.</span>name
+git config user<span class="token punctuation">.</span>email
+git config <span class="token operator">--</span>global user<span class="token punctuation">.</span>name <span class="token string">"name"</span>
+git config <span class="token operator">--</span>global user<span class="token punctuation">.</span>email <span class="token string">"email"</span>
+ssh <span class="token operator">-</span>keygen <span class="token operator">-</span>t rsa <span class="token operator">-</span><span class="token constant">C</span> <span class="token string">"email"</span>
+cd <span class="token operator">~</span><span class="token operator">/</span><span class="token punctuation">.</span>ssh
+ls 
+vim id_rsa<span class="token punctuation">.</span>pub
+copy
+在github的setting的ssh key中粘贴
+
+<span class="token literal-property property">查询：https</span><span class="token operator">:</span><span class="token operator">/</span><span class="token operator">/</span>ipaddress<span class="token punctuation">.</span>com<span class="token operator">/</span>website<span class="token operator">/</span>github<span class="token punctuation">.</span>com的ipv4地址
+添加 <span class="token constant">C</span><span class="token operator">:</span>\Windows\System32\drivers\etc\hosts
+<span class="token number">140.82</span><span class="token number">.112</span><span class="token number">.4</span> github<span class="token punctuation">.</span>com
+
+git bash
+ssh <span class="token operator">-</span><span class="token constant">T</span> git@github<span class="token punctuation">.</span>com<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<ol start="3">
+<li>修改hexo的配置文件_config.yml</li>
+</ol>
+  <pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token literal-property property">deploy</span><span class="token operator">:</span>
+  <span class="token literal-property property">type</span><span class="token operator">:</span> <span class="token string">'git'</span>
+  <span class="token literal-property property">repo</span><span class="token operator">:</span> git@github<span class="token punctuation">.</span>com<span class="token operator">:</span>01zic<span class="token operator">/</span>01zic<span class="token punctuation">.</span>github<span class="token punctuation">.</span>io<span class="token punctuation">.</span>git
+  <span class="token literal-property property">branch</span><span class="token operator">:</span>main<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<ol start="4">
+<li>部署到github(git bash)</li>
+</ol>
+  <pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">hexo clean<span class="token operator">&amp;&amp;</span>hexo g<span class="token operator">&amp;&amp;</span>hexo d<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
                 
             </div>
