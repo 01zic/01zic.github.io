@@ -322,50 +322,48 @@ hexo s <span class="token comment">//本地测试</span><span aria-hidden="true"
 </ul>
 </li>
 <li><p>重新本地运行</p>
-<ul>
-<li>hexo clean&amp;&amp;hexo g&amp;&amp;hexo d</li>
-</ul>
 </li>
 </ol>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">hexo clean<span class="token operator">&amp;&amp;</span>hexo g<span class="token operator">&amp;&amp;</span>hexo d<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <h2 id="四、部署到github"><a href="#四、部署到github" class="headerlink" title="四、部署到github"></a>四、部署到github</h2><ol>
 <li>安装git提交插件</li>
 </ol>
-<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">npm install hexo<span class="token operator">-</span>deployer<span class="token operator">-</span>git <span class="token operator">--</span>save<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> hexo-deployer-git --save<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <ol start="2">
 <li>生成密钥添加到Github并测试Git</li>
 </ol>
-<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">git config user<span class="token punctuation">.</span>name
-git config user<span class="token punctuation">.</span>email
-git config <span class="token operator">--</span>global user<span class="token punctuation">.</span>name <span class="token string">"name"</span>
-git config <span class="token operator">--</span>global user<span class="token punctuation">.</span>email <span class="token string">"email"</span>
-ssh <span class="token operator">-</span>keygen <span class="token operator">-</span>t rsa <span class="token operator">-</span><span class="token constant">C</span> <span class="token string">"email"</span>
-cd <span class="token operator">~</span><span class="token operator">/</span><span class="token punctuation">.</span>ssh
-ls 
-vim id_rsa<span class="token punctuation">.</span>pub
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> config user.name
+<span class="token function">git</span> config user.email
+<span class="token function">git</span> config --global user.name <span class="token string">"name"</span>
+<span class="token function">git</span> config --global user.email <span class="token string">"email"</span>
+<span class="token function">ssh</span> -keygen -t rsa -C <span class="token string">"email"</span>
+<span class="token builtin class-name">cd</span> ~/.ssh
+<span class="token function">ls</span> 
+<span class="token function">vim</span> id_rsa.pub
 copy
 在github的setting的ssh key中粘贴
        
-<span class="token literal-property property">查询：https</span><span class="token operator">:</span><span class="token operator">/</span><span class="token operator">/</span>ipaddress<span class="token punctuation">.</span>com<span class="token operator">/</span>website<span class="token operator">/</span>github<span class="token punctuation">.</span>com的ipv4地址
-添加 <span class="token constant">C</span><span class="token operator">:</span>\Windows\System32\drivers\etc\hosts
-<span class="token number">140.82</span><span class="token number">.112</span><span class="token number">.4</span> github<span class="token punctuation">.</span>com
+查询：https://ipaddress.com/website/github.com的ipv4地址
+添加 C:<span class="token punctuation">\</span>Windows<span class="token punctuation">\</span>System32<span class="token punctuation">\</span>drivers<span class="token punctuation">\</span>etc<span class="token punctuation">\</span>hosts
+<span class="token number">140.82</span>.112.4 github.com
        
-git bash
-ssh <span class="token operator">-</span><span class="token constant">T</span> git@github<span class="token punctuation">.</span>com<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token function">git</span> <span class="token function">bash</span>
+<span class="token function">ssh</span> -T git@github.com<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <ol start="3">
 <li>修改hexo的配置文件_config.yml</li>
 </ol>
-<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token literal-property property">deploy</span><span class="token operator">:</span>
-   <span class="token literal-property property">type</span><span class="token operator">:</span> <span class="token string">'git'</span>
-   <span class="token literal-property property">repo</span><span class="token operator">:</span> git@github<span class="token punctuation">.</span>com<span class="token operator">:</span>01zic<span class="token operator">/</span>01zic<span class="token punctuation">.</span>github<span class="token punctuation">.</span>io<span class="token punctuation">.</span>git
-   <span class="token literal-property property">branch</span><span class="token operator">:</span>main<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">deploy:
+   type: <span class="token string">'git'</span>
+   repo: git@github.com:01zic/01zic.github.io.git
+   branch:main<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
 <ol start="4">
 <li>部署到github(git bash)</li>
 </ol>
-<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">hexo clean<span class="token operator">&amp;&amp;</span>hexo g<span class="token operator">&amp;&amp;</span>hexo d<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">hexo clean<span class="token operator">&amp;&amp;</span>hexo g<span class="token operator">&amp;&amp;</span>hexo d<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 
                 
