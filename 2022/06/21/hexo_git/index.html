@@ -269,7 +269,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    282
+                    278
                 </div>
                 
 
@@ -291,6 +291,11 @@
         
 
         
+        <!-- 代码块折行 -->
+        <style type="text/css">
+            code[class*="language-"], pre[class*="language-"] { white-space: pre-wrap !important; }
+        </style>
+        
 
         <div class="card-content article-card-content">
             <div id="articleContent">
@@ -299,15 +304,12 @@
 <li>安装node.js</li>
 <li>安装hexo</li>
 </ol>
-<h2 id="二、本地运行"><a href="#二、本地运行" class="headerlink" title="二、本地运行"></a>二、本地运行</h2><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">//git窗口</span>
+<h2 id="二、本地运行"><a href="#二、本地运行" class="headerlink" title="二、本地运行"></a>二、本地运行</h2><pre class="language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">//git窗口</span>
 cd <span class="token operator">&lt;</span>folder<span class="token operator">></span> <span class="token comment">//进入blog所在文件夹</span>
 hexo init   <span class="token comment">//初始化</span>
 npm install <span class="token comment">//安装依赖</span>
 hexo g <span class="token comment">//构建</span>
-hexo s <span class="token comment">//本地测试</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-
-
+hexo s <span class="token comment">//本地测试</span></code></pre>
 
 <h2 id="三、修改主题"><a href="#三、修改主题" class="headerlink" title="三、修改主题"></a>三、修改主题</h2><ol>
 <li><p>github中搜索主题并下载压缩包</p>
@@ -328,10 +330,10 @@ hexo s <span class="token comment">//本地测试</span><span aria-hidden="true"
 <h2 id="四、部署到github"><a href="#四、部署到github" class="headerlink" title="四、部署到github"></a>四、部署到github</h2><ol>
 <li><p>安装git提交插件</p>
 <ul>
-<li>```js<br>  npm install hexo-deployer-git –save<pre class="line-numbers language-none"><code class="language-none">
+<li>```c<br>   npm install hexo-deployer-git –save<pre class="language-none"><code class="language-none">
 2. 生成密钥添加到Github并测试Git
 
-   - &#96;&#96;&#96;js
+   - &#96;&#96;&#96;c
      git config user.name
        git config user.email
        git config --global user.name &quot;name&quot;
@@ -348,24 +350,24 @@ hexo s <span class="token comment">//本地测试</span><span aria-hidden="true"
        140.82.112.4 github.com
        
        git bash
-       ssh -T git@github.com<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
+       ssh -T git@github.com</code></pre></li>
 </ul>
 </li>
 <li><p>修改hexo的配置文件_config.yml</p>
 <ul>
-<li>```js<br>deploy:<pre><code>type: &#39;git&#39;
+<li>```c<br>deploy:<pre><code>type: &#39;git&#39;
 repo: git@github.com:01zic/01zic.github.io.git
 branch:main
 </code></pre>
-<pre class="line-numbers language-none"><code class="language-none">
+<pre class="language-none"><code class="language-none">
 4. 部署到github(git bash)
 
-   - &#96;&#96;&#96;js
-     hexo clean&amp;&amp;hexo g&amp;&amp;hexo d<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
+   - &#96;&#96;&#96;c
+     hexo clean&amp;&amp;hexo g&amp;&amp;hexo d</code></pre></li>
 </ul>
 </li>
 </ol>
-<h2 id="部署到gitee"><a href="#部署到gitee" class="headerlink" title="部署到gitee"></a>部署到gitee</h2>
+
                 
             </div>
             <hr/>
@@ -717,7 +719,7 @@ branch:main
 
 
 
-    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1055998661" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 10559986611055998661" data-position="top" data-delay="50">
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1055998661" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1055998661" data-position="top" data-delay="50">
         <i class="fab fa-qq"></i>
     </a>
 
