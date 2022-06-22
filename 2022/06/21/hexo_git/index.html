@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="hexo部署到gitee, orangewBlog">
+    <meta name="keywords" content="hexo部署到gitub或gitee, orangewBlog">
     <meta name="description" content="demo record">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>hexo部署到gitee | orangewBlog</title>
+    <title>hexo部署到gitub或gitee | orangewBlog</title>
     <link rel="icon" type="image/png" href="/%E6%A9%99%E5%AD%90.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -203,12 +203,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/8.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">hexo部署到gitee</h1>
+                    <h1 class="description center-align post-title">hexo部署到gitub或gitee</h1>
                 </div>
             </div>
         </div>
@@ -232,10 +232,6 @@
                         
                             <a href="/tags/%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/">
                                 <span class="chip bg-color">静态博客</span>
-                            </a>
-                        
-                            <a href="/tags/gitee/">
-                                <span class="chip bg-color">gitee</span>
                             </a>
                         
                     </div>
@@ -273,7 +269,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    322
+                    282
                 </div>
                 
 
@@ -299,7 +295,7 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h2 id="一、配置环境"><a href="#一、配置环境" class="headerlink" title="一、配置环境"></a>一、配置环境</h2><ol>
-<li>安装git</li>
+<li>安装gitl</li>
 <li>安装node.js</li>
 <li>安装hexo</li>
 </ol>
@@ -310,6 +306,9 @@ npm install <span class="token comment">//安装依赖</span>
 hexo g <span class="token comment">//构建</span>
 hexo s <span class="token comment">//本地测试</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
+
+
+
 <h2 id="三、修改主题"><a href="#三、修改主题" class="headerlink" title="三、修改主题"></a>三、修改主题</h2><ol>
 <li><p>github中搜索主题并下载压缩包</p>
 </li>
@@ -317,78 +316,56 @@ hexo s <span class="token comment">//本地测试</span><span aria-hidden="true"
 </li>
 <li><p>修改theme下的配置文件_config.yml</p>
 <ul>
-<li><p><a target="_blank" rel="noopener" href="https://github.com/blinkfox/hexo-theme-matery/blob/develop/README_CN.md">参考</a>非常详细</p>
-<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">//新建分类页</span>
-hexo <span class="token keyword">new</span> <span class="token class-name">page</span> <span class="token string">"categories"</span>
-<span class="token comment">//新建标签</span>
-hexo <span class="token keyword">new</span> <span class="token class-name">page</span> <span class="token string">"tags"</span>
-<span class="token comment">//新建about</span>
-hexo <span class="token keyword">new</span> <span class="token class-name">page</span> <span class="token string">"about"</span>
-<span class="token comment">//新建404页</span>
-hexo <span class="token keyword">new</span> <span class="token class-name">page</span> <span class="token number">404</span>   <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
-<li><p>菜单导航配置</p>
-</li>
-<li><p>二级菜单配置</p>
-</li>
-<li><p>代码高亮</p>
-</li>
-<li><p>搜索</p>
-</li>
-<li><p>中文链接转拼音</p>
-</li>
-<li><p>文章字数统计插件添加emoji表情</p>
-</li>
-<li><p>修改社交链接</p>
-</li>
-<li><p>其他可选</p>
-</li>
+<li><a target="_blank" rel="noopener" href="https://github.com/blinkfox/hexo-theme-matery/blob/develop/README_CN.md">参考</a>非常详细</li>
 </ul>
 </li>
 <li><p>重新本地运行</p>
+<ul>
+<li>hexo clean&amp;&amp;hexo g&amp;&amp;hexo d</li>
+</ul>
 </li>
 </ol>
-<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">hexo g
-hexo s<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
 <h2 id="四、部署到github"><a href="#四、部署到github" class="headerlink" title="四、部署到github"></a>四、部署到github</h2><ol>
-<li>安装插件</li>
+<li><p>安装git提交插件</p>
+<ul>
+<li>```js<br>  npm install hexo-deployer-git –save<pre class="line-numbers language-none"><code class="language-none">
+2. 生成密钥添加到Github并测试Git
+
+   - &#96;&#96;&#96;js
+     git config user.name
+       git config user.email
+       git config --global user.name &quot;name&quot;
+       git config --global user.email &quot;email&quot;
+       ssh -keygen -t rsa -C &quot;email&quot;
+       cd ~&#x2F;.ssh
+       ls 
+       vim id_rsa.pub
+       copy
+       在github的setting的ssh key中粘贴
+       
+       查询：https:&#x2F;&#x2F;ipaddress.com&#x2F;website&#x2F;github.com的ipv4地址
+       添加 C:\Windows\System32\drivers\etc\hosts
+       140.82.112.4 github.com
+       
+       git bash
+       ssh -T git@github.com<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
+</ul>
+</li>
+<li><p>修改hexo的配置文件_config.yml</p>
+<ul>
+<li>```js<br>deploy:<pre><code>type: &#39;git&#39;
+repo: git@github.com:01zic/01zic.github.io.git
+branch:main
+</code></pre>
+<pre class="line-numbers language-none"><code class="language-none">
+4. 部署到github(git bash)
+
+   - &#96;&#96;&#96;js
+     hexo clean&amp;&amp;hexo g&amp;&amp;hexo d<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
+</ul>
+</li>
 </ol>
-  <pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">npm install hexo<span class="token operator">-</span>deployer<span class="token operator">-</span>git <span class="token operator">--</span>save <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<ol start="2">
-<li>生成密钥添加到Github</li>
-</ol>
-  <pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">git config user<span class="token punctuation">.</span>name
-git config user<span class="token punctuation">.</span>email
-git config <span class="token operator">--</span>global user<span class="token punctuation">.</span>name <span class="token string">"name"</span>
-git config <span class="token operator">--</span>global user<span class="token punctuation">.</span>email <span class="token string">"email"</span>
-ssh <span class="token operator">-</span>keygen <span class="token operator">-</span>t rsa <span class="token operator">-</span><span class="token constant">C</span> <span class="token string">"email"</span>
-cd <span class="token operator">~</span><span class="token operator">/</span><span class="token punctuation">.</span>ssh
-ls 
-vim id_rsa<span class="token punctuation">.</span>pub
-copy
-在github的setting的ssh key中粘贴
-
-<span class="token literal-property property">查询：https</span><span class="token operator">:</span><span class="token operator">/</span><span class="token operator">/</span>ipaddress<span class="token punctuation">.</span>com<span class="token operator">/</span>website<span class="token operator">/</span>github<span class="token punctuation">.</span>com的ipv4地址
-添加 <span class="token constant">C</span><span class="token operator">:</span>\Windows\System32\drivers\etc\hosts
-<span class="token number">140.82</span><span class="token number">.112</span><span class="token number">.4</span> github<span class="token punctuation">.</span>com
-
-git bash
-ssh <span class="token operator">-</span><span class="token constant">T</span> git@github<span class="token punctuation">.</span>com<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<ol start="3">
-<li>修改hexo的配置文件_config.yml</li>
-</ol>
-  <pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token literal-property property">deploy</span><span class="token operator">:</span>
-  <span class="token literal-property property">type</span><span class="token operator">:</span> <span class="token string">'git'</span>
-  <span class="token literal-property property">repo</span><span class="token operator">:</span> git@github<span class="token punctuation">.</span>com<span class="token operator">:</span>01zic<span class="token operator">/</span>01zic<span class="token punctuation">.</span>github<span class="token punctuation">.</span>io<span class="token punctuation">.</span>git
-  <span class="token literal-property property">branch</span><span class="token operator">:</span>main<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-
-<ol start="4">
-<li>部署到github(git bash)</li>
-</ol>
-  <pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">hexo clean<span class="token operator">&amp;&amp;</span>hexo g<span class="token operator">&amp;&amp;</span>hexo d<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
+<h2 id="部署到gitee"><a href="#部署到gitee" class="headerlink" title="部署到gitee"></a>部署到gitee</h2>
                 
             </div>
             <hr/>
@@ -414,7 +391,7 @@ ssh <span class="token operator">-</span><span class="token constant">T</span> g
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2022/06/21/hexo_gitee/">http://example.com/2022/06/21/hexo_gitee/</a>
+                    <a href="http://example.com/2022/06/21/hexo_git/">http://example.com/2022/06/21/hexo_git/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -454,10 +431,6 @@ ssh <span class="token operator">-</span><span class="token constant">T</span> g
                             
                                 <a href="/tags/%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/">
                                     <span class="chip bg-color">静态博客</span>
-                                </a>
-                            
-                                <a href="/tags/gitee/">
-                                    <span class="chip bg-color">gitee</span>
                                 </a>
                             
                         </div>
@@ -506,13 +479,13 @@ ssh <span class="token operator">-</span><span class="token constant">T</span> g
                 <i class="far fa-dot-circle"></i>&nbsp;本篇
             </div>
             <div class="card">
-                <a href="/2022/06/21/hexo_gitee/">
+                <a href="/2022/06/21/hexo_git/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="hexo部署到gitee">
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="hexo部署到gitub或gitee">
                         
-                        <span class="card-title">hexo部署到gitee</span>
+                        <span class="card-title">hexo部署到gitub或gitee</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -543,10 +516,6 @@ ssh <span class="token operator">-</span><span class="token constant">T</span> g
                     
                     <a href="/tags/%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/">
                         <span class="chip bg-color">静态博客</span>
-                    </a>
-                    
-                    <a href="/tags/gitee/">
-                        <span class="chip bg-color">gitee</span>
                     </a>
                     
                 </div>
@@ -560,13 +529,13 @@ ssh <span class="token operator">-</span><span class="token constant">T</span> g
                 本篇&nbsp;<i class="far fa-dot-circle"></i>
             </div>
             <div class="card">
-                <a href="/2022/06/21/hexo_gitee/">
+                <a href="/2022/06/21/hexo_git/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="hexo部署到gitee">
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="hexo部署到gitub或gitee">
                         
-                        <span class="card-title">hexo部署到gitee</span>
+                        <span class="card-title">hexo部署到gitub或gitee</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -597,10 +566,6 @@ ssh <span class="token operator">-</span><span class="token constant">T</span> g
                     
                     <a href="/tags/%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/">
                         <span class="chip bg-color">静态博客</span>
-                    </a>
-                    
-                    <a href="/tags/gitee/">
-                        <span class="chip bg-color">gitee</span>
                     </a>
                     
                 </div>
