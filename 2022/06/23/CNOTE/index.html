@@ -17,15 +17,15 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="前言 B站黑马C基础教程的资料总结 C语言入门教程100例 点击下载  一、基础篇1.C语言概述1.不同语言的应用场景graph LR; 不同语言--&gt;嵌入式:C和汇编 不同语言--&gt;Web开发:js,php,asp,jsp 不同语言--&gt;高性能服务:apache,nginx,memcached,redis等等高性能web服务器和数据库都是纯c开发的 不同语言--&gt;分布式应用:java,pytho">
+  <meta name="description" content="前言">
 <meta property="og:type" content="article">
 <meta property="og:title" content="C基础学习与复习">
 <meta property="og:url" content="http://example.com/2022/06/23/CNOTE/index.html">
-<meta property="og:site_name" content="orangewBlog">
-<meta property="og:description" content="前言 B站黑马C基础教程的资料总结 C语言入门教程100例 点击下载  一、基础篇1.C语言概述1.不同语言的应用场景graph LR; 不同语言--&gt;嵌入式:C和汇编 不同语言--&gt;Web开发:js,php,asp,jsp 不同语言--&gt;高性能服务:apache,nginx,memcached,redis等等高性能web服务器和数据库都是纯c开发的 不同语言--&gt;分布式应用:java,pytho">
+<meta property="og:site_name" content="orangeWBlog">
+<meta property="og:description" content="前言">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://qiniu.orangew.cn/img/32%E4%B8%AA%E5%85%B3%E9%94%AE%E5%AD%97.png">
 <meta property="og:image" content="http://qiniu.orangew.cn/img/01%E7%BC%96%E8%AF%91%E8%BF%87%E7%A8%8B.png">
@@ -49,7 +49,7 @@
   };
 </script>
 
-  <title>C基础学习与复习 | orangewBlog</title>
+  <title>C基础学习与复习 | orangeWBlog</title>
   
 
 
@@ -100,7 +100,7 @@
 
     <a href="/" class="brand" rel="start">
       <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">orangewBlog</h1>
+      <h1 class="site-title">orangeWBlog</h1>
       <span class="logo-line-after"><i></i></span>
     </a>
       <p class="site-subtitle" itemprop="description">blog</p>
@@ -143,6 +143,11 @@
     <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
 
   </li>
+        <li class="menu-item menu-item-schedule">
+
+    <a href="/schedule/" rel="section"><i class="fa fa-calendar fa-fw"></i>日程表</a>
+
+  </li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
         </a>
@@ -180,6 +185,8 @@
     </header>
 
     
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
 
 
     <main class="main">
@@ -199,11 +206,11 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/orange.png">
       <meta itemprop="name" content="OrangeW">
-      <meta itemprop="description" content="demo record">
+      <meta itemprop="description" content="demo_study record">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="orangewBlog">
+      <meta itemprop="name" content="orangeWBlog">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
@@ -2865,8 +2872,9 @@
     
 
       <footer class="post-footer">
+          
           <div class="post-tags">
-              <a href="/tags/c/" rel="tag"># c</a>
+              <a href="/tags/c/" rel="tag"><i class="fa fa-tag"></i> c</a>
           </div>
 
         
@@ -2946,7 +2954,7 @@
     <img class="site-author-image" itemprop="image" alt="OrangeW"
       src="/images/orange.png">
   <p class="site-author-name" itemprop="name">OrangeW</p>
-  <div class="site-description" itemprop="description">demo record</div>
+  <div class="site-description" itemprop="description">demo_study record</div>
 </div>
 <div class="site-state-wrap motion-element">
   <nav class="site-state">
@@ -2973,7 +2981,10 @@
 </div>
 
 
-
+<!-- CloudCalendar -->
+<div class="widget-wrap" style="width: 90%;margin-left: auto;margin-right: auto; opacity: 0.97;">
+	<div class="widget" id="CloudCalendar"></div>
+</div>
       </div>
         <div class="back-to-top motion-element">
           <i class="fa fa-arrow-up"></i>
@@ -3028,6 +3039,7 @@
   </div>
 
   
+  <script size="300" alpha="0.6" zIndex="-1" src="/lib/canvas-ribbon/canvas-ribbon.js"></script>
   <script src="/lib/anime.min.js"></script>
   <script src="/lib/velocity/velocity.min.js"></script>
   <script src="/lib/velocity/velocity.ui.min.js"></script>
@@ -3041,6 +3053,8 @@
 
 
 <script src="/js/next-boot.js"></script>
+
+<script src="/js/bookmark.js"></script>
 
 
 
@@ -3081,6 +3095,23 @@ if (document.querySelectorAll('pre.mermaid').length) {
   
 
   
+<!-- calendar widget -->
+
+    <script src="//cdn.jsdelivr.net/gh/theme-next/theme-next-calendar/calendar.min.js"></script>
+    <script src="//cdn.jsdelivr.net/gh/theme-next/theme-next-calendar/languages.min.js"></script>
+    <script>
+    $(function() {
+        $('#CloudCalendar').aCalendar('zh-CN',
+            $.extend(
+                '', {
+                    single:true,
+                    root:'/calendar/'
+                }
+            )
+        );
+    });
+    </script>
+
 
 </body>
 </html>
