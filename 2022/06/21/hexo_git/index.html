@@ -363,7 +363,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    573
+                    587
                 </div>
                 
 
@@ -482,12 +482,13 @@ copy
 <li>AK SK 域名 存储区域</li>
 </ol>
 <h2 id="七、配置mermaid"><a href="#七、配置mermaid" class="headerlink" title="七、配置mermaid"></a>七、配置mermaid</h2><ul>
-<li><a href="https://github.com/webappdevelp/hexo-filter-mermaid-diagrams">直接参考github链接</a><ol>
+<li><a href="https://github.com/webappdevelp/hexo-filter-mermaid-diagrams">直接参考github链接</a>（我搞的时候一直有问题）<ol>
 <li>安装插件</li>
 <li>修改配置文件</li>
 <li>js文件修改</li>
 </ol>
 </li>
+<li><a href="https://github.com/mermaid-js/mermaid/blob/develop/README.zh-CN.md">mermaid-github文档</a></li>
 </ul>
 <h2 id="八、hexo中添加本地文件下载"><a href="#八、hexo中添加本地文件下载" class="headerlink" title="八、hexo中添加本地文件下载"></a>八、hexo中添加本地文件下载</h2><ul>
 <li>调整程序配置文件_config.yml 里的post_asset_folder:这个选项设置为True</li>
@@ -865,6 +866,15 @@ copy
 
 
     <footer class="page-footer bg-color">
+
+  <script src='https://unpkg.com/mermaid@/dist/mermaid.min.js'></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({theme: 'forest'});
+    }
+  </script>
+
+
     
     <div class="container row center-align" style="margin-bottom: 15px !important;">
         <div class="col s12 m8 l8 copy-right">
@@ -946,13 +956,6 @@ copy
 
 </div>
     </div>
-
-  <script src='https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js'></script>
-  <script>
-    if (window.mermaid) {
-      mermaid.initialize({theme: 'forest'});
-    }
-  </script>
 
 </footer>
 

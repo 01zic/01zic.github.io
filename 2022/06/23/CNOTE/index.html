@@ -397,23 +397,23 @@
 <li>B站黑马C基础教程的资料总结</li>
 <li>C语言入门教程100例 <a href="/download/C%E8%AF%AD%E8%A8%80%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B%E5%8F%8A100%E4%BE%8B.chm">点击下载</a></li>
 </ul>
-<h2 id="一、基础篇"><a href="#一、基础篇" class="headerlink" title="一、基础篇"></a>一、基础篇</h2><h3 id="1-C语言概述"><a href="#1-C语言概述" class="headerlink" title="1.C语言概述"></a>1.C语言概述</h3><h4 id="1-不同语言的应用场景"><a href="#1-不同语言的应用场景" class="headerlink" title="1.不同语言的应用场景"></a>1.不同语言的应用场景</h4><pre class="line-numbers language-mermaid" data-language="mermaid"><code class="language-mermaid"><span class="token keyword">graph</span> LR<span class="token punctuation">;</span>
-不同语言<span class="token arrow operator">--></span>嵌入式<span class="token operator">:</span>C和汇编
-不同语言<span class="token arrow operator">--></span>Web开发<span class="token operator">:</span>js,php,asp,jsp
-不同语言<span class="token arrow operator">--></span>高性能服务<span class="token operator">:</span>apache,nginx,memcached,redis等等高性能web服务器和数据库都是纯c开发的
-不同语言<span class="token arrow operator">--></span>分布式应用<span class="token operator">:</span>java,python的天下
-不同语言<span class="token arrow operator">--></span>游戏服务器<span class="token operator">:</span>c,c++,lua脚本
-不同语言<span class="token arrow operator">--></span>并行计算<span class="token operator">:</span>java,go,erlang
-不同语言<span class="token arrow operator">--></span>游戏引擎<span class="token operator">:</span>c++,脚本
-不同语言<span class="token arrow operator">--></span>游戏逻辑<span class="token operator">:</span>脚本
-不同语言<span class="token arrow operator">--></span>移动开发<span class="token operator">:</span>java,obj-c,swift
-不同语言<span class="token arrow operator">--></span>桌面开发<span class="token operator">:</span>c++,qt+script,c#
-不同语言<span class="token arrow operator">--></span>操作系统<span class="token operator">:</span>c
-不同语言<span class="token arrow operator">--></span>虚拟技术<span class="token operator">:</span>qemu,kvm,xen都是纯c开发的
-不同语言<span class="token arrow operator">--></span>数据库<span class="token operator">:</span>c
-不同语言<span class="token arrow operator">--></span>编译器<span class="token operator">:</span>c,c++
-不同语言<span class="token arrow operator">--></span>大数据<span class="token operator">:</span>java,python
-不同语言<span class="token arrow operator">--></span>云存储<span class="token operator">:</span>java,python<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="一、基础篇"><a href="#一、基础篇" class="headerlink" title="一、基础篇"></a>一、基础篇</h2><h3 id="1-C语言概述"><a href="#1-C语言概述" class="headerlink" title="1.C语言概述"></a>1.C语言概述</h3><h4 id="1-不同语言的应用场景"><a href="#1-不同语言的应用场景" class="headerlink" title="1.不同语言的应用场景"></a>1.不同语言的应用场景</h4><pre class="mermaid">graph LR;
+不同语言-->嵌入式:C和汇编
+不同语言-->Web开发:js,php,asp,jsp
+不同语言-->高性能服务:apache,nginx,memcached,redis等等高性能web服务器和数据库都是纯c开发的
+不同语言-->分布式应用:java,python的天下
+不同语言-->游戏服务器:c,c++,lua脚本
+不同语言-->并行计算:java,go,erlang
+不同语言-->游戏引擎:c++,脚本
+不同语言-->游戏逻辑:脚本
+不同语言-->移动开发:java,obj-c,swift
+不同语言-->桌面开发:c++,qt+script,c#
+不同语言-->操作系统:c
+不同语言-->虚拟技术:qemu,kvm,xen都是纯c开发的
+不同语言-->数据库:c
+不同语言-->编译器:c,c++
+不同语言-->大数据:java,python
+不同语言-->云存储:java,python</pre>
 
 <h4 id="2-C语言的简洁"><a href="#2-C语言的简洁" class="headerlink" title="2.C语言的简洁"></a>2.C语言的简洁</h4><ul>
 <li>32个关键字，9种控制语句，34种运算符</li>
@@ -539,16 +539,16 @@
 <li>汇编：将汇编文件生成目标文件(二进制文件)</li>
 <li>链接：C语言写的程序是需要依赖各种库的，所以编译之后还需要把库链接到最终的可执行程序中去</li>
 </ol>
-<pre class="line-numbers language-mermaid" data-language="mermaid"><code class="language-mermaid"><span class="token keyword">graph</span> TD<span class="token punctuation">;</span>
-源代码*.c<span class="token arrow operator">--></span>预处理器
-头文件*.h<span class="token arrow operator">--></span>预处理器
-预处理器<span class="token arrow operator">--></span>编译器
-编译器<span class="token arrow operator">--></span>汇编<span class="token punctuation">;</span>
-汇编<span class="token arrow operator">--></span>目标代码*.o
-目标代码*.o <span class="token arrow operator">--></span>链接器
-启动代码<span class="token arrow operator">--></span>链接器
-库代码<span class="token arrow operator">--></span>链接器
-链接器<span class="token arrow operator">--></span>可执行文件<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="mermaid">graph TD;
+源代码*.c-->预处理器
+头文件*.h-->预处理器
+预处理器-->编译器
+编译器-->汇编;
+汇编-->目标代码*.o
+目标代码*.o -->链接器
+启动代码-->链接器
+库代码-->链接器
+链接器-->可执行文件</pre>
 
 <h4 id="8-gcc编译过程"><a href="#8-gcc编译过程" class="headerlink" title="8.gcc编译过程"></a>8.gcc编译过程</h4><ol>
 <li>分步编译</li>
@@ -737,19 +737,19 @@
 </li>
 <li>数据类型</li>
 </ol>
-<pre class="line-numbers language-mermaid" data-language="mermaid"><code class="language-mermaid"><span class="token keyword">graph</span> LR<span class="token punctuation">;</span>
-数据类型<span class="token arrow operator">--></span>基本类型
-数据类型<span class="token arrow operator">--></span>构造类型
-数据类型<span class="token arrow operator">--></span>指针类型<span class="token operator">:</span>char*,int*,int**等
-基本类型<span class="token arrow operator">--></span>整型<span class="token operator">:</span>int,short,long
-基本类型<span class="token arrow operator">--></span>字符型<span class="token operator">:</span>char
-基本类型<span class="token arrow operator">--></span>浮点型
-浮点型<span class="token arrow operator">--></span>单精度浮点型<span class="token operator">:</span>float
-浮点型<span class="token arrow operator">--></span>双精度浮点型<span class="token operator">:</span>double
-构造类型<span class="token arrow operator">--></span>数组类型
-构造类型<span class="token arrow operator">--></span>结构类型<span class="token operator">:</span>struct
-构造类型<span class="token arrow operator">--></span>联合类型<span class="token operator">:</span>union
-构造类型<span class="token arrow operator">--></span>枚举类型<span class="token operator">:</span>enum<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="mermaid">graph LR;
+数据类型-->基本类型
+数据类型-->构造类型
+数据类型-->指针类型:char*,int*,int**等
+基本类型-->整型:int,short,long
+基本类型-->字符型:char
+基本类型-->浮点型
+浮点型-->单精度浮点型:float
+浮点型-->双精度浮点型:double
+构造类型-->数组类型
+构造类型-->结构类型:struct
+构造类型-->联合类型:union
+构造类型-->枚举类型:enum</pre>
 
 <p>3.常量</p>
 <ul>
@@ -3366,6 +3366,15 @@
 
 
     <footer class="page-footer bg-color">
+
+  <script src='https://unpkg.com/mermaid@/dist/mermaid.min.js'></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({theme: 'forest'});
+    }
+  </script>
+
+
     
     <div class="container row center-align" style="margin-bottom: 15px !important;">
         <div class="col s12 m8 l8 copy-right">
@@ -3447,13 +3456,6 @@
 
 </div>
     </div>
-
-  <script src='https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js'></script>
-  <script>
-    if (window.mermaid) {
-      mermaid.initialize({theme: 'forest'});
-    }
-  </script>
 
 </footer>
 

@@ -451,7 +451,7 @@
                 type: 'pie',
                 radius: '50%',
                 color: ['#6772e5', '#ff9e0f', '#fa755a', '#3ecf8e', '#82d3f4', '#ab47bc', '#525f7f', '#f51c47', '#26A69A'],
-                data: [{"name":"博客","value":1},{"name":"c","value":1},{"name":"c/c++项目学习","value":1}],
+                data: [{"name":"c","value":1},{"name":"c/c++项目学习","value":1},{"name":"博客","value":1}],
                 itemStyle: {
                     emphasis: {
                         shadowBlur: 10,
@@ -475,7 +475,7 @@
         xAxis: [
             {
                 type: 'category',
-                data: ["静态博客","c","c/c++项目学习"]
+                data: ["c","c/c++项目学习","静态博客"]
             }
         ],
         yAxis: [
@@ -531,6 +531,15 @@
 
 
     <footer class="page-footer bg-color">
+
+  <script src='https://unpkg.com/mermaid@/dist/mermaid.min.js'></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({theme: 'forest'});
+    }
+  </script>
+
+
     
     <div class="container row center-align" style="margin-bottom: 15px !important;">
         <div class="col s12 m8 l8 copy-right">
@@ -612,13 +621,6 @@
 
 </div>
     </div>
-
-  <script src='https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js'></script>
-  <script>
-    if (window.mermaid) {
-      mermaid.initialize({theme: 'forest'});
-    }
-  </script>
 
 </footer>
 
