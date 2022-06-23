@@ -1,0 +1,3619 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="C基础学习与复习, orangewBlog">
+    <meta name="description" content="demo record">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>C基础学习与复习 | orangewBlog</title>
+    <link rel="icon" type="image/png" href="/%E6%A9%99%E5%AD%90.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 5.4.2"></head>
+
+
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/%E6%A9%99%E5%AD%90.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">orangewBlog</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/%E6%A9%99%E5%AD%90.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">orangewBlog</div>
+        <div class="logo-desc">
+            
+            demo record
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/14.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">C基础学习与复习</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        padding-bottom: 30px;
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/c/">
+                                <span class="chip bg-color">c</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/c/" class="post-category">
+                                c
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2022-06-23
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2022-06-23
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    7k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    29 分
+                </div>
+                
+
+                
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.css">
+        
+
+        
+        <!-- 代码块折行 -->
+        <style type="text/css">
+            code[class*="language-"], pre[class*="language-"] { white-space: pre-wrap !important; }
+        </style>
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><ul>
+<li>B站黑马C基础教程的资料总结</li>
+<li>C语言入门教程100例 点击下载(/download/C语言入门教程及100例.chm)</li>
+</ul>
+<h2 id="一、基础篇"><a href="#一、基础篇" class="headerlink" title="一、基础篇"></a>一、基础篇</h2><h3 id="1-C语言概述"><a href="#1-C语言概述" class="headerlink" title="1.C语言概述"></a>1.C语言概述</h3><h4 id="1-不同语言的应用场景"><a href="#1-不同语言的应用场景" class="headerlink" title="1.不同语言的应用场景"></a>1.不同语言的应用场景</h4><pre class="line-numbers language-mermaid" data-language="mermaid"><code class="language-mermaid"><span class="token keyword">graph</span> LR<span class="token punctuation">;</span>
+不同语言<span class="token arrow operator">--></span>嵌入式<span class="token operator">:</span>C和汇编
+不同语言<span class="token arrow operator">--></span>Web开发<span class="token operator">:</span>js,php,asp,jsp
+不同语言<span class="token arrow operator">--></span>高性能服务<span class="token operator">:</span>apache,nginx,memcached,redis等等高性能web服务器和数据库都是纯c开发的
+不同语言<span class="token arrow operator">--></span>分布式应用<span class="token operator">:</span>java,python的天下
+不同语言<span class="token arrow operator">--></span>游戏服务器<span class="token operator">:</span>c,c++,lua脚本
+不同语言<span class="token arrow operator">--></span>并行计算<span class="token operator">:</span>java,go,erlang
+不同语言<span class="token arrow operator">--></span>游戏引擎<span class="token operator">:</span>c++,脚本
+不同语言<span class="token arrow operator">--></span>游戏逻辑<span class="token operator">:</span>脚本
+不同语言<span class="token arrow operator">--></span>移动开发<span class="token operator">:</span>java,obj-c,swift
+不同语言<span class="token arrow operator">--></span>桌面开发<span class="token operator">:</span>c++,qt+script,c#
+不同语言<span class="token arrow operator">--></span>操作系统<span class="token operator">:</span>c
+不同语言<span class="token arrow operator">--></span>虚拟技术<span class="token operator">:</span>qemu,kvm,xen都是纯c开发的
+不同语言<span class="token arrow operator">--></span>数据库<span class="token operator">:</span>c
+不同语言<span class="token arrow operator">--></span>编译器<span class="token operator">:</span>c,c++
+不同语言<span class="token arrow operator">--></span>大数据<span class="token operator">:</span>java,python
+不同语言<span class="token arrow operator">--></span>云存储<span class="token operator">:</span>java,python<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="2-C语言的简洁"><a href="#2-C语言的简洁" class="headerlink" title="2.C语言的简洁"></a>2.C语言的简洁</h4><ul>
+<li>32个关键字，9种控制语句，34种运算符</li>
+<li><img src="http://qiniu.orangew.cn/img/32%E4%B8%AA%E5%85%B3%E9%94%AE%E5%AD%97.png" alt="32个关键字"></li>
+</ul>
+<blockquote>
+<p>32个关键字:(由系统定义，不能重作其它定义)</p>
+<p>auto<br>break<br>case<br>char<br>const<br>continue<br>default<br>do<br>double<br>else<br>enum<br>extern<br>float<br>for<br>goto<br>if<br>int<br>long<br>register<br>return<br>short<br>signed<br>sizeofstatic<br>struct<br>switch<br>typedef<br>unsigned<br>union<br>void<br>volatile<br>while</p>
+</blockquote>
+<blockquote>
+<p>9种控制语句:</p>
+<p>if( )<del>else</del></p>
+<p>for( )~</p>
+<p>while( )~</p>
+<p>do~while( )</p>
+<p>continue</p>
+<p>break</p>
+<p>switch</p>
+<p>goto</p>
+<p>return</p>
+</blockquote>
+<blockquote>
+<p>34种运算符:<br>算术运算符: + - * / % ++ –<br>关系运算符: &lt; &lt;= == &gt; &gt;= !=<br>逻辑运算符: ! &amp;&amp; ||<br>位运算符:  &lt;&lt;  &gt;&gt;  ~ | ^ &amp;<br>赋值运算符: = 及其扩展<br>条件运算符: ?:<br>逗号运算符: ,<br>指针运算符: * &amp;<br>求字节数: sizeof<br>强制类型转换:(类型)<br>分量运算符: . -&gt;<br>下标运算符: [ ]<br>其它:( )</p>
+</blockquote>
+<h4 id="3-gcc编译C"><a href="#3-gcc编译C" class="headerlink" title="3.gcc编译C"></a>3.<code>gcc</code>编译C</h4><ul>
+<li><code>gcc</code>（GNU Compiler Collection，GNU 编译器套件），是由 GNU 开发的编程语言编译器。<code>gcc</code>原本作为GNU操作系统的官方编译器，现已被大多数类Unix操作系统（如Linux、BSD、Mac OS X等）采纳为标准的编译器，<code>gcc</code>同样适用于微软的Windows。</li>
+<li><code>gcc</code>最初用于编译C语言，随着项目的发展<code>gcc</code>已经成为了能够编译<code>C、C++、Java、Ada、fortran、Object C、Object C++、Go</code>语言的编译器大家族。</li>
+<li>编译命令格式</li>
+</ul>
+<blockquote>
+<p><code>gcc</code>  [<code>-option1</code>] … <filename></p>
+<p><code>g++</code>  [<code>-option1</code>] … <filename></p>
+</blockquote>
+<ul>
+<li>命令、选项和源文件之间使用空格分隔</li>
+<li>一行命令中可以有零个、一个或多个选项</li>
+<li>文件名可以包含文件的绝对路径，也可以使用相对路径</li>
+<li>如果命令中不包含输出可执行文件的文件名，可执行文件的文件名会自动生成一个默认名，Linux平台为<code>a.out</code>，Windows平台为<code>a.exe</code></li>
+<li><code>gcc</code>,<code>g++</code>编译常用选项说明</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>选项</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>-o file</td>
+<td>指定生成的输出文件名为file</td>
+</tr>
+<tr>
+<td>-E</td>
+<td>预处理</td>
+</tr>
+<tr>
+<td>-S</td>
+<td>预处理和编译</td>
+</tr>
+<tr>
+<td>-c</td>
+<td>预处理、编译和汇编</td>
+</tr>
+</tbody></table>
+<h4 id="4-环境配置"><a href="#4-环境配置" class="headerlink" title="4.环境配置"></a>4.环境配置</h4><h4 id="5-代码分析"><a href="#5-代码分析" class="headerlink" title="5.代码分析"></a>5.代码分析</h4><ol>
+<li>头文件<ul>
+<li>#include&lt; &gt; 与 #include “”的区别：<ul>
+<li>&lt; &gt; 表示系统直接按系统指定的目录检索</li>
+<li>“” 表示系统先在 “” 指定的路径(没写路径代表当前路径)查找头文件，如果找不到，再按系统指定的目录检索</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>main函数<ul>
+<li>一个完整的C语言程序，是由一个、且只能有一个main()函数(又称主函数，必须有)和若干个其他函数结合而成（可选）</li>
+<li>main函数是C语言程序的入口，程序是从main函数开始执行。</li>
+</ul>
+</li>
+<li>{} 括号，程序体和代码块<ul>
+<li>{}叫代码块，一个代码块内部可以有一条或者多条语句</li>
+<li>C语言每句可执行代码都是”<strong>;</strong>“分号结尾</li>
+<li>所有的#开头的行，都代表预编译指令，预编译指令行结尾是没有分号的</li>
+<li>所有的可执行语句必须是在代码块里面</li>
+</ul>
+</li>
+<li>注释<ul>
+<li>//叫行注释，注释的内容编译器是忽略的，注释主要的作用是在代码中加一些说明和解释，这样有利于代码的阅读</li>
+<li>/**/叫块注释</li>
+<li>块注释是C语言标准的注释方法</li>
+<li>行注释是从C++语言借鉴过来的</li>
+</ul>
+</li>
+<li>return语句<ul>
+<li>return代表函数执行完毕，返回return代表函数的终止</li>
+<li>如果main定义的时候前面是int，那么return后面就需要写一个整数；如果main定义的时候前面是void，那么return后面什么也不需要写</li>
+<li>在main函数中return 0代表程序执行成功，return -1代表程序执行失败</li>
+<li>int main()和void main()在C语言中是一样的，但C++只接受int main这种定义方式</li>
+</ul>
+</li>
+</ol>
+<h4 id="6-system函数"><a href="#6-system函数" class="headerlink" title="6. system函数"></a>6. system函数</h4><pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;stdlib.h></span></span>
+<span class="token keyword">int</span> <span class="token function">system</span><span class="token punctuation">(</span><span class="token keyword">const</span> <span class="token keyword">char</span> <span class="token operator">*</span>command<span class="token punctuation">)</span><span class="token punctuation">;</span>
+功能：在已经运行的程序中执行另外一个外部程序
+参数：外部可执行程序名字
+返回值：
+成功：<span class="token number">0</span>
+失败：任意数字<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h></span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;stdlib.h></span></span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">&#123;</span>
+	<span class="token comment">//system("calc"); //windows平台</span>
+	<span class="token function">system</span><span class="token punctuation">(</span><span class="token string">"ls"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//Linux平台, 需要头文件#include &lt;stdlib.h></span>
+
+	<span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="7-C语言编译过程"><a href="#7-C语言编译过程" class="headerlink" title="7.C语言编译过程"></a>7.C语言编译过程</h4><ol>
+<li>预处理：宏定义展开、头文件展开、条件编译等，同时将代码中的注释删除，这里并不会检查语法</li>
+<li>编译：检查语法，将预处理后文件编译生成汇编文件</li>
+<li>汇编：将汇编文件生成目标文件(二进制文件)</li>
+<li>链接：C语言写的程序是需要依赖各种库的，所以编译之后还需要把库链接到最终的可执行程序中去</li>
+</ol>
+<pre class="line-numbers language-mermaid" data-language="mermaid"><code class="language-mermaid"><span class="token keyword">graph</span> TD<span class="token punctuation">;</span>
+源代码*.c<span class="token arrow operator">--></span>预处理器
+头文件*.h<span class="token arrow operator">--></span>预处理器
+预处理器<span class="token arrow operator">--></span>编译器
+编译器<span class="token arrow operator">--></span>汇编<span class="token punctuation">;</span>
+汇编<span class="token arrow operator">--></span>目标代码*.o
+目标代码*.o <span class="token arrow operator">--></span>链接器
+启动代码<span class="token arrow operator">--></span>链接器
+库代码<span class="token arrow operator">--></span>链接器
+链接器<span class="token arrow operator">--></span>可执行文件<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="8-gcc编译过程"><a href="#8-gcc编译过程" class="headerlink" title="8.gcc编译过程"></a>8.gcc编译过程</h4><ol>
+<li>分步编译</li>
+</ol>
+<blockquote>
+<p>预处理：<code>gcc -E hello.c -o hello.i</code></p>
+<p>编 译：<code>gcc -S hello.i -o hello.s</code></p>
+<p>汇 编：<code>gcc -c hello.s -o hello.o</code></p>
+<p>链 接：<code>gcc  hello.o -o hello</code></p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>选项</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>-E</td>
+<td>只进行预处理</td>
+</tr>
+<tr>
+<td>-S</td>
+<td>只进行预处理和编译</td>
+</tr>
+<tr>
+<td>-c</td>
+<td>只进行预处理、编译和汇编</td>
+</tr>
+<tr>
+<td>-o file</td>
+<td>指定生成的输出文件名为file</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>文件后缀</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>.c</td>
+<td>源文件</td>
+</tr>
+<tr>
+<td>.i</td>
+<td>预处理后的C语言文件</td>
+</tr>
+<tr>
+<td>.s</td>
+<td>编译后的汇编文件</td>
+</tr>
+<tr>
+<td>.o</td>
+<td>汇编后的目标文件</td>
+</tr>
+</tbody></table>
+<p><img src="http://qiniu.orangew.cn/img/01%E7%BC%96%E8%AF%91%E8%BF%87%E7%A8%8B.png" alt="01编译过程"></p>
+<h4 id="9-CPU内部结构和寄存器"><a href="#9-CPU内部结构和寄存器" class="headerlink" title="9.CPU内部结构和寄存器"></a>9.CPU内部结构和寄存器</h4><ol>
+<li>64位和32位系统的区别</li>
+</ol>
+<ul>
+<li>寄存器是CPU内部最基本的存储单元</li>
+<li>CPU对外是通过总线(地址、控制、数据)来和外部设备交互的，总线的宽度是8位，同时CPU的寄存器也是8位，那么这个CPU就叫8位CPU</li>
+<li>如果总线是32位，寄存器也是32位的，那么这个CPU就是32位CPU</li>
+<li>有一种CPU内部的寄存器是32位的，但总线是16位，准32为CPU</li>
+<li>所有的64位CPU兼容32位的指令，32位要兼容16位的指令，所以在64位的CPU上是可以识别32位的指令</li>
+<li>在64位的CPU构架上运行了64位的软件操作系统，那么这个系统是64位</li>
+<li>在64位的CPU构架上，运行了32位的软件操作系统，那么这个系统就是32位</li>
+<li>64位的软件不能运行在32位的CPU之上</li>
+</ul>
+<ol start="2">
+<li>寄存器名字</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>8位</th>
+<th>16位</th>
+<th>32位</th>
+<th>64位</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>A</td>
+<td>AX</td>
+<td>EAX</td>
+<td>RAX</td>
+</tr>
+<tr>
+<td>B</td>
+<td>BX</td>
+<td>EBX</td>
+<td>RBX</td>
+</tr>
+<tr>
+<td>C</td>
+<td>CX</td>
+<td>ECX</td>
+<td>RCX</td>
+</tr>
+<tr>
+<td>D</td>
+<td>DX</td>
+<td>EDX</td>
+<td>RDX</td>
+</tr>
+</tbody></table>
+<ol start="3">
+<li>寄存器、缓存、内存三者之间的关系<ul>
+<li>按与CPU远近来分，离得最近的是寄存器，然后缓存(CPU缓存)，最后内存。</li>
+<li>CPU计算时，先预先把要用的数据从硬盘读到内存，然后再把即将要用的数据读到寄存器。于是 CPU&lt;—&gt;寄存器&lt;—&gt;内存，这就是它们之间的信息交换。</li>
+<li>那为什么有缓存呢？因为如果经常操作内存中的同一址地的数据，就会影响速度。于是就在寄存器与内存之间设置一个缓存。</li>
+<li>因为从缓存提取的速度远高于内存。当然缓存的价格肯定远远高于内存，不然的话，机器里就没有内存的存在。</li>
+<li>由此可以看出，从远近来看：CPU〈—〉寄存器〈—&gt; 缓存 &lt;—&gt; 内存。</li>
+</ul>
+</li>
+</ol>
+<h4 id="10-汇编语言"><a href="#10-汇编语言" class="headerlink" title="10.汇编语言"></a>10.汇编语言</h4><ol>
+<li>vs中c语言嵌套汇编语言</li>
+</ol>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h></span></span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">&#123;</span>
+	<span class="token comment">//定义整型变量a, b, c</span>
+	<span class="token keyword">int</span> a<span class="token punctuation">;</span>
+	<span class="token keyword">int</span> b<span class="token punctuation">;</span>
+	<span class="token keyword">int</span> c<span class="token punctuation">;</span>
+
+	__asm
+	<span class="token punctuation">&#123;</span>
+		mov a<span class="token punctuation">,</span> <span class="token number">3</span>	<span class="token comment">//3的值放在a对应内存的位置</span>
+		mov b<span class="token punctuation">,</span> <span class="token number">4</span>	<span class="token comment">//4的值放在b对应内存的位置</span>
+		mov eax<span class="token punctuation">,</span> a	<span class="token comment">//把a内存的值放在eax寄存器</span>
+		add eax<span class="token punctuation">,</span> b	<span class="token comment">//eax和b相加，结果放在eax</span>
+		mov c<span class="token punctuation">,</span> eax	<span class="token comment">//eax的值放在c中</span>
+	<span class="token punctuation">&#125;</span>
+	
+	<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%d\n"</span><span class="token punctuation">,</span>  c<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//把c的值输出</span>
+
+	<span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span><span class="token comment">//成功完成</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<ol start="2">
+<li>反汇编</li>
+</ol>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h></span></span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">&#123;</span>
+	<span class="token comment">//定义整型变量a, b, c</span>
+	<span class="token keyword">int</span> a<span class="token punctuation">;</span>
+	<span class="token keyword">int</span> b<span class="token punctuation">;</span>
+	<span class="token keyword">int</span> c<span class="token punctuation">;</span>
+
+	a <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">;</span>
+	b <span class="token operator">=</span> <span class="token number">4</span><span class="token punctuation">;</span>
+	c <span class="token operator">=</span> a <span class="token operator">+</span> b<span class="token punctuation">;</span>
+	
+	<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%d\n"</span><span class="token punctuation">,</span>  c<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//把c的值输出</span>
+
+	<span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span><span class="token comment">//成功完成</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<ul>
+<li>设置断点</li>
+<li>右键反汇编</li>
+<li>根据汇编代码分析程序</li>
+</ul>
+<h4 id="11-IDE"><a href="#11-IDE" class="headerlink" title="11.IDE"></a>11.IDE</h4><ol>
+<li>Qt Creator</li>
+<li>Visual Studio<ol>
+<li>vs2013不建议使用C的传统函数库scanf,strcpy,sprintf，使用这些函数，会提示C4996错误</li>
+</ol>
+</li>
+</ol>
+<h3 id="2-数据类型"><a href="#2-数据类型" class="headerlink" title="2.数据类型"></a>2.数据类型</h3><h4 id="1-常量与变量"><a href="#1-常量与变量" class="headerlink" title="1.常量与变量"></a>1.常量与变量</h4><ol>
+<li>关键字（32个）<ul>
+<li>数据类型关键字（12个）<br>char, short,int,long, float, double,unsigned,signed,struct, union, enum, void</li>
+<li>控制语句关键字（12个)<br>if,else, switch, case, default<br>for , do, while, break, continue, goto, return</li>
+<li>存储类关键字(5个)<br>auto，extern,register，static，const</li>
+<li>其他关键字（3个)<br>sizeof，typedef，volatile</li>
+</ul>
+</li>
+<li>数据类型</li>
+</ol>
+<pre class="line-numbers language-mermaid" data-language="mermaid"><code class="language-mermaid"><span class="token keyword">graph</span> LR<span class="token punctuation">;</span>
+数据类型<span class="token arrow operator">--></span>基本类型
+数据类型<span class="token arrow operator">--></span>构造类型
+数据类型<span class="token arrow operator">--></span>指针类型<span class="token operator">:</span>char*,int*,int**等
+基本类型<span class="token arrow operator">--></span>整型<span class="token operator">:</span>int,short,long
+基本类型<span class="token arrow operator">--></span>字符型<span class="token operator">:</span>char
+基本类型<span class="token arrow operator">--></span>浮点型
+浮点型<span class="token arrow operator">--></span>单精度浮点型<span class="token operator">:</span>float
+浮点型<span class="token arrow operator">--></span>双精度浮点型<span class="token operator">:</span>double
+构造类型<span class="token arrow operator">--></span>数组类型
+构造类型<span class="token arrow operator">--></span>结构类型<span class="token operator">:</span>struct
+构造类型<span class="token arrow operator">--></span>联合类型<span class="token operator">:</span>union
+构造类型<span class="token arrow operator">--></span>枚举类型<span class="token operator">:</span>enum<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>3.常量</p>
+<ul>
+<li><p>在程序运行过程中，其值不能被改变的量</p>
+</li>
+<li><p> 常量一般出现在表达式或赋值语句中</p>
+</li>
+<li></li>
+<li><table>
+<thead>
+<tr>
+<th>整型常量</th>
+<th>100，200，-100，0</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>实型常量</td>
+<td>3.14 ， 0.125，-3.123</td>
+</tr>
+<tr>
+<td>字符型常量</td>
+<td>‘a’,‘b’,‘1’,‘\n’</td>
+</tr>
+<tr>
+<td>字符串常量</td>
+<td>“a”,“ab”，“12356”</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<ol start="4">
+<li>变量<ul>
+<li>在程序运行过程中，其值可以改变</li>
+<li>变量在使用前必须先定义，定义变量前必须有相应的数据类型</li>
+<li>标识符不能是关键字</li>
+<li>标识符只能由字母、数字、下划线组成</li>
+<li>第一个字符必须为字母或下划线</li>
+<li>标识符中字母区分大小写</li>
+<li>变量在编译时为其分配相应的内存空间</li>
+<li>可以通过其名字和地址访问相应内存</li>
+<li>变量名，变量值，存储单元</li>
+</ul>
+</li>
+<li>声明和定义的区别<ul>
+<li>声明变量不需要建立存储空间，如：extern int a;</li>
+<li>定义变量需要建立存储空间，如：int b;</li>
+</ul>
+</li>
+</ol>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h></span></span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">&#123;</span>
+	<span class="token comment">//extern 关键字只做声明，不能做任何定义</span>
+	<span class="token comment">//声明一个变量a，a在这里没有建立存储空间</span>
+	<span class="token keyword">extern</span> <span class="token keyword">int</span> a<span class="token punctuation">;</span>
+	a <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>	<span class="token comment">//err, 没有空间，就不可以赋值</span>
+
+	<span class="token keyword">int</span> b <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>	<span class="token comment">//定义一个变量b，b的类型为int，b赋值为10</span>
+
+	<span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<blockquote>
+<p>从广义的角度来讲声明中包含着定义，即定义是声明的一个特例，所以并非所有的声明都是定义：</p>
+<ul>
+<li><p>int b 它既是声明，同时又是定义</p>
+</li>
+<li><p>对于 extern b来讲它只是声明不是定义</p>
+</li>
+</ul>
+</blockquote>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h></span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">MAX</span> <span class="token expression"><span class="token number">10</span> </span><span class="token comment">//声明了一个常量，名字叫MAX，值是10，常量的值一旦初始化不可改</span></span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">&#123;</span>
+	<span class="token keyword">int</span> a<span class="token punctuation">;</span>	<span class="token comment">//定义了一个变量，其类型为int，名字叫a</span>
+
+	<span class="token keyword">const</span> <span class="token keyword">int</span> b <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span> <span class="token comment">//定义一个const常量，名为叫b，值为10</span>
+	<span class="token comment">//b = 11; //err,常量的值不能改变</span>
+
+	<span class="token comment">//MAX = 100;	//err,常量的值不能改变</span>
+
+	a <span class="token operator">=</span> MAX<span class="token punctuation">;</span><span class="token comment">//将abc的值设置为MAX的值</span>
+	a <span class="token operator">=</span> <span class="token number">123</span><span class="token punctuation">;</span>
+
+	<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%d\n"</span><span class="token punctuation">,</span> a<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//打印变量a的值</span>
+
+	<span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="2-整型：int"><a href="#2-整型：int" class="headerlink" title="2.整型：int"></a>2.整型：int</h4><ol>
+<li><p>定义和输出</p>
+<ul>
+<li></li>
+<li><table>
+<thead>
+<tr>
+<th><strong>打印格式</strong></th>
+<th><strong>含义</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>%d</td>
+<td>输出一个有符号的10进制int类型</td>
+</tr>
+<tr>
+<td>%o(字母o)</td>
+<td>输出8进制的int类型</td>
+</tr>
+<tr>
+<td>%x</td>
+<td>输出16进制的int类型，字母以小写输出</td>
+</tr>
+<tr>
+<td>%X</td>
+<td>输出16进制的int类型，字母以大写输出</td>
+</tr>
+<tr>
+<td>%u</td>
+<td>输出一个10进制的无符号数</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+</li>
+</ol>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h></span></span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">&#123;</span>
+	<span class="token keyword">int</span> a <span class="token operator">=</span> <span class="token number">123</span><span class="token punctuation">;</span>	<span class="token comment">//定义变量a，以10进制方式赋值为123</span>
+	<span class="token keyword">int</span> b <span class="token operator">=</span> <span class="token number">0567</span><span class="token punctuation">;</span>	<span class="token comment">//定义变量b，以8进制方式赋值为0567</span>
+	<span class="token keyword">int</span> c <span class="token operator">=</span> <span class="token number">0xabc</span><span class="token punctuation">;</span>	<span class="token comment">//定义变量c，以16进制方式赋值为0xabc</span>
+
+	<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"a = %d\n"</span><span class="token punctuation">,</span> a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"8进制：b = %o\n"</span><span class="token punctuation">,</span> b<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"10进制：b = %d\n"</span><span class="token punctuation">,</span> b<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"16进制：c = %x\n"</span><span class="token punctuation">,</span> c<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"16进制：c = %X\n"</span><span class="token punctuation">,</span> c<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"10进制：c = %d\n"</span><span class="token punctuation">,</span> c<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+	<span class="token keyword">unsigned</span> <span class="token keyword">int</span> d <span class="token operator">=</span> <span class="token number">0xffffffff</span><span class="token punctuation">;</span> <span class="token comment">//定义无符号int变量d，以16进制方式赋值</span>
+	<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"有符号方式打印：d = %d\n"</span><span class="token punctuation">,</span> d<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"无符号方式打印：d = %u\n"</span><span class="token punctuation">,</span> d<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<ol start="2">
+<li>输入</li>
+</ol>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h></span></span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">&#123;</span>
+	<span class="token keyword">int</span> a<span class="token punctuation">;</span>
+	<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"请输入a的值："</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+	<span class="token comment">//不要加“\n”</span>
+	<span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">"%d"</span><span class="token punctuation">,</span> <span class="token operator">&amp;</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+	<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"a = %d\n"</span><span class="token punctuation">,</span> a<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//打印a的值</span>
+
+	<span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<ol start="3">
+<li>short、int、long、long long</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th><strong>数据类型</strong></th>
+<th><strong>占用空间</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>short(短整型)</td>
+<td>2字节</td>
+</tr>
+<tr>
+<td>int(整型)</td>
+<td>4字节</td>
+</tr>
+<tr>
+<td>long(长整形)</td>
+<td>Windows为4字节，Linux为4字节(32位)，8字节(64位)</td>
+</tr>
+<tr>
+<td>long long(长长整形)</td>
+<td>8字节</td>
+</tr>
+</tbody></table>
+<ul>
+<li>需要注意的是，整型数据在内存中占的字节数与所选择的操作系统有关。虽然 C 语言标准中没有明确规定整型数据的长度，但 long 类型整数的长度不能短于 int 类型， short 类型整数的长度不能长于 int 类型。</li>
+<li>当一个小的数据类型赋值给一个大的数据类型，不会出错，因为编译器会自动转化。但当一个大的类型赋值给一个小的数据类型，那么就可能丢失高位。</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th><strong>整型常量</strong></th>
+<th><strong>所需类型</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>10</td>
+<td>代表int类型</td>
+</tr>
+<tr>
+<td>10l, 10L</td>
+<td>代表long类型</td>
+</tr>
+<tr>
+<td>10ll, 10LL</td>
+<td>代表long long类型</td>
+</tr>
+<tr>
+<td>10u, 10U</td>
+<td>代表unsigned int类型</td>
+</tr>
+<tr>
+<td>10ul, 10UL</td>
+<td>代表unsigned long类型</td>
+</tr>
+<tr>
+<td>10ull, 10ULL</td>
+<td>代表unsigned long long类型</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th><strong>打印格式</strong></th>
+<th align="left"><strong>含义</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>%hd</td>
+<td align="left">输出short类型</td>
+</tr>
+<tr>
+<td>%d</td>
+<td align="left">输出int类型</td>
+</tr>
+<tr>
+<td>%ld</td>
+<td align="left">输出long类型</td>
+</tr>
+<tr>
+<td>%lld</td>
+<td align="left">输出long long类型</td>
+</tr>
+<tr>
+<td>%hu</td>
+<td align="left">输出unsigned short类型</td>
+</tr>
+<tr>
+<td>%u</td>
+<td align="left">输出unsigned int类型</td>
+</tr>
+<tr>
+<td>%lu</td>
+<td align="left">输出unsigned long类型</td>
+</tr>
+<tr>
+<td>%llu</td>
+<td align="left">输出unsigned long long类型</td>
+</tr>
+</tbody></table>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h></span></span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">&#123;</span>
+	<span class="token keyword">short</span> a <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+	<span class="token keyword">int</span> b <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+	<span class="token keyword">long</span> c <span class="token operator">=</span> <span class="token number">10l</span><span class="token punctuation">;</span> <span class="token comment">//或者10L</span>
+	<span class="token keyword">long</span> <span class="token keyword">long</span> d <span class="token operator">=</span> <span class="token number">10ll</span><span class="token punctuation">;</span> <span class="token comment">//或者10LL</span>
+
+	<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"sizeof(a) = %u\n"</span><span class="token punctuation">,</span> <span class="token keyword">sizeof</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"sizeof(b) = %u\n"</span><span class="token punctuation">,</span> <span class="token keyword">sizeof</span><span class="token punctuation">(</span>b<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"sizeof(c) = %u\n"</span><span class="token punctuation">,</span> <span class="token keyword">sizeof</span><span class="token punctuation">(</span>c<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"sizeof(c) = %u\n"</span><span class="token punctuation">,</span> <span class="token keyword">sizeof</span><span class="token punctuation">(</span>d<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+	<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"short a = %hd\n"</span><span class="token punctuation">,</span> a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"int b = %d\n"</span><span class="token punctuation">,</span> b<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"long c = %ld\n"</span><span class="token punctuation">,</span> c<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"long long d = %lld\n"</span><span class="token punctuation">,</span> d<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+	<span class="token keyword">unsigned</span> <span class="token keyword">short</span> a2 <span class="token operator">=</span> <span class="token number">20u</span><span class="token punctuation">;</span>
+	<span class="token keyword">unsigned</span> <span class="token keyword">int</span> b2 <span class="token operator">=</span> <span class="token number">20u</span><span class="token punctuation">;</span>
+	<span class="token keyword">unsigned</span> <span class="token keyword">long</span> c2<span class="token operator">=</span> <span class="token number">20ul</span><span class="token punctuation">;</span> 
+	<span class="token keyword">unsigned</span> <span class="token keyword">long</span> <span class="token keyword">long</span> d2 <span class="token operator">=</span> <span class="token number">20ull</span><span class="token punctuation">;</span> 
+
+	<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"unsigned short a = %hu\n"</span><span class="token punctuation">,</span> a2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"unsigned int b = %u\n"</span><span class="token punctuation">,</span> b2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"unsigned long c = %lu\n"</span><span class="token punctuation">,</span> c2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"unsigned long long d = %llu\n"</span><span class="token punctuation">,</span> d2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+	<span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>4.有符号数和无符号数的区别</p>
+<ul>
+<li>有符号数是最高位为符号位，0代表正数，1代表负数。</li>
+</ul>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h></span></span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">&#123;</span>
+	<span class="token keyword">signed</span> <span class="token keyword">int</span> a <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">1089474374</span><span class="token punctuation">;</span> <span class="token comment">//定义有符号整型变量a</span>
+	<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%X\n"</span><span class="token punctuation">,</span> a<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//结果为 BF0FF0BA</span>
+
+	<span class="token comment">//B       F      0        F       F     0        B	      A</span>
+	<span class="token comment">//1011 1111 0000 1111 1111 0000 1011 1010</span>
+
+	<span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<ul>
+<li> 符号数最高位不是符号位，而就是数的一部分，无符号数不可能是负数。</li>
+</ul>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h></span></span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">&#123;</span>
+	<span class="token keyword">unsigned</span> <span class="token keyword">int</span> a <span class="token operator">=</span> <span class="token number">3236958022</span><span class="token punctuation">;</span> <span class="token comment">//定义无符号整型变量a</span>
+	<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%X\n"</span><span class="token punctuation">,</span> a<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//结果为 C0F00F46</span>
+
+	<span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<ul>
+<li>有符号和无符号整型的取值范围</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th><strong>数据类型</strong></th>
+<th><strong>占用空间</strong></th>
+<th><strong>取值范围</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>short</td>
+<td>2字节</td>
+<td>-32768 到 32767 (-215 ~ 215-1)</td>
+</tr>
+<tr>
+<td>int</td>
+<td>4字节</td>
+<td>-2147483648 到 2147483647 (-231 ~ 231-1)</td>
+</tr>
+<tr>
+<td>long</td>
+<td>4字节</td>
+<td>-2147483648 到 2147483647 (-231 ~ 231-1)</td>
+</tr>
+<tr>
+<td>unsigned short</td>
+<td>2字节</td>
+<td>0 到 65535 (0 ~ 216-1)</td>
+</tr>
+<tr>
+<td>unsigned int</td>
+<td>4字节</td>
+<td>0 到 4294967295 (0 ~ 232-1)</td>
+</tr>
+<tr>
+<td>unsigned long</td>
+<td>4字节</td>
+<td>0 到 4294967295 (0 ~ 232-1)</td>
+</tr>
+</tbody></table>
+<h4 id="3-sizeof关键字"><a href="#3-sizeof关键字" class="headerlink" title="3.sizeof关键字"></a>3.sizeof关键字</h4><ul>
+<li>sizeof不是函数，所以不需要包含任何头文件，它的功能是计算一个数据类型的大小，单位为字节</li>
+<li>sizeof的返回值为size_t</li>
+<li>size_t类型在32位操作系统下是unsigned int，是一个无符号的整数</li>
+</ul>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h></span></span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">&#123;</span>
+	<span class="token keyword">int</span> a<span class="token punctuation">;</span>
+	<span class="token keyword">int</span> b <span class="token operator">=</span> <span class="token keyword">sizeof</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//sizeof得到指定值占用内存的大小，单位：字节</span>
+	<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"b = %d\n"</span><span class="token punctuation">,</span> b<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+	<span class="token class-name">size_t</span> c <span class="token operator">=</span> <span class="token keyword">sizeof</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"c = %u\n"</span><span class="token punctuation">,</span> c<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//用无符号数的方式输出c的值</span>
+
+	<span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="4-字符型char"><a href="#4-字符型char" class="headerlink" title="4.字符型char"></a>4.字符型char</h4><ol>
+<li>字符变量的定义和输出<ul>
+<li>字符变量实际上并不是把该字符本身放到变量的内存单元中去，而是将该字符对应的 ASCII 编码放到变量的存储单元中。char的本质就是一个1字节大小的整型。</li>
+</ul>
+</li>
+</ol>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h></span></span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">&#123;</span>
+	<span class="token keyword">char</span> ch <span class="token operator">=</span> <span class="token char">'a'</span><span class="token punctuation">;</span>
+	<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"sizeof(ch) = %u\n"</span><span class="token punctuation">,</span> <span class="token keyword">sizeof</span><span class="token punctuation">(</span>ch<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+	<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"ch[%%c] = %c\n"</span><span class="token punctuation">,</span> ch<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//打印字符</span>
+	<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"ch[%%d] = %d\n"</span><span class="token punctuation">,</span> ch<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//打印‘a’ ASCII的值</span>
+
+	<span class="token keyword">char</span> A <span class="token operator">=</span> <span class="token char">'A'</span><span class="token punctuation">;</span>
+	<span class="token keyword">char</span> a <span class="token operator">=</span> <span class="token char">'a'</span><span class="token punctuation">;</span>
+	<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"a = %d\n"</span><span class="token punctuation">,</span> a<span class="token punctuation">)</span><span class="token punctuation">;</span>		<span class="token comment">//97</span>
+	<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"A = %d\n"</span><span class="token punctuation">,</span> A<span class="token punctuation">)</span><span class="token punctuation">;</span>	<span class="token comment">//65</span>
+
+	<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"A = %c\n"</span><span class="token punctuation">,</span> <span class="token char">'a'</span> <span class="token operator">-</span> <span class="token number">32</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//小写a转大写A</span>
+	<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"a = %c\n"</span><span class="token punctuation">,</span> <span class="token char">'A'</span> <span class="token operator">+</span> <span class="token number">32</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//大写A转小写a</span>
+
+	ch <span class="token operator">=</span> <span class="token char">' '</span><span class="token punctuation">;</span>
+	<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"空字符：%d\n"</span><span class="token punctuation">,</span> ch<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//空字符ASCII的值为32</span>
+	<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"A = %c\n"</span><span class="token punctuation">,</span> <span class="token char">'a'</span> <span class="token operator">-</span> <span class="token char">' '</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//小写a转大写A</span>
+	<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"a = %c\n"</span><span class="token punctuation">,</span> <span class="token char">'A'</span> <span class="token operator">+</span> <span class="token char">' '</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//大写A转小写a</span>
+
+	<span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>2.字符变量的输入</p>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h></span></span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">&#123;</span>
+	<span class="token keyword">char</span> ch<span class="token punctuation">;</span>
+	<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"请输入ch的值："</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+	<span class="token comment">//不要加“\n”</span>
+	<span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">"%c"</span><span class="token punctuation">,</span> <span class="token operator">&amp;</span>ch<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"ch = %c\n"</span><span class="token punctuation">,</span> ch<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//打印ch的字符</span>
+
+	<span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<ol start="3">
+<li>ASCII对照表</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th><strong>十进制代码</strong></th>
+<th><strong>十六进制代码</strong></th>
+<th><strong>MCS 字符或缩写</strong></th>
+<th><strong>DEC 多国字符名</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>ASCII 控制字符</strong> <strong>1</strong></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>0</td>
+<td>0</td>
+<td>NUL</td>
+<td>空字符</td>
+</tr>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>SOH</td>
+<td>标题起始 (Ctrl/A)</td>
+</tr>
+<tr>
+<td>2</td>
+<td>2</td>
+<td>STX</td>
+<td>文本起始 (Ctrl/B)</td>
+</tr>
+<tr>
+<td>3</td>
+<td>3</td>
+<td>ETX</td>
+<td>文本结束 (Ctrl/C)</td>
+</tr>
+<tr>
+<td>4</td>
+<td>4</td>
+<td>EOT</td>
+<td>传输结束 (Ctrl/D)</td>
+</tr>
+<tr>
+<td>5</td>
+<td>5</td>
+<td>ENQ</td>
+<td>询问 (Ctrl/E)</td>
+</tr>
+<tr>
+<td>6</td>
+<td>6</td>
+<td>ACK</td>
+<td>认可 (Ctrl/F)</td>
+</tr>
+<tr>
+<td>7</td>
+<td>7</td>
+<td>BEL</td>
+<td>铃 (Ctrl/G)</td>
+</tr>
+<tr>
+<td>8</td>
+<td>8</td>
+<td>BS</td>
+<td>退格 (Ctrl/H)</td>
+</tr>
+<tr>
+<td>9</td>
+<td>9</td>
+<td>HT</td>
+<td>水平制表栏 (Ctrl/I)</td>
+</tr>
+<tr>
+<td>10</td>
+<td>0A</td>
+<td>LF</td>
+<td>换行 (Ctrl/J)</td>
+</tr>
+<tr>
+<td>11</td>
+<td>0B</td>
+<td>VT</td>
+<td>垂直制表栏 (Ctrl/K)</td>
+</tr>
+<tr>
+<td>12</td>
+<td>0C</td>
+<td>FF</td>
+<td>换页 (Ctrl/L)</td>
+</tr>
+<tr>
+<td>13</td>
+<td>0D</td>
+<td>CR</td>
+<td>回车 (Ctrl/M)</td>
+</tr>
+<tr>
+<td>14</td>
+<td>0E</td>
+<td>SO</td>
+<td>移出 (Ctrl/N)</td>
+</tr>
+<tr>
+<td>15</td>
+<td>0F</td>
+<td>SI</td>
+<td>移入 (Ctrl/O)</td>
+</tr>
+<tr>
+<td>16</td>
+<td>10</td>
+<td>DLE</td>
+<td>数据链接丢失 (Ctrl/P)</td>
+</tr>
+<tr>
+<td>17</td>
+<td>11</td>
+<td>DC1</td>
+<td>设备控制 1 (Ctrl/Q)</td>
+</tr>
+<tr>
+<td>18</td>
+<td>12</td>
+<td>DC2</td>
+<td>设备控制 2 (Ctrl/R)</td>
+</tr>
+<tr>
+<td>19</td>
+<td>13</td>
+<td>DC3</td>
+<td>设备控制 3 (Ctrl/S)</td>
+</tr>
+<tr>
+<td>20</td>
+<td>14</td>
+<td>DC4</td>
+<td>设备控制 4 (Ctrl/T)</td>
+</tr>
+<tr>
+<td>21</td>
+<td>15</td>
+<td>NAK</td>
+<td>否定接受 (Ctrl/U)</td>
+</tr>
+<tr>
+<td>22</td>
+<td>16</td>
+<td>SYN</td>
+<td>同步闲置符 (Ctrl/V)</td>
+</tr>
+<tr>
+<td>23</td>
+<td>17</td>
+<td>ETB</td>
+<td>传输块结束 (Ctrl/W)</td>
+</tr>
+<tr>
+<td>24</td>
+<td>18</td>
+<td>CAN</td>
+<td>取消 (Ctrl/X)</td>
+</tr>
+<tr>
+<td>25</td>
+<td>19</td>
+<td>EM</td>
+<td>媒体结束 (Ctrl/Y)</td>
+</tr>
+<tr>
+<td>26</td>
+<td>1A</td>
+<td>SUB</td>
+<td>替换 (Ctrl/Z)</td>
+</tr>
+<tr>
+<td>27</td>
+<td>1B</td>
+<td>ESC</td>
+<td>换码符</td>
+</tr>
+<tr>
+<td>28</td>
+<td>1C</td>
+<td>FS</td>
+<td>文件分隔符</td>
+</tr>
+<tr>
+<td>29</td>
+<td>1D</td>
+<td>GS</td>
+<td>组分隔符</td>
+</tr>
+<tr>
+<td>30</td>
+<td>1E</td>
+<td>RS</td>
+<td>记录分隔符</td>
+</tr>
+<tr>
+<td>31</td>
+<td>1F</td>
+<td>US</td>
+<td>单位分隔符</td>
+</tr>
+<tr>
+<td><strong>ASCII 特殊和数字字符</strong></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>32</td>
+<td>20</td>
+<td>SP</td>
+<td>空格</td>
+</tr>
+<tr>
+<td>33</td>
+<td>21</td>
+<td>!</td>
+<td>感叹号</td>
+</tr>
+<tr>
+<td>34</td>
+<td>22</td>
+<td>“</td>
+<td>引号 (双引号)</td>
+</tr>
+<tr>
+<td>35</td>
+<td>23</td>
+<td>#</td>
+<td>数字符号</td>
+</tr>
+<tr>
+<td>36</td>
+<td>24</td>
+<td>$</td>
+<td>美元符</td>
+</tr>
+<tr>
+<td>37</td>
+<td>25</td>
+<td>%</td>
+<td>百分号</td>
+</tr>
+<tr>
+<td>38</td>
+<td>26</td>
+<td>&amp;</td>
+<td>和号</td>
+</tr>
+<tr>
+<td>39</td>
+<td>27</td>
+<td>‘</td>
+<td>省略号 (单引号)</td>
+</tr>
+<tr>
+<td>40</td>
+<td>28</td>
+<td>(</td>
+<td>左圆括号</td>
+</tr>
+<tr>
+<td>41</td>
+<td>29</td>
+<td>)</td>
+<td>右圆括号</td>
+</tr>
+<tr>
+<td>42</td>
+<td>2A</td>
+<td>*</td>
+<td>星号</td>
+</tr>
+<tr>
+<td>43</td>
+<td>2B</td>
+<td>+</td>
+<td>加号</td>
+</tr>
+<tr>
+<td>44</td>
+<td>2C</td>
+<td>,</td>
+<td>逗号</td>
+</tr>
+<tr>
+<td>45</td>
+<td>2D</td>
+<td>–</td>
+<td>连字号或减号</td>
+</tr>
+<tr>
+<td>46</td>
+<td>2E</td>
+<td>.</td>
+<td>句点或小数点</td>
+</tr>
+<tr>
+<td>47</td>
+<td>2F</td>
+<td>/</td>
+<td>斜杠</td>
+</tr>
+<tr>
+<td>48</td>
+<td>30</td>
+<td>0</td>
+<td>零</td>
+</tr>
+<tr>
+<td>49</td>
+<td>31</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>50</td>
+<td>32</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>51</td>
+<td>33</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr>
+<td>52</td>
+<td>34</td>
+<td>4</td>
+<td>4</td>
+</tr>
+<tr>
+<td>53</td>
+<td>35</td>
+<td>5</td>
+<td>5</td>
+</tr>
+<tr>
+<td>54</td>
+<td>36</td>
+<td>6</td>
+<td>6</td>
+</tr>
+<tr>
+<td>55</td>
+<td>37</td>
+<td>7</td>
+<td>7</td>
+</tr>
+<tr>
+<td>56</td>
+<td>38</td>
+<td>8</td>
+<td>8</td>
+</tr>
+<tr>
+<td>57</td>
+<td>39</td>
+<td>9</td>
+<td>9</td>
+</tr>
+<tr>
+<td>58</td>
+<td>3A</td>
+<td>:</td>
+<td>冒号</td>
+</tr>
+<tr>
+<td>59</td>
+<td>3B</td>
+<td>;</td>
+<td>分号</td>
+</tr>
+<tr>
+<td>60</td>
+<td>3C</td>
+<td>&lt;</td>
+<td>小于</td>
+</tr>
+<tr>
+<td>61</td>
+<td>3D</td>
+<td>=</td>
+<td>等于</td>
+</tr>
+<tr>
+<td>62</td>
+<td>3E</td>
+<td>&gt;</td>
+<td>大于</td>
+</tr>
+<tr>
+<td>63</td>
+<td>3F</td>
+<td>?</td>
+<td>问号</td>
+</tr>
+<tr>
+<td><strong>ASCII 字母字符</strong></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>64</td>
+<td>40</td>
+<td>@</td>
+<td>商业 at 符号</td>
+</tr>
+<tr>
+<td>65</td>
+<td>41</td>
+<td>A</td>
+<td>大写字母 A</td>
+</tr>
+<tr>
+<td>66</td>
+<td>42</td>
+<td>B</td>
+<td>大写字母 B</td>
+</tr>
+<tr>
+<td>67</td>
+<td>43</td>
+<td>C</td>
+<td>大写字母 C</td>
+</tr>
+<tr>
+<td>68</td>
+<td>44</td>
+<td>D</td>
+<td>大写字母 D</td>
+</tr>
+<tr>
+<td>69</td>
+<td>45</td>
+<td>E</td>
+<td>大写字母 E</td>
+</tr>
+<tr>
+<td>70</td>
+<td>46</td>
+<td>F</td>
+<td>大写字母 F</td>
+</tr>
+<tr>
+<td>71</td>
+<td>47</td>
+<td>G</td>
+<td>大写字母 G</td>
+</tr>
+<tr>
+<td>72</td>
+<td>48</td>
+<td>H</td>
+<td>大写字母 H</td>
+</tr>
+<tr>
+<td>73</td>
+<td>49</td>
+<td>I</td>
+<td>大写字母 I</td>
+</tr>
+<tr>
+<td>74</td>
+<td>4A</td>
+<td>J</td>
+<td>大写字母 J</td>
+</tr>
+<tr>
+<td>75</td>
+<td>4B</td>
+<td>K</td>
+<td>大写字母 K</td>
+</tr>
+<tr>
+<td>76</td>
+<td>4C</td>
+<td>L</td>
+<td>大写字母 L</td>
+</tr>
+<tr>
+<td>77</td>
+<td>4D</td>
+<td>M</td>
+<td>大写字母 M</td>
+</tr>
+<tr>
+<td>78</td>
+<td>4E</td>
+<td>N</td>
+<td>大写字母 N</td>
+</tr>
+<tr>
+<td>79</td>
+<td>4F</td>
+<td>O</td>
+<td>大写字母 O</td>
+</tr>
+<tr>
+<td>80</td>
+<td>50</td>
+<td>P</td>
+<td>大写字母 P</td>
+</tr>
+<tr>
+<td>81</td>
+<td>51</td>
+<td>Q</td>
+<td>大写字母 Q</td>
+</tr>
+<tr>
+<td>82</td>
+<td>52</td>
+<td>R</td>
+<td>大写字母 R</td>
+</tr>
+<tr>
+<td>83</td>
+<td>53</td>
+<td>S</td>
+<td>大写字母 S</td>
+</tr>
+<tr>
+<td>84</td>
+<td>54</td>
+<td>T</td>
+<td>大写字母 T</td>
+</tr>
+<tr>
+<td>85</td>
+<td>55</td>
+<td>U</td>
+<td>大写字母 U</td>
+</tr>
+<tr>
+<td>86</td>
+<td>56</td>
+<td>V</td>
+<td>大写字母 V</td>
+</tr>
+<tr>
+<td>87</td>
+<td>57</td>
+<td>W</td>
+<td>大写字母 W</td>
+</tr>
+<tr>
+<td>88</td>
+<td>58</td>
+<td>X</td>
+<td>大写字母 X</td>
+</tr>
+<tr>
+<td>89</td>
+<td>59</td>
+<td>Y</td>
+<td>大写字母 Y</td>
+</tr>
+<tr>
+<td>90</td>
+<td>5A</td>
+<td>Z</td>
+<td>大写字母 Z</td>
+</tr>
+<tr>
+<td>91</td>
+<td>5B</td>
+<td>[</td>
+<td>左中括号</td>
+</tr>
+<tr>
+<td>92</td>
+<td>5C</td>
+<td>\</td>
+<td>反斜杠</td>
+</tr>
+<tr>
+<td>93</td>
+<td>5D</td>
+<td>]</td>
+<td>右中括号</td>
+</tr>
+<tr>
+<td>94</td>
+<td>5E</td>
+<td>^</td>
+<td>音调符号</td>
+</tr>
+<tr>
+<td>95</td>
+<td>5F</td>
+<td>_</td>
+<td>下划线</td>
+</tr>
+<tr>
+<td>96</td>
+<td>60</td>
+<td>`</td>
+<td>重音符</td>
+</tr>
+<tr>
+<td>97</td>
+<td>61</td>
+<td>a</td>
+<td>小写字母 a</td>
+</tr>
+<tr>
+<td>98</td>
+<td>62</td>
+<td>b</td>
+<td>小写字母 b</td>
+</tr>
+<tr>
+<td>99</td>
+<td>63</td>
+<td>c</td>
+<td>小写字母 c</td>
+</tr>
+<tr>
+<td>100</td>
+<td>64</td>
+<td>d</td>
+<td>小写字母 d</td>
+</tr>
+<tr>
+<td>101</td>
+<td>65</td>
+<td>e</td>
+<td>小写字母 e</td>
+</tr>
+<tr>
+<td>102</td>
+<td>66</td>
+<td>f</td>
+<td>小写字母 f</td>
+</tr>
+<tr>
+<td>103</td>
+<td>67</td>
+<td>g</td>
+<td>小写字母 g</td>
+</tr>
+<tr>
+<td>104</td>
+<td>68</td>
+<td>h</td>
+<td>小写字母 h</td>
+</tr>
+<tr>
+<td>105</td>
+<td>69</td>
+<td>i</td>
+<td>小写字母 i</td>
+</tr>
+<tr>
+<td>106</td>
+<td>6A</td>
+<td>j</td>
+<td>小写字母 j</td>
+</tr>
+<tr>
+<td>107</td>
+<td>6B</td>
+<td>k</td>
+<td>小写字母 k</td>
+</tr>
+<tr>
+<td>108</td>
+<td>6C</td>
+<td>l</td>
+<td>小写字母 l</td>
+</tr>
+<tr>
+<td>109</td>
+<td>6D</td>
+<td>m</td>
+<td>小写字母 m</td>
+</tr>
+<tr>
+<td>110</td>
+<td>6E</td>
+<td>n</td>
+<td>小写字母 n</td>
+</tr>
+<tr>
+<td>111</td>
+<td>6F</td>
+<td>o</td>
+<td>小写字母 o</td>
+</tr>
+<tr>
+<td>112</td>
+<td>70</td>
+<td>p</td>
+<td>小写字母 p</td>
+</tr>
+<tr>
+<td>113</td>
+<td>71</td>
+<td>q</td>
+<td>小写字母 q</td>
+</tr>
+<tr>
+<td>114</td>
+<td>72</td>
+<td>r</td>
+<td>小写字母 r</td>
+</tr>
+<tr>
+<td>115</td>
+<td>73</td>
+<td>s</td>
+<td>小写字母 s</td>
+</tr>
+<tr>
+<td>116</td>
+<td>74</td>
+<td>t</td>
+<td>小写字母 t</td>
+</tr>
+<tr>
+<td>117</td>
+<td>75</td>
+<td>u</td>
+<td>小写字母 u</td>
+</tr>
+<tr>
+<td>118</td>
+<td>76</td>
+<td>v</td>
+<td>小写字母 v</td>
+</tr>
+<tr>
+<td>119</td>
+<td>77</td>
+<td>w</td>
+<td>小写字母 w</td>
+</tr>
+<tr>
+<td>120</td>
+<td>78</td>
+<td>x</td>
+<td>小写字母 x</td>
+</tr>
+<tr>
+<td>121</td>
+<td>79</td>
+<td>y</td>
+<td>小写字母 y</td>
+</tr>
+<tr>
+<td>122</td>
+<td>7A</td>
+<td>z</td>
+<td>小写字母 z</td>
+</tr>
+<tr>
+<td>123</td>
+<td>7B</td>
+<td>{</td>
+<td>左大括号</td>
+</tr>
+<tr>
+<td>124</td>
+<td>7C</td>
+<td>|</td>
+<td>垂直线</td>
+</tr>
+<tr>
+<td>125</td>
+<td>7D</td>
+<td>}</td>
+<td>右大括号 (ALTMODE)</td>
+</tr>
+<tr>
+<td>126</td>
+<td>7E</td>
+<td>~</td>
+<td>代字号 (ALTMODE)</td>
+</tr>
+<tr>
+<td>127</td>
+<td>7F</td>
+<td>DEL</td>
+<td>擦掉 (DELETE)</td>
+</tr>
+<tr>
+<td><strong>控制字符</strong></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>128</td>
+<td>80</td>
+<td></td>
+<td>[保留]</td>
+</tr>
+<tr>
+<td>129</td>
+<td>81</td>
+<td></td>
+<td>[保留]</td>
+</tr>
+<tr>
+<td>130</td>
+<td>82</td>
+<td></td>
+<td>[保留]</td>
+</tr>
+<tr>
+<td>131</td>
+<td>83</td>
+<td></td>
+<td>[保留]</td>
+</tr>
+<tr>
+<td>132</td>
+<td>84</td>
+<td>IND</td>
+<td>索引</td>
+</tr>
+<tr>
+<td>133</td>
+<td>85</td>
+<td>NEL</td>
+<td>下一行</td>
+</tr>
+<tr>
+<td>134</td>
+<td>86</td>
+<td>SSA</td>
+<td>被选区域起始</td>
+</tr>
+<tr>
+<td>135</td>
+<td>87</td>
+<td>ESA</td>
+<td>被选区域结束</td>
+</tr>
+<tr>
+<td>136</td>
+<td>88</td>
+<td>HTS</td>
+<td>水平制表符集</td>
+</tr>
+<tr>
+<td>137</td>
+<td>89</td>
+<td>HTJ</td>
+<td>对齐的水平制表符集</td>
+</tr>
+<tr>
+<td>138</td>
+<td>8A</td>
+<td>VTS</td>
+<td>垂直制表符集</td>
+</tr>
+<tr>
+<td>139</td>
+<td>8B</td>
+<td>PLD</td>
+<td>部分行向下</td>
+</tr>
+<tr>
+<td>140</td>
+<td>8C</td>
+<td>PLU</td>
+<td>部分行向上</td>
+</tr>
+<tr>
+<td>141</td>
+<td>8D</td>
+<td>RI</td>
+<td>反向索引</td>
+</tr>
+<tr>
+<td>142</td>
+<td>8E</td>
+<td>SS2</td>
+<td>单移 2</td>
+</tr>
+<tr>
+<td>143</td>
+<td>8F</td>
+<td>SS3</td>
+<td>单移 3</td>
+</tr>
+<tr>
+<td>144</td>
+<td>90</td>
+<td>DCS</td>
+<td>设备控制字符串</td>
+</tr>
+<tr>
+<td>145</td>
+<td>91</td>
+<td>PU1</td>
+<td>专用 1</td>
+</tr>
+<tr>
+<td>146</td>
+<td>92</td>
+<td>PU2</td>
+<td>专用 2</td>
+</tr>
+<tr>
+<td>147</td>
+<td>93</td>
+<td>STS</td>
+<td>设置传输状态</td>
+</tr>
+<tr>
+<td>148</td>
+<td>94</td>
+<td>CCH</td>
+<td>取消字符</td>
+</tr>
+<tr>
+<td>149</td>
+<td>95</td>
+<td>MW</td>
+<td>消息等待</td>
+</tr>
+<tr>
+<td>150</td>
+<td>96</td>
+<td>SPA</td>
+<td>保护区起始</td>
+</tr>
+<tr>
+<td>151</td>
+<td>97</td>
+<td>EPA</td>
+<td>保护区结束</td>
+</tr>
+<tr>
+<td>152</td>
+<td>98</td>
+<td></td>
+<td>[保留]</td>
+</tr>
+<tr>
+<td>153</td>
+<td>99</td>
+<td></td>
+<td>[保留]</td>
+</tr>
+<tr>
+<td>154</td>
+<td>9A</td>
+<td></td>
+<td>[保留]</td>
+</tr>
+<tr>
+<td>155</td>
+<td>9B</td>
+<td>CSI</td>
+<td>控制序列引导符</td>
+</tr>
+<tr>
+<td>156</td>
+<td>9C</td>
+<td>ST</td>
+<td>字符串终止符</td>
+</tr>
+<tr>
+<td>157</td>
+<td>9D</td>
+<td>OSC</td>
+<td>操作系统命令</td>
+</tr>
+<tr>
+<td>158</td>
+<td>9E</td>
+<td>PM</td>
+<td>秘密消息</td>
+</tr>
+<tr>
+<td>159</td>
+<td>9F</td>
+<td>APC</td>
+<td>应用程序</td>
+</tr>
+<tr>
+<td><strong>其他字符</strong></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>160</td>
+<td>A0</td>
+<td></td>
+<td>[保留] 2</td>
+</tr>
+<tr>
+<td>161</td>
+<td>A1</td>
+<td>¡</td>
+<td>反向感叹号</td>
+</tr>
+<tr>
+<td>162</td>
+<td>A2</td>
+<td>¢</td>
+<td>分币符</td>
+</tr>
+<tr>
+<td>163</td>
+<td>A3</td>
+<td>£</td>
+<td>英磅符</td>
+</tr>
+<tr>
+<td>164</td>
+<td>A4</td>
+<td></td>
+<td>[保留] 2</td>
+</tr>
+<tr>
+<td>165</td>
+<td>A5</td>
+<td>¥</td>
+<td>人民币符</td>
+</tr>
+<tr>
+<td>166</td>
+<td>A6</td>
+<td></td>
+<td>[保留] 2</td>
+</tr>
+<tr>
+<td>167</td>
+<td>A7</td>
+<td>§</td>
+<td>章节符</td>
+</tr>
+<tr>
+<td>168</td>
+<td>A8</td>
+<td>¤</td>
+<td>通用货币符号 2</td>
+</tr>
+<tr>
+<td>169</td>
+<td>A9</td>
+<td>©</td>
+<td>版权符号</td>
+</tr>
+<tr>
+<td>170</td>
+<td>AA</td>
+<td>ª</td>
+<td>阴性顺序指示符</td>
+</tr>
+<tr>
+<td>171</td>
+<td>AB</td>
+<td>«</td>
+<td>左角引号</td>
+</tr>
+<tr>
+<td>172</td>
+<td>AC</td>
+<td></td>
+<td>[保留] 2</td>
+</tr>
+<tr>
+<td>173</td>
+<td>AD</td>
+<td></td>
+<td>[保留] 2</td>
+</tr>
+<tr>
+<td>174</td>
+<td>AE</td>
+<td></td>
+<td>[保留] 2</td>
+</tr>
+<tr>
+<td>175</td>
+<td>AF</td>
+<td></td>
+<td>[保留] 2</td>
+</tr>
+<tr>
+<td>176</td>
+<td>B0</td>
+<td>°</td>
+<td>温度符</td>
+</tr>
+<tr>
+<td>177</td>
+<td>B1</td>
+<td>±</td>
+<td>加/减号</td>
+</tr>
+<tr>
+<td>178</td>
+<td>B2</td>
+<td>²</td>
+<td>上标 2</td>
+</tr>
+<tr>
+<td>179</td>
+<td>B3</td>
+<td>³</td>
+<td>上标 3</td>
+</tr>
+<tr>
+<td>180</td>
+<td>B4</td>
+<td></td>
+<td>[保留] 2</td>
+</tr>
+<tr>
+<td>181</td>
+<td>B5</td>
+<td>µ</td>
+<td>微符</td>
+</tr>
+<tr>
+<td>182</td>
+<td>B6</td>
+<td>¶</td>
+<td>段落符，pilcrow</td>
+</tr>
+<tr>
+<td>183</td>
+<td>B7</td>
+<td>·</td>
+<td>中点</td>
+</tr>
+<tr>
+<td>184</td>
+<td>B8</td>
+<td></td>
+<td>[保留] 2</td>
+</tr>
+<tr>
+<td>185</td>
+<td>B9</td>
+<td>¹</td>
+<td>上标 1</td>
+</tr>
+<tr>
+<td>186</td>
+<td>BA</td>
+<td>º</td>
+<td>阳性顺序指示符</td>
+</tr>
+<tr>
+<td>187</td>
+<td>BB</td>
+<td>»</td>
+<td>右角引号</td>
+</tr>
+<tr>
+<td>188</td>
+<td>BC</td>
+<td>¼</td>
+<td>分数四分之一</td>
+</tr>
+<tr>
+<td>189</td>
+<td>BD</td>
+<td>½</td>
+<td>分数二分之一</td>
+</tr>
+<tr>
+<td>190</td>
+<td>BE</td>
+<td></td>
+<td>[保留] 2</td>
+</tr>
+<tr>
+<td>191</td>
+<td>BF</td>
+<td>¿</td>
+<td>反向问号</td>
+</tr>
+<tr>
+<td>192</td>
+<td>C0</td>
+<td>À</td>
+<td>带重音符的大写字母 A</td>
+</tr>
+<tr>
+<td>193</td>
+<td>C1</td>
+<td>Á</td>
+<td>带尖锐重音的大写字母 A</td>
+</tr>
+<tr>
+<td>194</td>
+<td>C2</td>
+<td>Â</td>
+<td>带音调符号的大写字母 A</td>
+</tr>
+<tr>
+<td>195</td>
+<td>C3</td>
+<td>Ã</td>
+<td>带代字号的大写字母 A</td>
+</tr>
+<tr>
+<td>196</td>
+<td>C4</td>
+<td>Ä</td>
+<td>带元音变音 (分音符号) 的大写字母 A</td>
+</tr>
+<tr>
+<td>197</td>
+<td>C5</td>
+<td>Å</td>
+<td>带铃声的大写字母 A</td>
+</tr>
+<tr>
+<td>198</td>
+<td>C6</td>
+<td>Æ</td>
+<td>大写字母 AE 双重元音</td>
+</tr>
+<tr>
+<td>199</td>
+<td>C7</td>
+<td>Ç</td>
+<td>带变音符号的大写字母 C</td>
+</tr>
+<tr>
+<td>200</td>
+<td>C8</td>
+<td>È</td>
+<td>带重音符的大写字母 E</td>
+</tr>
+<tr>
+<td>201</td>
+<td>C9</td>
+<td>É</td>
+<td>带尖锐重音的大写字母 E</td>
+</tr>
+<tr>
+<td>202</td>
+<td>CA</td>
+<td>Ê</td>
+<td>带音调符号的大写字母 E</td>
+</tr>
+<tr>
+<td>203</td>
+<td>CB</td>
+<td>Ë</td>
+<td>带元音变音 (分音符号) 的大写字母 E</td>
+</tr>
+<tr>
+<td>204</td>
+<td>CC</td>
+<td>Ì</td>
+<td>带重音符的大写字母 I</td>
+</tr>
+<tr>
+<td>205</td>
+<td>CD</td>
+<td>Í</td>
+<td>带尖锐重音的大写字母 I</td>
+</tr>
+<tr>
+<td>206</td>
+<td>CE</td>
+<td>Î</td>
+<td>带音调符号的大写字母 I</td>
+</tr>
+<tr>
+<td>207</td>
+<td>CF</td>
+<td>Ï</td>
+<td>带元音变音 (分音符号) 的大写字母 I</td>
+</tr>
+<tr>
+<td>208</td>
+<td>D0</td>
+<td></td>
+<td>[保留] 2</td>
+</tr>
+<tr>
+<td>209</td>
+<td>D1</td>
+<td>Ñ</td>
+<td>带代字号的大写字母 N</td>
+</tr>
+<tr>
+<td>210</td>
+<td>D2</td>
+<td>Ò</td>
+<td>带重音符的大写字母 O</td>
+</tr>
+<tr>
+<td>211</td>
+<td>D3</td>
+<td>Ó</td>
+<td>带尖锐重音的大写字母 O</td>
+</tr>
+<tr>
+<td>212</td>
+<td>D4</td>
+<td>Ô</td>
+<td>带音调符号的大写字母 O</td>
+</tr>
+<tr>
+<td>213</td>
+<td>D5</td>
+<td>Õ</td>
+<td>带代字号的大写字母 O</td>
+</tr>
+<tr>
+<td>214</td>
+<td>D6</td>
+<td>Ö</td>
+<td>带元音变音 (分音符号) 的大写字母 O</td>
+</tr>
+<tr>
+<td>215</td>
+<td>D7</td>
+<td>OE</td>
+<td>大写字母 OE 连字 2</td>
+</tr>
+<tr>
+<td>216</td>
+<td>D8</td>
+<td>Ø</td>
+<td>带斜杠的大写字母 O</td>
+</tr>
+<tr>
+<td>217</td>
+<td>D9</td>
+<td>Ù</td>
+<td>带重音符的大写字母 U</td>
+</tr>
+<tr>
+<td>218</td>
+<td>DA</td>
+<td>Ú</td>
+<td>带尖锐重音的大写字母 U</td>
+</tr>
+<tr>
+<td>219</td>
+<td>DB</td>
+<td>Û</td>
+<td>带音调符号的大写字母 U</td>
+</tr>
+<tr>
+<td>220</td>
+<td>DC</td>
+<td>Ü</td>
+<td>带元音变音 (分音符号) 的大写字母 U</td>
+</tr>
+<tr>
+<td>221</td>
+<td>DD</td>
+<td>Y</td>
+<td>带元音变音 (分音符号) 的大写字母 Y</td>
+</tr>
+<tr>
+<td>222</td>
+<td>DE</td>
+<td></td>
+<td>[保留] 2</td>
+</tr>
+<tr>
+<td>223</td>
+<td>DF</td>
+<td>ß</td>
+<td>德语高调小写字母 s</td>
+</tr>
+<tr>
+<td>224</td>
+<td>E0</td>
+<td>à</td>
+<td>带重音符的小写字母 a</td>
+</tr>
+<tr>
+<td>225</td>
+<td>E1</td>
+<td>á</td>
+<td>带尖锐重音的小写字母 a</td>
+</tr>
+<tr>
+<td>226</td>
+<td>E2</td>
+<td>â</td>
+<td>带音调符号的小写字母 a</td>
+</tr>
+<tr>
+<td>227</td>
+<td>E3</td>
+<td>ã</td>
+<td>带代字号的小写字母 a</td>
+</tr>
+<tr>
+<td>228</td>
+<td>E4</td>
+<td>ä</td>
+<td>带元音变音 (分音符号) 的小写字母 a</td>
+</tr>
+<tr>
+<td>229</td>
+<td>E5</td>
+<td>å</td>
+<td>带铃声的小写字母 a</td>
+</tr>
+<tr>
+<td>230</td>
+<td>E6</td>
+<td>æ</td>
+<td>小写字母 ae 双重元音</td>
+</tr>
+<tr>
+<td>231</td>
+<td>E7</td>
+<td>ç</td>
+<td>带变音符号的小写字母 c</td>
+</tr>
+<tr>
+<td>232</td>
+<td>E8</td>
+<td>è</td>
+<td>带重音符的小写字母 e</td>
+</tr>
+<tr>
+<td>233</td>
+<td>E9</td>
+<td>é</td>
+<td>带尖锐重音的小写字母 e</td>
+</tr>
+<tr>
+<td>234</td>
+<td>EA</td>
+<td>ê</td>
+<td>带音调符号的小写字母 e</td>
+</tr>
+<tr>
+<td>235</td>
+<td>EB</td>
+<td>ë</td>
+<td>带元音变音 (分音符号) 的小写字母 e</td>
+</tr>
+<tr>
+<td>236</td>
+<td>EC</td>
+<td>ì</td>
+<td>带重音符的小写字母 i</td>
+</tr>
+<tr>
+<td>237</td>
+<td>ED</td>
+<td>í</td>
+<td>带尖锐重音的小写字母 i</td>
+</tr>
+<tr>
+<td>238</td>
+<td>EE</td>
+<td>î</td>
+<td>带音调符号的小写字母 i</td>
+</tr>
+<tr>
+<td>239</td>
+<td>EF</td>
+<td>ï</td>
+<td>带元音变音 (分音符号) 的小写字母 i</td>
+</tr>
+<tr>
+<td>240</td>
+<td>F0</td>
+<td></td>
+<td>[保留] 2</td>
+</tr>
+<tr>
+<td>241</td>
+<td>F1</td>
+<td>ñ</td>
+<td>带代字号的小写字母 n</td>
+</tr>
+<tr>
+<td>242</td>
+<td>F2</td>
+<td>ò</td>
+<td>带重音符的小写字母 o</td>
+</tr>
+<tr>
+<td>243</td>
+<td>F3</td>
+<td>ó</td>
+<td>带尖锐重音的小写字母 o</td>
+</tr>
+<tr>
+<td>244</td>
+<td>F4</td>
+<td>ô</td>
+<td>带音调符号的小写字母 o</td>
+</tr>
+<tr>
+<td>245</td>
+<td>F5</td>
+<td>õ</td>
+<td>带代字号的小写字母 o</td>
+</tr>
+<tr>
+<td>246</td>
+<td>F6</td>
+<td>ö</td>
+<td>带元音变音 (分音符号) 的小写字母 o</td>
+</tr>
+<tr>
+<td>247</td>
+<td>F7</td>
+<td>oe</td>
+<td>小写字母 oe 连字 2</td>
+</tr>
+<tr>
+<td>248</td>
+<td>F8</td>
+<td>ø</td>
+<td>带斜杠的小写字母 o</td>
+</tr>
+<tr>
+<td>249</td>
+<td>F9</td>
+<td>ù</td>
+<td>带重音符的小写字母 u</td>
+</tr>
+<tr>
+<td>250</td>
+<td>FA</td>
+<td>ú</td>
+<td>带尖锐重音的小写字母 u</td>
+</tr>
+<tr>
+<td>251</td>
+<td>FB</td>
+<td>û</td>
+<td>带音调符号的小写字母 u</td>
+</tr>
+<tr>
+<td>252</td>
+<td>FC</td>
+<td>ü</td>
+<td>带元音变音 (分音符号) 的小写字母 u</td>
+</tr>
+<tr>
+<td>253</td>
+<td>FD</td>
+<td>ÿ</td>
+<td>带元音变音 (分音符号) 的小写字母 y 2</td>
+</tr>
+<tr>
+<td>254</td>
+<td>FE</td>
+<td></td>
+<td>[保留] 2</td>
+</tr>
+<tr>
+<td>255</td>
+<td>FF</td>
+<td></td>
+<td>[保留] 2</td>
+</tr>
+</tbody></table>
+<ul>
+<li>ASCII 非打印控制字符： ASCII 表上的数字 0-31 分配给了控制字符，用于控制像打印机等一些外围设备。</li>
+<li>ASCII 打印字符：数字 32-126 分配给了能在键盘上找到的字符，当查看或打印文档时就会出现。数字 127 代表 Del 命令。</li>
+</ul>
+<p>4.转义字符</p>
+<table>
+<thead>
+<tr>
+<th><strong>转义字符</strong></th>
+<th><strong>含义</strong></th>
+<th><strong>ASCII码值（十进制）</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>\a</td>
+<td>警报</td>
+<td>007</td>
+</tr>
+<tr>
+<td>\b</td>
+<td>退格(BS) ，将当前位置移到前一列</td>
+<td>008</td>
+</tr>
+<tr>
+<td>\f</td>
+<td>换页(FF)，将当前位置移到下页开头</td>
+<td>012</td>
+</tr>
+<tr>
+<td>\n</td>
+<td>换行(LF) ，将当前位置移到下一行开头</td>
+<td>010</td>
+</tr>
+<tr>
+<td>\r</td>
+<td>回车(CR) ，将当前位置移到本行开头</td>
+<td>013</td>
+</tr>
+<tr>
+<td>\t</td>
+<td>水平制表(HT) （跳到下一个TAB位置）</td>
+<td>009</td>
+</tr>
+<tr>
+<td>\v</td>
+<td>垂直制表(VT)</td>
+<td>011</td>
+</tr>
+<tr>
+<td>\</td>
+<td>代表一个反斜线字符”&quot;</td>
+<td>092</td>
+</tr>
+<tr>
+<td>&#39;</td>
+<td>代表一个单引号（撇号）字符</td>
+<td>039</td>
+</tr>
+<tr>
+<td>&quot;</td>
+<td>代表一个双引号字符</td>
+<td>034</td>
+</tr>
+<tr>
+<td>?</td>
+<td>代表一个问号</td>
+<td>063</td>
+</tr>
+<tr>
+<td>\0</td>
+<td>数字0</td>
+<td>000</td>
+</tr>
+<tr>
+<td>\ddd</td>
+<td>8进制转义字符，d范围0~7</td>
+<td>3位8进制</td>
+</tr>
+<tr>
+<td>\xhh</td>
+<td>16进制转义字符，h范围0<del>9，a</del>f，A~F</td>
+<td>3位16进制</td>
+</tr>
+</tbody></table>
+<h4 id="5-浮点型（float-double）"><a href="#5-浮点型（float-double）" class="headerlink" title="5.浮点型（float,double）"></a>5.浮点型（float,double）</h4><pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h></span></span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">&#123;</span>
+	<span class="token comment">//传统方式赋值</span>
+	<span class="token keyword">float</span> a <span class="token operator">=</span> <span class="token number">3.14f</span><span class="token punctuation">;</span> <span class="token comment">//或3.14F</span>
+	<span class="token keyword">double</span> b <span class="token operator">=</span> <span class="token number">3.14</span><span class="token punctuation">;</span>
+
+	<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"a = %f\n"</span><span class="token punctuation">,</span> a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"b = %lf\n"</span><span class="token punctuation">,</span> b<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+	<span class="token comment">//科学法赋值</span>
+	a <span class="token operator">=</span> <span class="token number">3.2e3f</span><span class="token punctuation">;</span> <span class="token comment">//3.2*1000 = 3200，e可以写E</span>
+	<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"a1 = %f\n"</span><span class="token punctuation">,</span> a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+	a <span class="token operator">=</span> <span class="token number">100e-3f</span><span class="token punctuation">;</span> <span class="token comment">//100*0.001 = 0.1</span>
+	<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"a2 = %f\n"</span><span class="token punctuation">,</span> a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+	a <span class="token operator">=</span> <span class="token number">3.1415926f</span><span class="token punctuation">;</span>
+	<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"a3 = %f\n"</span><span class="token punctuation">,</span> a<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//结果为3.141593</span>
+
+	<span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="6-进制"><a href="#6-进制" class="headerlink" title="6.进制"></a>6.进制</h4><ul>
+<li><p>进制也就是进位制，是人们规定的一种进位方法。 对于任何一种进制—X进制，就表示某一位置上的数运算时是逢X进一位。 十进制是逢十进一，十六进制是逢十六进一，二进制就是逢二进一，以此类推，x进制就是逢x进位。</p>
+</li>
+<li></li>
+<li><table>
+<thead>
+<tr>
+<th><strong>十进制</strong></th>
+<th><strong>二进制</strong></th>
+<th><strong>八进制</strong></th>
+<th><strong>十六进制</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>2</td>
+<td>10</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>3</td>
+<td>11</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr>
+<td>4</td>
+<td>100</td>
+<td>4</td>
+<td>4</td>
+</tr>
+<tr>
+<td>5</td>
+<td>101</td>
+<td>5</td>
+<td>5</td>
+</tr>
+<tr>
+<td>6</td>
+<td>110</td>
+<td>6</td>
+<td>6</td>
+</tr>
+<tr>
+<td>7</td>
+<td>111</td>
+<td>7</td>
+<td>7</td>
+</tr>
+<tr>
+<td>8</td>
+<td>1000</td>
+<td>10</td>
+<td>8</td>
+</tr>
+<tr>
+<td>9</td>
+<td>1001</td>
+<td>11</td>
+<td>9</td>
+</tr>
+<tr>
+<td>10</td>
+<td>1010</td>
+<td>12</td>
+<td>A</td>
+</tr>
+<tr>
+<td>11</td>
+<td>1011</td>
+<td>13</td>
+<td>B</td>
+</tr>
+<tr>
+<td>12</td>
+<td>1100</td>
+<td>14</td>
+<td>C</td>
+</tr>
+<tr>
+<td>13</td>
+<td>1101</td>
+<td>15</td>
+<td>D</td>
+</tr>
+<tr>
+<td>14</td>
+<td>1110</td>
+<td>16</td>
+<td>E</td>
+</tr>
+<tr>
+<td>15</td>
+<td>1111</td>
+<td>17</td>
+<td>F</td>
+</tr>
+<tr>
+<td>16</td>
+<td>10000</td>
+<td>20</td>
+<td>10</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">OrangeW</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="http://example.com/2022/06/23/CNOTE/">http://example.com/2022/06/23/CNOTE/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">OrangeW</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/c/">
+                                    <span class="chip bg-color">c</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="qq,qzone,wechat,weibo" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2022/06/23/CNOTE/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="C基础学习与复习">
+                        
+                        <span class="card-title">C基础学习与复习</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            B站黑马C教程的资料学习与汇总
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-06-23
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/c/" class="post-category">
+                                    c
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/c/">
+                        <span class="chip bg-color">c</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2022/06/22/throughLispLearnC/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="C项目学习——BuildYourOwnLisp">
+                        
+                        <span class="card-title">C项目学习——BuildYourOwnLisp</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            通过用c编写lisp来学习c语言
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-06-22
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/c-c-%E9%A1%B9%E7%9B%AE%E5%AD%A6%E4%B9%A0/" class="post-category">
+                                    c/c++项目学习
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/c-c-%E9%A1%B9%E7%9B%AE%E5%AD%A6%E4%B9%A0/">
+                        <span class="chip bg-color">c/c++项目学习</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('120')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: orangewBlog<br />'
+            + '文章作者: OrangeW<br />'
+            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+    <div class="container row center-align" style="margin-bottom: 15px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2022</span>
+            
+            <span id="year">2022</span>
+            <a href="/about" target="_blank">OrangeW</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            
+            
+            
+            
+            <br>
+            
+            <span id="sitetime">载入运行时间...</span>
+            <script>
+                function siteTime() {
+                    var seconds = 1000;
+                    var minutes = seconds * 60;
+                    var hours = minutes * 60;
+                    var days = hours * 24;
+                    var years = days * 365;
+                    var today = new Date();
+                    var startYear = "2022";
+                    var startMonth = "6";
+                    var startDate = "21";
+                    var startHour = "21";
+                    var startMinute = "0";
+                    var startSecond = "0";
+                    var todayYear = today.getFullYear();
+                    var todayMonth = today.getMonth() + 1;
+                    var todayDate = today.getDate();
+                    var todayHour = today.getHours();
+                    var todayMinute = today.getMinutes();
+                    var todaySecond = today.getSeconds();
+                    var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                    var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                    var diff = t2 - t1;
+                    var diffYears = Math.floor(diff / years);
+                    var diffDays = Math.floor((diff / days) - diffYears * 365);
+                    var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+                    var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) /
+                        minutes);
+                    var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours -
+                        diffMinutes * minutes) / seconds);
+                    if (startYear == todayYear) {
+                        document.getElementById("year").innerHTML = todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffDays + " 天 " + diffHours +
+                            " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    } else {
+                        document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffYears + " 年 " + diffDays +
+                            " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    }
+                }
+                setInterval(siteTime, 1000);
+            </script>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link ">
+    <a href="mailto:1055998661@qq.com" class="tooltipped" target="_blank" data-tooltip="1055998661@qq.com" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1055998661" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1055998661" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+
+    
+
+    
+
+	
+    
+    <script type="text/javascript" color="0,0,255"
+        pointColor="0,0,255" opacity='0.7'
+        zIndex="-1" count="99"
+        src="/libs/background/canvas-nest.js"></script>
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>

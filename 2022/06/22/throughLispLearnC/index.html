@@ -363,14 +363,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    15.1k
+                    17.5k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    71 分
+                    82 分
                 </div>
                 
 
@@ -2833,6 +2833,224 @@ lval<span class="token operator">*</span> <span class="token function">lval_read
   <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
+<h2 id="第十一章-·-变量"><a href="#第十一章-·-变量" class="headerlink" title="第十一章 · 变量"></a>第十一章 · 变量</h2><h3 id="1-不变性"><a href="#1-不变性" class="headerlink" title="1. 不变性"></a>1. 不变性</h3><ul>
+<li>变量是一种命名值得方式。它们为一个值指定一个名称，然后在需要得时候获得该值的副本</li>
+<li>为了允许命名值，需要创建一个存储程序中所有命名内容的名称和值的结构。我们称之为环境。</li>
+<li>当我们开始一个新的交互式提示时，我们希望创建一个新的环境来配合它，在这个环境中，每个新的输入位都会被评估。然后我们可以在编程时存储和调用变量。</li>
+</ul>
+<blockquote>
+<p>当我们为新事物重新命名时会发生什么？这不是易变性吗？在我们的Lisp中，当我们重新分配一个名称时，我们将删除旧的关联并创建一个新的关联。这给人一种错觉，即指定给该名称的对象已经更改，并且是可变的，但事实上，我们已经删除了旧对象，并将其指定为新对象。这与C不同，在C中，我们确实可以更改指针指向的数据或存储在结构中的数据，而无需删除它并创建新的数据。</p>
+</blockquote>
+<h3 id="2-符号语法"><a href="#2-符号语法" class="headerlink" title="2.符号语法"></a>2.符号语法</h3><ul>
+<li>允许各种可能的符号输入。正则表达式</li>
+<li>C中的变量的名称是非常严格的</li>
+</ul>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token operator">/</span><span class="token punctuation">[</span>a<span class="token operator">-</span>zA<span class="token operator">-</span>Z0<span class="token operator">-</span><span class="token number">9</span>_<span class="token operator">+</span>\\<span class="token operator">-</span><span class="token operator">*</span>\\<span class="token operator">/</span>\\\\<span class="token operator">=</span><span class="token operator">&lt;</span><span class="token operator">></span><span class="token operator">!</span><span class="token operator">&amp;</span><span class="token punctuation">]</span><span class="token operator">+</span><span class="token operator">/</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<ul>
+<li>反斜杠来转义，两个反斜杠表示单个反斜杠</li>
+<li>This rule lets symbols be any of the normal C identifier characters<code>a-zA-Z0-9_</code>the arithmetic operator characters<code>+\\-*\\/</code>the backslash character<code>\\\\</code>the comparison operator characters<code>=&lt;&gt;!</code>or an ampersands<code>&amp;</code>. This will give us all the flexibility we need for defining new and existing symbols.</li>
+</ul>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token function">mpca_lang</span><span class="token punctuation">(</span>MPCA_LANG_DEFAULT<span class="token punctuation">,</span>
+  <span class="token string">"                                                     \
+    number : /-?[0-9]+/ ;                               \
+    symbol : /[a-zA-Z0-9_+\\-*\\/\\\\=&lt;>!&amp;]+/ ;         \
+    sexpr  : '(' &lt;expr>* ')' ;                          \
+    qexpr  : '&#123;' &lt;expr>* '&#125;' ;                          \
+    expr   : &lt;number> | &lt;symbol> | &lt;sexpr> | &lt;qexpr> ;  \
+    lispy  : /^/ &lt;expr>* /$/ ;                          \
+  "</span><span class="token punctuation">,</span>
+  Number<span class="token punctuation">,</span> Symbol<span class="token punctuation">,</span> Sexpr<span class="token punctuation">,</span> Qexpr<span class="token punctuation">,</span> Expr<span class="token punctuation">,</span> Lispy<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="3-函数指针"><a href="#3-函数指针" class="headerlink" title="3.函数指针"></a>3.函数指针</h3><ul>
+<li><p>一旦我们引入变量，符号将不再在我们的语言中表示函数，而是代表一个名称，以便我们查看环境并从中获得一些新的值。</p>
+</li>
+<li><p>因此，我们需要一个新的值来表示语言中的函数，一旦遇到一个内置符号，我们就可以返回该值。要创建这种新类型的值，我们将使用一种称为函数指针的东西。</p>
+</li>
+<li><p>函数指针是C的一个重要特性，它允许您存储和传递指向函数的指针。编辑这些指针指向的数据是没有意义的。相反，我们使用它们来调用它们指向的函数，就像它是一个普通函数一样。</p>
+</li>
+<li><p>与普通指针一样，函数指针也有一些与之相关的类型。此类型指定指向的函数的类型，而不是指向的数据的类型。这可以让编译器计算出它是否被正确调用。</p>
+</li>
+<li><p>In the previous chapter our builtin functions took a <code>lval*</code> as input and returned a <code>lval*</code> as output. In this chapter our builtin functions will take an extra pointer to the environment <code>lenv*</code> as input. We can declare a new function pointer type called <code>lbuiltin</code>, for this type of function, like this.</p>
+</li>
+</ul>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token keyword">typedef</span> lval<span class="token operator">*</span><span class="token punctuation">(</span><span class="token operator">*</span>lbuiltin<span class="token punctuation">)</span><span class="token punctuation">(</span>lenv<span class="token operator">*</span><span class="token punctuation">,</span> lval<span class="token operator">*</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<blockquote>
+<p><strong>Why is that syntax so odd?</strong></p>
+<p>In some places the syntax of C can look particularly weird. It can help if we understand exactly why the syntax is like this. Let us de-construct the syntax in the example above part by part.</p>
+<p>First the <code>typedef</code>. This can be put before any standard variable declaration. It results in the name of the variable, being declared a new type, matching what would be the inferred type of that variable. This is why in the above declaration what looks like the function name becomes the new type name.</p>
+<p>Next all those <code>*</code>. Pointer types in C are actually meant to be written with the star <code>*</code> on the left hand side of the variable name, not the right hand side of the type <code>int *x;</code>. This is because C type syntax works by a kind of inference. Instead of reading <em>“Create a new <code>int</code> pointer <code>x</code>“</em>. It is meant to read <em>“Create a new variable <code>x</code> where to dereference <code>x</code> results in an <code>int</code>.”</em> Therefore <code>x</code> is inferred to be a pointer to an <code>int</code>.</p>
+<p>This idea is extended to function pointers. We can read the above declaration as follows. <em>“To get an <code>lval\*</code> we dereference <code>lbuiltin</code> and call it with a <code>lenv\*</code> and a <code>lval\*</code>.”</em> Therefore <code>lbuiltin</code> must be a function pointer that takes an <code>lenv*</code> and a <code>lval*</code> and returns a <code>lval*</code>.</p>
+</blockquote>
+<h3 id="4-循环类型"><a href="#4-循环类型" class="headerlink" title="4.循环类型"></a>4.循环类型</h3><ul>
+<li><code>lbuiltin</code>类型引用<code>lval</code>类型和<code>lenv</code>类型。这意味着应该首先在源文件中声明它们。</li>
+<li>但我们想在<code>lval</code>结构中创建一个<code>lbuiltin</code>字段，以便创建函数值。因此，我们的<code>lbuiltin</code>声明必须先于<code>lval</code>声明。这导致了所谓的循环类型依赖，其中两种类型相互依赖。</li>
+<li>我们以前在函数相互依赖的情况下遇到过这个问题。解决方案是创建一个转发声明，该声明声明了一个函数，但将函数体留空。</li>
+<li>在C中，我们可以对类型执行完全相同的操作。首先，我们声明两个没有主体的结构类型。其次，我们将这些名称键入<code>lval</code>和<code>lenv</code>。然后我们可以定义<code>lbuiltin</code>函数指针类型。最后，我们可以定义<code>lval</code>结构体。现在我们所有的类型问题都解决了，编译器不会再抱怨了</li>
+</ul>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token comment">/* Forward Declarations */</span>
+
+<span class="token keyword">struct</span> <span class="token class-name">lval</span><span class="token punctuation">;</span>
+<span class="token keyword">struct</span> <span class="token class-name">lenv</span><span class="token punctuation">;</span>
+<span class="token keyword">typedef</span> <span class="token keyword">struct</span> <span class="token class-name">lval</span> lval<span class="token punctuation">;</span>
+<span class="token keyword">typedef</span> <span class="token keyword">struct</span> <span class="token class-name">lenv</span> lenv<span class="token punctuation">;</span>
+
+<span class="token comment">/* Lisp Value */</span>
+
+<span class="token keyword">enum</span> <span class="token punctuation">&#123;</span> LVAL_ERR<span class="token punctuation">,</span> LVAL_NUM<span class="token punctuation">,</span>   LVAL_SYM<span class="token punctuation">,</span>
+       LVAL_FUN<span class="token punctuation">,</span> LVAL_SEXPR<span class="token punctuation">,</span> LVAL_QEXPR <span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+
+<span class="token keyword">typedef</span> lval<span class="token operator">*</span><span class="token punctuation">(</span><span class="token operator">*</span>lbuiltin<span class="token punctuation">)</span><span class="token punctuation">(</span>lenv<span class="token operator">*</span><span class="token punctuation">,</span> lval<span class="token operator">*</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">struct</span> <span class="token class-name">lval</span> <span class="token punctuation">&#123;</span>
+  <span class="token keyword">int</span> type<span class="token punctuation">;</span>
+
+  <span class="token keyword">long</span> num<span class="token punctuation">;</span>
+  <span class="token keyword">char</span><span class="token operator">*</span> err<span class="token punctuation">;</span>
+  <span class="token keyword">char</span><span class="token operator">*</span> sym<span class="token punctuation">;</span>
+  lbuiltin fun<span class="token punctuation">;</span>
+
+  <span class="token keyword">int</span> count<span class="token punctuation">;</span>
+  lval<span class="token operator">*</span><span class="token operator">*</span> cell<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="5-函数类型"><a href="#5-函数类型" class="headerlink" title="5.函数类型"></a>5.函数类型</h3><ul>
+<li>添加了一个新的<code>lval</code>类型和枚举<code>LVAL_FUN</code>，要更新所有工作在<code>lvals</code>上的相关函数，以正确处理此更新。在大多数情况下，这只意味着在switch语句中插入新的case。我们可以从为这种类型创建一个新的构造函数开始。</li>
+</ul>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c">lval<span class="token operator">*</span> <span class="token function">lval_fun</span><span class="token punctuation">(</span>lbuiltin func<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  lval<span class="token operator">*</span> v <span class="token operator">=</span> <span class="token function">malloc</span><span class="token punctuation">(</span><span class="token keyword">sizeof</span><span class="token punctuation">(</span>lval<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  v<span class="token operator">-></span>type <span class="token operator">=</span> LVAL_FUN<span class="token punctuation">;</span>
+  v<span class="token operator">-></span>fun <span class="token operator">=</span> func<span class="token punctuation">;</span>
+  <span class="token keyword">return</span> v<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<ul>
+<li>On <strong>deletion</strong> we don’t need to do anything special for function pointers.</li>
+</ul>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token keyword">case</span> LVAL_FUN<span class="token operator">:</span> <span class="token keyword">break</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<ul>
+<li>On <strong>printing</strong> we can just print out a nominal string.</li>
+</ul>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token keyword">case</span> LVAL_FUN<span class="token operator">:</span>   <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"&lt;function>"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token keyword">break</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<ul>
+<li>我们还将添加一个用于复制<code>lval</code>的新函数。当我们把东西放进环境中或从环境中取出东西时，这会很有用。对于数字和函数，我们可以直接复制相关字段。对于字符串，我们需要使用<code>malloc</code>和<code>strcpy</code>进行复制。要复制列表，我们需要分配正确的空间量，然后分别复制每个元素。</li>
+</ul>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c">lval<span class="token operator">*</span> <span class="token function">lval_copy</span><span class="token punctuation">(</span>lval<span class="token operator">*</span> v<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+
+  lval<span class="token operator">*</span> x <span class="token operator">=</span> <span class="token function">malloc</span><span class="token punctuation">(</span><span class="token keyword">sizeof</span><span class="token punctuation">(</span>lval<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  x<span class="token operator">-></span>type <span class="token operator">=</span> v<span class="token operator">-></span>type<span class="token punctuation">;</span>
+
+  <span class="token keyword">switch</span> <span class="token punctuation">(</span>v<span class="token operator">-></span>type<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+
+    <span class="token comment">/* Copy Functions and Numbers Directly */</span>
+    <span class="token keyword">case</span> LVAL_FUN<span class="token operator">:</span> x<span class="token operator">-></span>fun <span class="token operator">=</span> v<span class="token operator">-></span>fun<span class="token punctuation">;</span> <span class="token keyword">break</span><span class="token punctuation">;</span>
+    <span class="token keyword">case</span> LVAL_NUM<span class="token operator">:</span> x<span class="token operator">-></span>num <span class="token operator">=</span> v<span class="token operator">-></span>num<span class="token punctuation">;</span> <span class="token keyword">break</span><span class="token punctuation">;</span>
+
+    <span class="token comment">/* Copy Strings using malloc and strcpy */</span>
+    <span class="token keyword">case</span> LVAL_ERR<span class="token operator">:</span>
+      x<span class="token operator">-></span>err <span class="token operator">=</span> <span class="token function">malloc</span><span class="token punctuation">(</span><span class="token function">strlen</span><span class="token punctuation">(</span>v<span class="token operator">-></span>err<span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token function">strcpy</span><span class="token punctuation">(</span>x<span class="token operator">-></span>err<span class="token punctuation">,</span> v<span class="token operator">-></span>err<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token keyword">break</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">case</span> LVAL_SYM<span class="token operator">:</span>
+      x<span class="token operator">-></span>sym <span class="token operator">=</span> <span class="token function">malloc</span><span class="token punctuation">(</span><span class="token function">strlen</span><span class="token punctuation">(</span>v<span class="token operator">-></span>sym<span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token function">strcpy</span><span class="token punctuation">(</span>x<span class="token operator">-></span>sym<span class="token punctuation">,</span> v<span class="token operator">-></span>sym<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token keyword">break</span><span class="token punctuation">;</span>
+
+    <span class="token comment">/* Copy Lists by copying each sub-expression */</span>
+    <span class="token keyword">case</span> LVAL_SEXPR<span class="token operator">:</span>
+    <span class="token keyword">case</span> LVAL_QEXPR<span class="token operator">:</span>
+      x<span class="token operator">-></span>count <span class="token operator">=</span> v<span class="token operator">-></span>count<span class="token punctuation">;</span>
+      x<span class="token operator">-></span>cell <span class="token operator">=</span> <span class="token function">malloc</span><span class="token punctuation">(</span><span class="token keyword">sizeof</span><span class="token punctuation">(</span>lval<span class="token operator">*</span><span class="token punctuation">)</span> <span class="token operator">*</span> x<span class="token operator">-></span>count<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> x<span class="token operator">-></span>count<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        x<span class="token operator">-></span>cell<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">lval_copy</span><span class="token punctuation">(</span>v<span class="token operator">-></span>cell<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">&#125;</span>
+    <span class="token keyword">break</span><span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+
+  <span class="token keyword">return</span> x<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="6-环境"><a href="#6-环境" class="headerlink" title="6.环境"></a>6.环境</h3><ul>
+<li>我们的环境结构必须对名称和值之间的关系列表进行编码。有很多方法可以构建一个可以做这类事情的结构。我们将寻求最简单、可行的方法。这是使用两个长度相等的列表。一个是<code>lval*</code>列表，另一个是<code>char*</code>列表。一个列表中的每个条目在另一个列表中的相同位置都有一个对应的条目。我们已经向前声明了我们的<code>lenv</code>结构，所以我们可以如下定义它。</li>
+</ul>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token keyword">struct</span> <span class="token class-name">lenv</span> <span class="token punctuation">&#123;</span>
+  <span class="token keyword">int</span> count<span class="token punctuation">;</span>
+  <span class="token keyword">char</span><span class="token operator">*</span><span class="token operator">*</span> syms<span class="token punctuation">;</span>
+  lval<span class="token operator">*</span><span class="token operator">*</span> vals<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<ul>
+<li>我们需要一些函数来创建和删除此结构。这些都很简单。创建会初始化结构字段，而删除会迭代两个列表中的项目，并删除或释放它们。</li>
+</ul>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c">lenv<span class="token operator">*</span> <span class="token function">lenv_new</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  lenv<span class="token operator">*</span> e <span class="token operator">=</span> <span class="token function">malloc</span><span class="token punctuation">(</span><span class="token keyword">sizeof</span><span class="token punctuation">(</span>lenv<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  e<span class="token operator">-></span>count <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+  e<span class="token operator">-></span>syms <span class="token operator">=</span> <span class="token constant">NULL</span><span class="token punctuation">;</span>
+  e<span class="token operator">-></span>vals <span class="token operator">=</span> <span class="token constant">NULL</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> e<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token keyword">void</span> <span class="token function">lenv_del</span><span class="token punctuation">(</span>lenv<span class="token operator">*</span> e<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> e<span class="token operator">-></span>count<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token function">free</span><span class="token punctuation">(</span>e<span class="token operator">-></span>syms<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">lval_del</span><span class="token punctuation">(</span>e<span class="token operator">-></span>vals<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+  <span class="token function">free</span><span class="token punctuation">(</span>e<span class="token operator">-></span>syms<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">free</span><span class="token punctuation">(</span>e<span class="token operator">-></span>vals<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">free</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<ul>
+<li>我们可以创建两个函数，要么从环境中获取值，要么将值放入其中。</li>
+<li>为了从环境中获得一个值，我们循环环境中的所有项，并检查给定的符号是否与任何存储的字符串匹配。如果找到匹配项，则可以返回存储值的副本。如果没有找到匹配项，我们应该返回一个错误。</li>
+<li>将新变量放入环境的函数稍微复杂一些。首先，我们要检查是否已经存在同名的变量。如果是这种情况，我们应该用新值替换它的值。为此，我们在环境中循环所有现有变量并检查它们的名称。如果找到匹配项，我们将删除存储在该位置的值，并将输入值的副本存储在该位置。</li>
+<li>如果找不到具有该名称的现有值，我们需要分配更多空间将其放入。为此，我们可以使用<code>realloc</code>，并在新分配的位置存储<code>lval</code>及其名称的副本。</li>
+</ul>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c">lval<span class="token operator">*</span> <span class="token function">lenv_get</span><span class="token punctuation">(</span>lenv<span class="token operator">*</span> e<span class="token punctuation">,</span> lval<span class="token operator">*</span> k<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+
+  <span class="token comment">/* Iterate over all items in environment */</span>
+  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> e<span class="token operator">-></span>count<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token comment">/* Check if the stored string matches the symbol string */</span>
+    <span class="token comment">/* If it does, return a copy of the value */</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">strcmp</span><span class="token punctuation">(</span>e<span class="token operator">-></span>syms<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span> k<span class="token operator">-></span>sym<span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+      <span class="token keyword">return</span> <span class="token function">lval_copy</span><span class="token punctuation">(</span>e<span class="token operator">-></span>vals<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+  <span class="token punctuation">&#125;</span>
+  <span class="token comment">/* If no symbol found return error */</span>
+  <span class="token keyword">return</span> <span class="token function">lval_err</span><span class="token punctuation">(</span><span class="token string">"unbound symbol!"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token keyword">void</span> <span class="token function">lenv_put</span><span class="token punctuation">(</span>lenv<span class="token operator">*</span> e<span class="token punctuation">,</span> lval<span class="token operator">*</span> k<span class="token punctuation">,</span> lval<span class="token operator">*</span> v<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+
+  <span class="token comment">/* Iterate over all items in environment */</span>
+  <span class="token comment">/* This is to see if variable already exists */</span>
+  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> e<span class="token operator">-></span>count<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+
+    <span class="token comment">/* If variable is found delete item at that position */</span>
+    <span class="token comment">/* And replace with variable supplied by user */</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">strcmp</span><span class="token punctuation">(</span>e<span class="token operator">-></span>syms<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span> k<span class="token operator">-></span>sym<span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+      <span class="token function">lval_del</span><span class="token punctuation">(</span>e<span class="token operator">-></span>vals<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      e<span class="token operator">-></span>vals<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">lval_copy</span><span class="token punctuation">(</span>v<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">return</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+  <span class="token punctuation">&#125;</span>
+
+  <span class="token comment">/* If no existing entry found allocate space for new entry */</span>
+  e<span class="token operator">-></span>count<span class="token operator">++</span><span class="token punctuation">;</span>
+  e<span class="token operator">-></span>vals <span class="token operator">=</span> <span class="token function">realloc</span><span class="token punctuation">(</span>e<span class="token operator">-></span>vals<span class="token punctuation">,</span> <span class="token keyword">sizeof</span><span class="token punctuation">(</span>lval<span class="token operator">*</span><span class="token punctuation">)</span> <span class="token operator">*</span> e<span class="token operator">-></span>count<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  e<span class="token operator">-></span>syms <span class="token operator">=</span> <span class="token function">realloc</span><span class="token punctuation">(</span>e<span class="token operator">-></span>syms<span class="token punctuation">,</span> <span class="token keyword">sizeof</span><span class="token punctuation">(</span><span class="token keyword">char</span><span class="token operator">*</span><span class="token punctuation">)</span> <span class="token operator">*</span> e<span class="token operator">-></span>count<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token comment">/* Copy contents of lval and symbol string into new location */</span>
+  e<span class="token operator">-></span>vals<span class="token punctuation">[</span>e<span class="token operator">-></span>count<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">lval_copy</span><span class="token punctuation">(</span>v<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  e<span class="token operator">-></span>syms<span class="token punctuation">[</span>e<span class="token operator">-></span>count<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">malloc</span><span class="token punctuation">(</span><span class="token function">strlen</span><span class="token punctuation">(</span>k<span class="token operator">-></span>sym<span class="token punctuation">)</span><span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">strcpy</span><span class="token punctuation">(</span>e<span class="token operator">-></span>syms<span class="token punctuation">[</span>e<span class="token operator">-></span>count<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span> k<span class="token operator">-></span>sym<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="7-变量评估"><a href="#7-变量评估" class="headerlink" title="7.变量评估"></a>7.变量评估</h3><ul>
+<li></li>
+</ul>
 
                 
             </div>
@@ -2942,48 +3160,46 @@ lval<span class="token operator">*</span> <span class="token function">lval_read
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2022/06/22/throughLispLearnC/">
+                <a href="/2022/06/23/CNOTE/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="C项目学习——BuildYourOwnLisp">
+                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="C基础学习与复习">
                         
-                        <span class="card-title">C项目学习——BuildYourOwnLisp</span>
+                        <span class="card-title">C基础学习与复习</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            通过用c编写lisp来学习c语言
+                            B站黑马C教程的资料学习与汇总
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-06-22
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-06-23
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/c-c-%E9%A1%B9%E7%9B%AE%E5%AD%A6%E4%B9%A0/" class="post-category">
-                                    c/c++项目学习
+                            <a href="/categories/c/" class="post-category">
+                                    c
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/c-c-%E9%A1%B9%E7%9B%AE%E5%AD%A6%E4%B9%A0/">
-                        <span class="chip bg-color">c/c++项目学习</span>
+                    <a href="/tags/c/">
+                        <span class="chip bg-color">c</span>
                     </a>
                     
                 </div>
