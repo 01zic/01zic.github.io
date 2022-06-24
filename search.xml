@@ -1,126 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>hexo部署到gitub或gitee</title>
-    <url>/2022/06/21/hexo_git/</url>
-    <content><![CDATA[<h2 id="一、配置环境"><a href="#一、配置环境" class="headerlink" title="一、配置环境"></a>一、配置环境</h2><ol>
-<li>安装gitl</li>
-<li>安装node.js</li>
-<li>安装hexo<ul>
-<li><a href="https://hexo.io/zh-cn/docs/">官方文档</a></li>
-</ul>
-</li>
-</ol>
-<h2 id="二、本地运行"><a href="#二、本地运行" class="headerlink" title="二、本地运行"></a>二、本地运行</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">//git窗口
-<span class="token builtin class-name">cd</span> <span class="token operator">&lt;</span>folder<span class="token operator">></span> //进入blog所在文件夹
-hexo init   //初始化
-<span class="token function">npm</span> <span class="token function">install</span> //安装依赖
-hexo g //构建
-hexo s //本地测试<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="三、修改主题"><a href="#三、修改主题" class="headerlink" title="三、修改主题"></a>三、修改主题</h2><ol>
-<li><p>github中搜索主题并下载压缩包</p>
-</li>
-<li><p>在hexo的theme中解压压缩包</p>
-</li>
-<li><p>修改theme下的配置文件_config.yml</p>
-<ul>
-<li><a href="https://github.com/blinkfox/hexo-theme-matery/blob/develop/README_CN.md">参考</a>非常详细</li>
-</ul>
-</li>
-<li><p>重新本地运行</p>
-</li>
-</ol>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">hexo clean<span class="token operator">&amp;&amp;</span>hexo g<span class="token operator">&amp;&amp;</span>hexo d<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<h2 id="四、部署到github"><a href="#四、部署到github" class="headerlink" title="四、部署到github"></a>四、部署到github</h2><ol>
-<li>安装git提交插件</li>
-</ol>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> hexo-deployer-git --save<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<ol start="2">
-<li>生成密钥添加到Github并测试Git</li>
-</ol>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> config user.name
-<span class="token function">git</span> config user.email
-<span class="token function">git</span> config --global user.name <span class="token string">"name"</span>
-<span class="token function">git</span> config --global user.email <span class="token string">"email"</span>
-<span class="token function">ssh</span> -keygen -t rsa -C <span class="token string">"email"</span>
-<span class="token builtin class-name">cd</span> ~/.ssh
-<span class="token function">ls</span> 
-<span class="token function">vim</span> id_rsa.pub
-copy
-在github的setting的ssh key中粘贴
-       
-查询：https://ipaddress.com/website/github.com的ipv4地址
-添加 C:<span class="token punctuation">\</span>Windows<span class="token punctuation">\</span>System32<span class="token punctuation">\</span>drivers<span class="token punctuation">\</span>etc<span class="token punctuation">\</span>hosts
-<span class="token number">140.82</span>.112.4 github.com
-       
-<span class="token function">git</span> <span class="token function">bash</span>
-<span class="token function">ssh</span> -T git@github.com<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<ol start="3">
-<li>修改hexo的配置文件_config.yml</li>
-</ol>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">deploy:
-   type: <span class="token string">'git'</span>
-   repo: git@github.com:01zic/01zic.github.io.git
-   branch:main<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-
-<ol start="4">
-<li>部署到github(git bash)</li>
-</ol>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">hexo clean<span class="token operator">&amp;&amp;</span>hexo g<span class="token operator">&amp;&amp;</span>hexo d<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<h2 id="五、可能的小问题"><a href="#五、可能的小问题" class="headerlink" title="五、可能的小问题"></a>五、可能的小问题</h2><ol>
-<li>git连接失败的解决方案<ol>
-<li>换网，校园网不一定好使</li>
-<li>查询：<a href="https://ipaddress.com/website/github.com">github的ipv4地址</a><br>添加：C:\Windows\System32\drivers\etc\hosts -&gt; 140.82.112.4 github.com</li>
-<li>ssh公钥配置，重新配置</li>
-</ol>
-</li>
-<li>github页面代码块的错乱问题<ul>
-<li>代码块前面不要有任何东西 </li>
-<li>例如无序列表或者有序列表之类的东西</li>
-<li>直接将代码块置顶，前面不留空格</li>
-</ul>
-</li>
-</ol>
-<h2 id="六、七牛云图床的配置"><a href="#六、七牛云图床的配置" class="headerlink" title="六、七牛云图床的配置"></a>六、七牛云图床的配置</h2><ol>
-<li>七牛云登录后，对象存储里面新建空间，配置加速域名，用备案过的域名的二级域名</li>
-<li>到腾讯云DNS解析的地方添加解析记录，qiniu CNAME CNAME记录值（七牛云提供）</li>
-<li>AK SK 域名 存储区域</li>
-</ol>
-<h2 id="七、配置mermaid"><a href="#七、配置mermaid" class="headerlink" title="七、配置mermaid"></a>七、配置mermaid</h2><ul>
-<li><a href="https://github.com/webappdevelp/hexo-filter-mermaid-diagrams">直接参考github链接</a>（我搞的时候一直有问题）<ol>
-<li>安装插件</li>
-<li>修改配置文件</li>
-<li>js文件修改</li>
-</ol>
-</li>
-<li><a href="https://github.com/mermaid-js/mermaid/blob/develop/README.zh-CN.md">mermaid-github文档</a></li>
-</ul>
-<h2 id="八、hexo中添加本地文件下载"><a href="#八、hexo中添加本地文件下载" class="headerlink" title="八、hexo中添加本地文件下载"></a>八、hexo中添加本地文件下载</h2><ul>
-<li>调整程序配置文件_config.yml 里的post_asset_folder:这个选项设置为True</li>
-<li>在source下创建/download文件夹，先把文件xxx.xls/doc（或者其他）复制到这个文件夹</li>
-<li> 最后在xxxx.md中想引入下载链接时，只需要在xxxx.md中按照markdown的格式引入即可：</li>
-</ul>
-<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown">xx文件 <span class="token url">[<span class="token content">点击下载</span>](<span class="token url">/download/xx.xx</span>)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<h2 id="九、换NEXT主题"><a href="#九、换NEXT主题" class="headerlink" title="九、换NEXT主题"></a>九、换NEXT主题</h2><ul>
-<li>因为mermaid配置太折磨人了</li>
-<li><a href="https://github.com/theme-next/awesome-next">next主题的相关插件</a></li>
-<li><a href="https://blog.csdn.net/Sky_True/article/details/104435997/">别人的完整配置</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>博客</category>
-      </categories>
-      <tags>
-        <tag>静态博客</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>C基础学习与复习</title>
     <url>/2022/06/23/CNOTE/</url>
     <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><ul>
@@ -2731,6 +2611,126 @@ copy
       </categories>
       <tags>
         <tag>c</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>hexo部署到gitub或gitee</title>
+    <url>/2022/06/21/hexo_git/</url>
+    <content><![CDATA[<h2 id="一、配置环境"><a href="#一、配置环境" class="headerlink" title="一、配置环境"></a>一、配置环境</h2><ol>
+<li>安装gitl</li>
+<li>安装node.js</li>
+<li>安装hexo<ul>
+<li><a href="https://hexo.io/zh-cn/docs/">官方文档</a></li>
+</ul>
+</li>
+</ol>
+<h2 id="二、本地运行"><a href="#二、本地运行" class="headerlink" title="二、本地运行"></a>二、本地运行</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">//git窗口
+<span class="token builtin class-name">cd</span> <span class="token operator">&lt;</span>folder<span class="token operator">></span> //进入blog所在文件夹
+hexo init   //初始化
+<span class="token function">npm</span> <span class="token function">install</span> //安装依赖
+hexo g //构建
+hexo s //本地测试<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="三、修改主题"><a href="#三、修改主题" class="headerlink" title="三、修改主题"></a>三、修改主题</h2><ol>
+<li><p>github中搜索主题并下载压缩包</p>
+</li>
+<li><p>在hexo的theme中解压压缩包</p>
+</li>
+<li><p>修改theme下的配置文件_config.yml</p>
+<ul>
+<li><a href="https://github.com/blinkfox/hexo-theme-matery/blob/develop/README_CN.md">参考</a>非常详细</li>
+</ul>
+</li>
+<li><p>重新本地运行</p>
+</li>
+</ol>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">hexo clean<span class="token operator">&amp;&amp;</span>hexo g<span class="token operator">&amp;&amp;</span>hexo d<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h2 id="四、部署到github"><a href="#四、部署到github" class="headerlink" title="四、部署到github"></a>四、部署到github</h2><ol>
+<li>安装git提交插件</li>
+</ol>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> hexo-deployer-git --save<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<ol start="2">
+<li>生成密钥添加到Github并测试Git</li>
+</ol>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> config user.name
+<span class="token function">git</span> config user.email
+<span class="token function">git</span> config --global user.name <span class="token string">"name"</span>
+<span class="token function">git</span> config --global user.email <span class="token string">"email"</span>
+<span class="token function">ssh</span> -keygen -t rsa -C <span class="token string">"email"</span>
+<span class="token builtin class-name">cd</span> ~/.ssh
+<span class="token function">ls</span> 
+<span class="token function">vim</span> id_rsa.pub
+copy
+在github的setting的ssh key中粘贴
+       
+查询：https://ipaddress.com/website/github.com的ipv4地址
+添加 C:<span class="token punctuation">\</span>Windows<span class="token punctuation">\</span>System32<span class="token punctuation">\</span>drivers<span class="token punctuation">\</span>etc<span class="token punctuation">\</span>hosts
+<span class="token number">140.82</span>.112.4 github.com
+       
+<span class="token function">git</span> <span class="token function">bash</span>
+<span class="token function">ssh</span> -T git@github.com<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<ol start="3">
+<li>修改hexo的配置文件_config.yml</li>
+</ol>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">deploy:
+   type: <span class="token string">'git'</span>
+   repo: git@github.com:01zic/01zic.github.io.git
+   branch:main<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<ol start="4">
+<li>部署到github(git bash)</li>
+</ol>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">hexo clean<span class="token operator">&amp;&amp;</span>hexo g<span class="token operator">&amp;&amp;</span>hexo d<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h2 id="五、可能的小问题"><a href="#五、可能的小问题" class="headerlink" title="五、可能的小问题"></a>五、可能的小问题</h2><ol>
+<li>git连接失败的解决方案<ol>
+<li>换网，校园网不一定好使</li>
+<li>查询：<a href="https://ipaddress.com/website/github.com">github的ipv4地址</a><br>添加：C:\Windows\System32\drivers\etc\hosts -&gt; 140.82.112.4 github.com</li>
+<li>ssh公钥配置，重新配置</li>
+</ol>
+</li>
+<li>github页面代码块的错乱问题<ul>
+<li>代码块前面不要有任何东西 </li>
+<li>例如无序列表或者有序列表之类的东西</li>
+<li>直接将代码块置顶，前面不留空格</li>
+</ul>
+</li>
+</ol>
+<h2 id="六、七牛云图床的配置"><a href="#六、七牛云图床的配置" class="headerlink" title="六、七牛云图床的配置"></a>六、七牛云图床的配置</h2><ol>
+<li>七牛云登录后，对象存储里面新建空间，配置加速域名，用备案过的域名的二级域名</li>
+<li>到腾讯云DNS解析的地方添加解析记录，qiniu CNAME CNAME记录值（七牛云提供）</li>
+<li>AK SK 域名 存储区域</li>
+</ol>
+<h2 id="七、配置mermaid"><a href="#七、配置mermaid" class="headerlink" title="七、配置mermaid"></a>七、配置mermaid</h2><ul>
+<li><a href="https://github.com/webappdevelp/hexo-filter-mermaid-diagrams">直接参考github链接</a>（我搞的时候一直有问题）<ol>
+<li>安装插件</li>
+<li>修改配置文件</li>
+<li>js文件修改</li>
+</ol>
+</li>
+<li><a href="https://github.com/mermaid-js/mermaid/blob/develop/README.zh-CN.md">mermaid-github文档</a></li>
+</ul>
+<h2 id="八、hexo中添加本地文件下载"><a href="#八、hexo中添加本地文件下载" class="headerlink" title="八、hexo中添加本地文件下载"></a>八、hexo中添加本地文件下载</h2><ul>
+<li>调整程序配置文件_config.yml 里的post_asset_folder:这个选项设置为True</li>
+<li>在source下创建/download文件夹，先把文件xxx.xls/doc（或者其他）复制到这个文件夹</li>
+<li> 最后在xxxx.md中想引入下载链接时，只需要在xxxx.md中按照markdown的格式引入即可：</li>
+</ul>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown">xx文件 <span class="token url">[<span class="token content">点击下载</span>](<span class="token url">/download/xx.xx</span>)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h2 id="九、换NEXT主题"><a href="#九、换NEXT主题" class="headerlink" title="九、换NEXT主题"></a>九、换NEXT主题</h2><ul>
+<li>因为mermaid配置太折磨人了</li>
+<li><a href="https://github.com/theme-next/awesome-next">next主题的相关插件</a></li>
+<li><a href="https://blog.csdn.net/Sky_True/article/details/104435997/">别人的完整配置</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>博客</category>
+      </categories>
+      <tags>
+        <tag>静态博客</tag>
       </tags>
   </entry>
   <entry>
