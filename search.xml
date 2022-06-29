@@ -547,6 +547,9 @@ copy
 </ul>
 <pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown">xx文件 <span class="token url">[<span class="token content">点击下载</span>](<span class="token url">/download/xx.xx</span>)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
+<ul>
+<li>还可以在七牛云里面新建文件夹，将需要下载的文件上传，然后获取Url形成超链接即可。</li>
+</ul>
 <h2 id="九、换NEXT主题"><a href="#九、换NEXT主题" class="headerlink" title="九、换NEXT主题"></a>九、换NEXT主题</h2><ul>
 <li>因为mermaid配置太折磨人了</li>
 <li><a href="https://github.com/theme-next/awesome-next">next主题的相关插件</a></li>
