@@ -442,7 +442,7 @@
     <title>hexo部署到gitub或gitee</title>
     <url>/2022/06/21/hexo_git/</url>
     <content><![CDATA[<h2 id="一、配置环境"><a href="#一、配置环境" class="headerlink" title="一、配置环境"></a>一、配置环境</h2><ol>
-<li>安装gitl</li>
+<li>安装git</li>
 <li>安装node.js</li>
 <li>安装hexo<ul>
 <li><a href="https://hexo.io/zh-cn/docs/">官方文档</a></li>
@@ -3332,7 +3332,7 @@ lval<span class="token operator">*</span> <span class="token function">lval_read
     <url>/2022/06/23/CNOTE/</url>
     <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><ul>
 <li>B站黑马C基础教程的资料总结</li>
-<li>C语言入门教程100例 <a href="/download/C%E8%AF%AD%E8%A8%80%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B%E5%8F%8A100%E4%BE%8B.chm">点击下载</a></li>
+<li>C语言入门教程100例 <a href="/CNOTEIMG/C%E8%AF%AD%E8%A8%80%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B%E5%8F%8A100%E4%BE%8B.chm">点击下载</a></li>
 </ul>
 <h2 id="一、基础篇"><a href="#一、基础篇" class="headerlink" title="一、基础篇"></a>一、基础篇</h2><h3 id="1-C语言概述"><a href="#1-C语言概述" class="headerlink" title="1.C语言概述"></a>1.C语言概述</h3><h4 id="1-不同语言的应用场景"><a href="#1-不同语言的应用场景" class="headerlink" title="1.不同语言的应用场景"></a>1.不同语言的应用场景</h4><pre class="mermaid">graph LR;
 不同语言-->嵌入式:C和汇编
