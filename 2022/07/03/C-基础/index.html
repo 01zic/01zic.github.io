@@ -34,7 +34,7 @@
 <meta property="og:image" content="http://qiniu.orangew.cn/img/20220703213915.png">
 <meta property="og:image" content="http://qiniu.orangew.cn/img/20220703221844.png">
 <meta property="article:published_time" content="2022-07-03T01:05:58.000Z">
-<meta property="article:modified_time" content="2022-07-03T15:04:32.014Z">
+<meta property="article:modified_time" content="2022-07-04T14:16:24.963Z">
 <meta property="article:author" content="OrangeW">
 <meta property="article:tag" content="c++">
 <meta name="twitter:card" content="summary">
@@ -222,10 +222,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2022-07-03 09:05:58 / 修改时间：23:04:32" itemprop="dateCreated datePublished" datetime="2022-07-03T09:05:58+08:00">2022-07-03</time>
+              <time title="创建时间：2022-07-03 09:05:58" itemprop="dateCreated datePublished" datetime="2022-07-03T09:05:58+08:00">2022-07-03</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-07-04 22:16:24" itemprop="dateModified" datetime="2022-07-04T22:16:24+08:00">2022-07-04</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -242,14 +248,14 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>41k</span>
+              <span>70k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1:14</span>
+              <span>2:08</span>
             </span>
 
         </div>
@@ -285,18 +291,32 @@
 <li>科学计算</li>
 </ul>
 <h2 id="C-对C语言的加强"><a href="#C-对C语言的加强" class="headerlink" title="C++对C语言的加强"></a>C++对C语言的加强</h2><h3 id="namespace命名空间"><a href="#namespace命名空间" class="headerlink" title="namespace命名空间"></a>namespace命名空间</h3><h4 id="C-命名空间基本常识"><a href="#C-命名空间基本常识" class="headerlink" title="C++命名空间基本常识"></a>C++命名空间基本常识</h4><ul>
-<li>所谓namespace，是指标识符的各种可见范围。C++标准程序库中的所有标识符都被定义于一个名为std的namespace中。</li>
-<li>一 : <iostream>和&lt;iostream.h&gt;格式不一样，前者没有后缀，实际上，在你的编译器include文件夹里面可以看到，二者是两个文件，打开文件就会发现，里面的代码是不一样的。后缀为.h的头文件c++标准已经明确提出不支持了，早些的实现将标准库功能定义在全局空间里，声明在带.h后缀的头文件里，c++标准为了和C区别开，也为了正确使用命名空间，规定头文件不使用后缀.h。因此，</li>
-<li>1)当使用&lt;iostream.h&gt;时，相当于在c中调用库函数，使用的是全局命名空间，也就是早期的c++实现;</li>
-<li>2）当使用<iostream>的时候，该头文件没有定义全局命名空间，必须使用namespace std;这样才能正确使用cout。</li>
-<li>二︰由于namespace的概念，使用C++标准程序库的任何标识符时，可以有三种选择:</li>
-<li>1）直接指定标识符。例如std:ostream而不是ostream。完整语句如</li>
+<li><p>所谓namespace，是指标识符的各种可见范围。C++标准程序库中的所有标识符都被定义于一个名为std的namespace中。</p>
+</li>
+<li><p>一 : <iostream>和&lt;iostream.h&gt;格式不一样，前者没有后缀，实际上，在你的编译器include文件夹里面可以看到，二者是两个文件，打开文件就会发现，里面的代码是不一样的。后缀为.h的头文件c++标准已经明确提出不支持了，早些的实现将标准库功能定义在全局空间里，声明在带.h后缀的头文件里，c++标准为了和C区别开，也为了正确使用命名空间，规定头文件不使用后缀.h。因此，</p>
+<ol>
+<li>当使用&lt;iostream.h&gt;时，相当于在c中调用库函数，使用的是全局命名空间，也就是早期的c++实现;</li>
+<li>当使用<iostream>的时候，该头文件没有定义全局命名空间，必须使用namespace std;这样才能正确使用cout。</li>
+</ol>
+</li>
+<li><p>二︰由于namespace的概念，使用C++标准程序库的任何标识符时，可以有三种选择:</p>
+<ol>
+<li><p>直接指定标识符。例如std:ostream而不是ostream。完整语句如</p>
+<ul>
 <li><code>std:: cout &lt;&lt; std ::hex &lt;&lt; 3.4 &lt;&lt; std::endl;</code></li>
-<li>2）使用using关键字</li>
+</ul>
+</li>
+<li><p>使用using关键字</p>
+<ul>
 <li><code>using std::cout;using std::endl;using std::cin;</code></li>
 <li>以上程序可以写成</li>
 <li><code>cout&lt;&lt;std::hex&lt;&lt;3.4&lt;&lt;endl;</code></li>
-<li>3)最方便的就是使用using namespace std;例如: using namespace std;这样命名空间std内定义的所有标识符都有效（曝光）。就好像它们被声明为全局变量一样。那么以上语句可以如下写: <code>cout &lt;&lt;hex &lt;&lt; 3.4 &lt;&lt; endl;</code>因为标准库非常的庞大，所以程序员在选择的类的名称或函数名时就很有可能和标准库中的某个名字相同。所以为了避免这种情况所造成的名字冲突，就把标准库中的一切都被放在名字空间std中。但这又会带来了一个新问题。无数原有的C++代码都依赖于使用了多年的伪标准库中的功能，他们都是在全局空间下的。所以就有了&lt;iostream.h&gt;和<iostream>等等这样的头文件，一个是为了兼容以前的C++代码，一个是为了支持新的标准。命名空间std封装的是标准程序库的名称，标准程序库为了和以前的头文件区别，一般不加”.h”</li>
+</ul>
+</li>
+<li><p>最方便的就是使用using namespace std;例如: using namespace std;这样命名空间std内定义的所有标识符都有效（曝光）。就好像它们被声明为全局变量一样。那么以上语句可以如下写: <code>cout &lt;&lt;hex &lt;&lt; 3.4 &lt;&lt; endl;</code>因为标准库非常的庞大，所以程序员在选择的类的名称或函数名时就很有可能和标准库中的某个名字相同。所以为了避免这种情况所造成的名字冲突，就把标准库中的一切都被放在名字空间std中。但这又会带来了一个新问题。无数原有的C++代码都依赖于使用了多年的伪标准库中的功能，他们都是在全局空间下的。所以就有了&lt;iostream.h&gt;和<iostream>等等这样的头文件，一个是为了兼容以前的C++代码，一个是为了支持新的标准。命名空间std封装的是标准程序库的名称，标准程序库为了和以前的头文件区别，一般不加”.h”</p>
+</li>
+</ol>
+</li>
 </ul>
 <h4 id="C-命名空间定义以及使用方法"><a href="#C-命名空间定义以及使用方法" class="headerlink" title="C++命名空间定义以及使用方法"></a>C++命名空间定义以及使用方法</h4><ul>
 <li>在C++中，名称( name )可以是符号常量、变量、宏、函数、结构、枚举、类和对象等等。为了避免，在大规模程序的设计中，以及在程序员使用各种各样的C++库时，这些标识符的命名发生冲突。</li>
@@ -2610,9 +2630,1532 @@ class C2&#123;
     void setk( int val) &#123;k &#x3D; val; &#125;&#x2F;&#x2F;4
 &#125;;
 struct s1&#123;
-int i;int j;int k;; &#x2F;&#x2F;12
-struct s2
+	int i;
+    int j;
+    int k;; &#x2F;&#x2F;12
+struct s2&#123;
+	int i;
+    int j;
+    int k;
+	static int m;
+&#125;; &#x2F;&#x2F;12?
+int main()&#123;
+	cout &lt;&lt; &quot;c1: &quot; &lt;&lt; sizeof(C1) &lt;&lt;endl;
+    cout &lt;&lt;&quot;c1: &quot; &lt;&lt; sizeof(C2) &lt;&lt;endl;
+	cout &lt;&lt;&quot;c1:&quot; &lt;&lt; sizeof(S1) &lt;&lt;endl;
+	cout &lt;&lt;&quot;c1: &quot; &lt;&lt; sizeof(S2) &lt;&lt;endl;
+	return 0;
+&#125;
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="处理机制"><a href="#处理机制" class="headerlink" title="处理机制"></a>处理机制</h4><ul>
+<li>C++类对象中的成员变量和成员函数是分开存储的</li>
+<li>成员变量︰<ul>
+<li>普通成员变量∶存储于对象中，与struct变量有相同的内存布局和字节对齐方式</li>
+<li>静态成员变量∶存储于全局数据区中</li>
+</ul>
+</li>
+<li>成员函数:存储于代码段中。</li>
+<li>C++编译器对类的成员的内部处理机制类似如下</li>
+</ul>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#include&lt;iostream&gt;
+&#125;
+using namespace std;
+class Test&#123;
+    private:
+    int ml;
+    public:
+    Test(int i):ml(i)&#123;&#125;
+    int getI()&#123;
+        return ml;
+    &#125;
+    static void Print()&#123;
+        printf(&quot;This is class Test.\n&quot;);
+    &#125;
+&#125;;
+int main()&#123;
+Test a(10);
+a.getI();
+Test::Print();
+a.Print();
+&#125;
+
+&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&gt;
+    struct Test&#123;
+        int ml;
+    &#125;;
+	void Test_initialize(Test * pThis,int i)&#123;
+        pThis-&gt;ml&#x3D;i;
+    &#125;
+	int Test_getI(Test*pThis)&#123;
+        return pThis-&gt;ml;
+    &#125;
+	void Test_Print()&#123;
+        printf(&quot;This is class Test.\n&quot;);
+    &#125;
+		Test a;
+		Test_initialize(&amp;a,10);
+		Test_getI(&amp;a);
+		Test_Print();<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<blockquote>
+<p>1、C++类对象中的成员变量和成员函数是分开存储的。C语言中的内存四区模型仍然有效!</p>
+<p>2、C++中类的普通成员函数都隐式包含一个指向当前对象的this指针。</p>
+<p>3、静态成员函数、成员变量属于类</p>
+<p>4、静态成员函数与普通成员函数的区别</p>
+<p>静态成员函数不包含指向具体对象的指针</p>
+<p>普通成员函数包含一个指向具体对象的指针</p>
+</blockquote>
+<h4 id="this指针"><a href="#this指针" class="headerlink" title="this指针"></a>this指针</h4><ul>
+<li>成员函数隐含定义this指针接受调用对象的地址</li>
+</ul>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">void setXY(int a,int b)&#123;x&#x3D;a;y&#x3D;b;&#125;
+void setXY(simple * const this,int a,int b)&#123;this-&gt;x&#x3D;a;this-&gt;y&#x3D;b;&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#include &lt;iostream&gt;
+using namespace std;
+class Test
+&#123;
+	public:
+	Test(int a, int b) &#x2F;&#x2F;---&gt; Test(Test *this,int a, int b)
+    &#123;
+	this-&gt;a &#x3D; a;
+    this-&gt; b &#x3D; b;
+    &#125;
+void printT()&#123;
+cout&lt;&lt; &quot;a: &quot; &lt;&lt;a &lt;&lt;endl;
+cout&lt;&lt; &quot;b: &quot; &lt;&lt; this-&gt;b &lt;&lt;endl;
+&#125;
+	protected:
+    private:
+	int a;
+    int b;
+&#125;;
+int main(void)&#123;
+	Test t1(1，2);&#x2F;&#x2F;&#x3D;&#x3D;&#x3D;&gt; Test(&amp;t1，1，2);
+    t1.printT();&#x2F;&#x2F;&#x3D;&#x3D;&#x3D;&gt; printT(&amp;t1)
+return 0;
+&#125;
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<blockquote>
+<p>(1)︰若类成员函数的形参和类的属性，名字相同，通过this指针来解决。</p>
+<p>(2)︰类的成员函数可通过const修饰。</p>
+</blockquote>
+<h4 id="全局函数与成员函数"><a href="#全局函数与成员函数" class="headerlink" title="全局函数与成员函数"></a>全局函数与成员函数</h4><ol>
+<li>把全局函数转化成成员函数，通过this指针隐藏左操作数<br><code>Test add(Test &amp;t1,Test &amp;t2)===》Test add(Test &amp;t2)</code></li>
+<li>把成员函数转换成全局函数，多了一个参数<br><code>void printAB()===》void printAB(Test *pthis)</code></li>
+<li>函数返回元素和返回引用</li>
+</ol>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">Test&amp; add(Test &amp;t2)&#x2F;&#x2F;*this &#x2F;&#x2F;函数返回引用
+&#123;
+	this-&gt;a &#x3D; this-&gt;a + t2.getA();
+    this-&gt;b &#x3D; this-&gt;b + t2.getB();
+	return *this; &#x2F;&#x2F;*操作让this指针回到元素状态
+&#125;
+Test add2(Test &amp;t2)&#x2F;&#x2F;*this &#x2F;&#x2F;函数返回元素
+&#123;
+	&#x2F;&#x2F;t3是局部变量
+	Test t3(this-&gt;a+t2.getA(),this-&gt;b+t2.getB()) ;
+    return t3;
+&#125;
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="强化练习"><a href="#强化练习" class="headerlink" title="强化练习"></a>强化练习</h3><blockquote>
+<p>某商店经销一种货物。货物购进和卖出时以箱为单位，各箱的重量不一样，因此，商店需要记录目前库存的总重量。现在用C++模拟商店货物购进和卖出的情况。</p>
+</blockquote>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#define _CRT_SECURE_NO_WARNINGS
+#include &lt;iostream&gt;
+
+
+using namespace std;
+
+
+class Goods
+&#123;
+public:
+	Goods()
+	&#123;
+		weight &#x3D; 0;
+		next &#x3D; NULL;
+		cout &lt;&lt; &quot;创建了一个重量为&quot; &lt;&lt; weight &lt;&lt; &quot;的货物&quot; &lt;&lt; endl;
+	&#125;
+
+	Goods(int w) &#123;
+		&#x2F;&#x2F;需要创建一个w的货物，并且仓库加上这个重量
+		weight &#x3D; w;
+		next &#x3D; NULL;
+		total_weight +&#x3D; w;
+		cout &lt;&lt; &quot;创建了一个重量为&quot; &lt;&lt; weight &lt;&lt; &quot;的货物&quot; &lt;&lt; endl;
+	&#125;
+
+	~Goods() &#123;
+		&#x2F;&#x2F;仓库减少这个货物的重量
+		cout &lt;&lt; &quot;删除了一箱重量是&quot; &lt;&lt; weight &lt;&lt; &quot;的货物&quot; &lt;&lt; endl;
+		total_weight -&#x3D; weight;
+	&#125;
+
+
+	static int get_total_weight()
+	&#123;
+		return total_weight;
+	&#125;
+
+	Goods *next;
+private:
+	int weight;&#x2F;&#x2F;重量
+	static int total_weight;&#x2F;&#x2F;仓库的总重量
+&#125;;
+
+int Goods::total_weight &#x3D; 0;
+
+
+void buy(Goods * &amp;head, int w)
+&#123;
+	&#x2F;&#x2F;创建一个货物 重量是w
+	Goods *new_goods &#x3D; new Goods(w);
+
+	if (head &#x3D;&#x3D; NULL) &#123;
+		head &#x3D; new_goods;
+	&#125;
+	else &#123;
+		new_goods-&gt;next &#x3D; head;
+		head &#x3D; new_goods;
+	&#125;
+
+&#125;
+
+void sale(Goods * &amp;head)
+&#123;
+	if (head &#x3D;&#x3D; NULL) &#123;
+		cout &lt;&lt; &quot;仓库中已经没有货物了。。&quot; &lt;&lt; endl;
+		return;
+	&#125;
+
+	Goods *temp &#x3D; head;
+	head &#x3D; head-&gt;next;
+
+	delete temp;
+	cout &lt;&lt; &quot;saled.&quot; &lt;&lt; endl;
+&#125;
+
+
+
+int main(void)
+&#123;
+	int choice &#x3D; 0;
+	Goods *head &#x3D; NULL;
+	int w;
+
+	do &#123;
+		cout &lt;&lt; &quot;1 进货&quot; &lt;&lt; endl;
+		cout &lt;&lt; &quot;2 出货&quot; &lt;&lt; endl;
+		cout &lt;&lt; &quot;0 退出&quot; &lt;&lt; endl;
+
+		cin &gt;&gt; choice;
+		switch (choice)
+		&#123;
+		case 1:
+			&#x2F;&#x2F;进货
+			cout &lt;&lt; &quot;请输出要创建货物的重量&quot; &lt;&lt; endl;
+			cin &gt;&gt; w;
+			buy(head, w);
+			break;
+		case 2:
+			&#x2F;&#x2F;出货
+			sale(head);
+			break;
+		case 0:
+			&#x2F;&#x2F;退出
+			return 0;
+		default:
+			break;
+		&#125;
+
+		cout &lt;&lt; &quot;当前仓库的总重量是&quot;&lt;&lt;Goods::get_total_weight() &lt;&lt; endl;
+
+	&#125; while (1);
+	
+	return 0;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<blockquote>
+<p>数组类封装<br>目标︰解决实际问题，训练构造函敬、copy构造函数等，</p>
+<p>为操作符重载做准备</p>
+</blockquote>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">&#x2F;&#x2F;MyArray.h
+#pragma once
+#include &lt;iostream&gt;
+
+using namespace std;
+
+class MyArray
+&#123;
+public:
+	MyArray();
+	MyArray(int len);
+	MyArray(const MyArray &amp;another);
+	~MyArray();
+
+	void setData(int index, int data);
+	int getData(int index);
+	int getLen();
+
+	void operator&#x3D;(const MyArray&amp; another);
+private:
+	int len;
+	int *space;
+&#125;;
+
+&#x2F;&#x2F;MyArray.c
+
+#include &quot;MyArray.h&quot;
+
+MyArray::MyArray()
+&#123;
+	cout &lt;&lt; &quot;MyArray()...&quot; &lt;&lt; endl;
+	this-&gt;len &#x3D; 0;
+	this-&gt;space &#x3D; NULL;
+&#125;
+
+MyArray::MyArray(int len)
+&#123;
+	if (len &lt;&#x3D; 0) &#123;
+		this-&gt;len &#x3D; 0;
+		return;
+	&#125;
+	else &#123;
+		this-&gt;len &#x3D; len;
+
+		&#x2F;&#x2F;给space开辟空间
+		this-&gt;space &#x3D; new int[this-&gt;len];
+		cout &lt;&lt; &quot;MyArray::MyArray(int len) ...&quot; &lt;&lt; endl;
+	&#125;
+&#125;
+MyArray::MyArray(const MyArray &amp;another)
+&#123;
+	if (another.len &gt;&#x3D; 0) &#123;
+		this-&gt;len &#x3D; another.len;
+
+		&#x2F;&#x2F;深拷贝
+		this-&gt;space &#x3D; new int[this-&gt;len];
+		for (int i &#x3D; 0; i &lt; this-&gt;len; i++) &#123;
+			this-&gt;space[i] &#x3D; another.space[i];
+		&#125;
+		cout &lt;&lt; &quot;MyArray::MyArray(const MyArray &amp;another) ...&quot; &lt;&lt; endl;
+
+	&#125;
+&#125;
+MyArray::~MyArray()
+&#123;
+	if (this-&gt;space !&#x3D; NULL) &#123;
+		delete[]this-&gt;space;
+		this-&gt;space &#x3D; NULL;
+		len &#x3D; 0;
+		cout &lt;&lt; &quot;MyArray::~MyArray() ...&quot; &lt;&lt; endl;
+	&#125;
+&#125;
+
+void MyArray::setData(int index, int data)
+&#123;
+	if (this-&gt;space !&#x3D; NULL) &#123;
+		this-&gt;space[index] &#x3D; data;
+	&#125;
+&#125;
+int MyArray::getData(int index)
+&#123;
+	return this-&gt;space[index];
+&#125;
+int MyArray::getLen()
+&#123;
+	return this-&gt;len;
+&#125;
+
+void MyArray::operator&#x3D;(const MyArray&amp; another)
+&#123;
+	if (another.len &gt;&#x3D; 0) &#123;
+		this-&gt;len &#x3D; another.len;
+
+		&#x2F;&#x2F;深拷贝
+		this-&gt;space &#x3D; new int[this-&gt;len];
+		for (int i &#x3D; 0; i &lt; this-&gt;len; i++) &#123;
+			this-&gt;space[i] &#x3D; another.space[i];
+		&#125;
+		cout &lt;&lt; &quot;MyArray::operator&#x3D;(const MyArray&amp; another) ...&quot; &lt;&lt; endl;
+
+	&#125;
+&#125;
+
+&#x2F;&#x2F;main.c
+#define _CRT_SECURE_NO_WARNINGS
+#include &lt;iostream&gt;
+#include &quot;MyArray.h&quot;
+
+using namespace std;
+
+int main(void)
+&#123;
+
+	MyArray array1(10);&#x2F;&#x2F;开辟10元素的数组
+
+	&#x2F;&#x2F;赋值操作
+	for (int i &#x3D; 0; i &lt; 10; i++) &#123;
+		array1.setData(i, i + 10);
+	&#125;
+
+	cout &lt;&lt; &quot;--------&quot; &lt;&lt; endl;
+
+	cout &lt;&lt; &quot;array1:&quot; &lt;&lt; endl;
+	for (int i &#x3D; 0; i &lt; 10; i++) &#123;
+		cout &lt;&lt; array1.getData(i) &lt;&lt; &quot; &quot;;
+	&#125;
+	cout &lt;&lt; endl;
+
+	MyArray array2 &#x3D; array1;
+	cout &lt;&lt; &quot;array2:&quot; &lt;&lt; endl;
+	for (int i &#x3D; 0; i &lt; array2.getLen(); i++) &#123;
+		cout &lt;&lt; array2.getData(i) &lt;&lt; &quot; &quot;;
+	&#125;
+	cout &lt;&lt; endl;
+	
+	MyArray array3;
+	array3 &#x3D; array1;
+
+
+	cout &lt;&lt; &quot;array3:&quot; &lt;&lt; endl;
+	for (int i &#x3D; 0; i &lt; array3.getLen(); i++) &#123;
+		cout &lt;&lt; array3.getData(i) &lt;&lt; &quot; &quot;;
+	&#125;
+	cout &lt;&lt; endl;
+
+	return 0;
+&#125;
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="友元"><a href="#友元" class="headerlink" title="友元"></a>友元</h3><ul>
+<li>采用类的机制后实现了数据的隐藏与封装,类的数据成员一般定义为私有成员,成员函数一般定义为公有的,依此提供类与外界间的通信接口。但是,有时需要定义一些函数这些函数不是类的一部分,但又需要频繁地访问类的数据成员,这时可以将这些函数定义为该函数的友元函数。除了友元函数外,还有友元类,两者统称为友元。友元的作用是提高了程序的运行效率(即减少了类型检查和安全性检查等都需要时间开销),但它破坏了类的封装性和隐藏性,使得非成员函数可以访问类的私有成员。</li>
+<li>友元可以是一个函数,该函数被称为友元函数;友元也可以是一个类,该类被称为友元类。</li>
+<li>同类对象间无私处</li>
+</ul>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">MyString::MyString( const MyString &amp; other)&#123;
+	int len &#x3D; strlen(other._str);
+    this-&gt;_str &#x3D; new char[ len+1];
+    strcpy(this-&gt;_str,other._str);
+&#125;
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<ul>
+<li>异类对象间有友元</li>
+</ul>
+<h4 id="友元函数"><a href="#友元函数" class="headerlink" title="友元函数"></a>友元函数</h4><ul>
+<li>友元函数是可以直接访问类的私有成员的非成员函数。它是定义在类外的普通函数它不属于任何类,但需要在类的定义中加以声明,声明时只需在友元的名称前加上关键字friend,其格式如下:</li>
+<li>friend 类型 函数名(形式参数);</li>
+<li>全局函数作友元函数</li>
+</ul>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#include&lt;iostream&gt;\
+#include&lt;cmath&gt;
+using namespace std;
+class Point&#123;
+	public:
+	Point( double xx, double yy)&#123;
+	x &#x3D; xx;
+    y &#x3D; yy;
+    &#125;
+	void Getxy();
+	friend double Distance(Point &amp;a,Point &amp;b);
+	private:
+	double x,y;
+&#125;;
+void Point::Getxy()&#123;
+cout &lt;&lt; &quot;(&quot; &lt;&lt; x &lt;&lt; &quot;,&quot; &lt;&lt; y &lt;&lt; &quot;)&quot;&lt;&lt; endl;
+&#125;
+double Distance(Point &amp;a，Point &amp;b)&#123;
+	double dx &#x3D; a.x - b.x;
+    double dy &#x3D; a.y - b.y;
+return sqrt( dx*dx + dy*dy ) ;
+&#125;
+int main(void)
+&#123;
+Point p1(3.0，4.0)，p2(6.0，8.0);p1.Getxy();
+p2.Getxy();
+double d &#x3D; Distance(p1，p2);
+cout &lt;&lt; &quot;Distance is &quot; &lt;&lt; d &lt;&lt; endl;
+return 0;
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<ul>
+<li>类成员函数作友元函数</li>
+</ul>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#include&lt;iostream&gt;
+#include&lt;cmath&gt;
+using namespace std;
+class Point;
+&#x2F;&#x2F;前向声明,是一种不完全型声明,即只需提供类名(无需提供类实现)即可。仅可用于声明指针和引用。
+class ManagerPoint&#123;
+	public:
+		double Distance(Point &amp;a，Point &amp;b);
+&#125;;
+class Point&#123;
+	public:
+		Point( double xx,double yy)&#123;
+		x &#x3D; xx;y &#x3D; yy;&#125;
+		void Getxy();
+	friend double ManagerPgint::Distanse(Point 8a,Point &amp;b);
+    private:
+		double x,y;
+&#125;;
+void Point::Getxy()&#123;
+cout &lt;&lt; “(”&lt;&lt; x &lt;&lt; &quot;,&quot; &lt;&lt; y &lt;&lt; &quot;)&quot;&lt;&lt; endl;
+&#125;
+double ManagerPoint::Distance(Point &amp;a，Point &amp;b) &#123;
+double dx &#x3D; a.x - b.x;
+double dy &#x3D; a.y - b.y;
+return sqrt( dx*dx + dy*dy);
+&#125;
+int main(void)&#123;
+Point p1(3.0，4.0),p2(6.0，8.0);
+    p1.Getxy();
+	p2.Getxy();
+	ManagerPoint mp;
+	float d &#x3D; mp.Distance(p1,p2);
+	cout &lt;&lt; &quot;Distance is &quot; &lt;&lt; d&lt;&lt; endl;
+	return 0;
+&#125;     <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="友元对象"><a href="#友元对象" class="headerlink" title="友元对象"></a>友元对象</h4><ul>
+<li>友元类的所有成员函数都是另一个类的友元函数,都可以访问另一个类中的隐藏信息(包括私有成员和保护成员)。</li>
+<li>当希望一个类可以存取另一个类的私有成员时,可以将该类声明为另一类的友元类。定义友元类的语句格式如下:</li>
+</ul>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">friend class 类名;
+其中:friend 和 class是关键字,类名必须是程序中的一个已定义过的类。例如,以下语句说明类B是类A的友元类:
+class A
+&#123;
+	public:
+	friend class B;
+&#125;;
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<ul>
+<li>经过以上说明后,类B的所有成员函数都是类A的友元函数,能存取类A的私有成员和保护成员</li>
+</ul>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">class A&#123;
+	public:
+	inline void Test()&#123;
+	&#125;
+    private:
+	int x,y; 
+    friend class B;
+&#125;
+class B&#123;
+	public:
+	inline void Test()
+    	&#123;
+		A a;
+		printf( &quot;x&#x3D;%d , y&#x3D;%d&quot;.a.x,a.y );
+		&#125;
+&#125;
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="论友元"><a href="#论友元" class="headerlink" title="论友元"></a>论友元</h4><ul>
+<li>声明位置<ul>
+<li>友元声明以关键字<code>friend</code>开始,它只能出现在类定义中。因为友元不是授权类的成员,所以它不受其所在类的声明区域<code>public private</code>和<code>protected</code>的影响。通常我们选择把所有友元声明组织在一起并放在类头之后.</li>
+</ul>
+</li>
+<li>友元的利弊<ul>
+<li>友元不是类成员,但是它可以访问类中的私有成员。友元的作用在于提高程序的运行效率,但是,它破坏了类的封装性和隐藏性,使得非成员函数可以访问类的私有成员。不过,类的访问权限确实在某些应用场合显得有些呆板,从而容忍了友元这一特别语法现象。</li>
+</ul>
+</li>
+<li>注意事项<ul>
+<li>友元关系不能被继承。</li>
+<li>友元关系是单向的,不具有交换性。若类B是类A的友元,类A不一定是类B的友元,要看在类中是否有相应的声明。</li>
+<li>友元关系不具有传递性。若类B是类A的友元,类C是B的友元,类C不一定是类A的友元,同样要看类中是否有相应的声明。</li>
+</ul>
+</li>
+</ul>
+<h4 id="运算符重载"><a href="#运算符重载" class="headerlink" title="运算符重载"></a>运算符重载</h4><ul>
+<li>所谓重载，就是重新赋予新的含义。函数重载就是对一个已有的函数赋予新的含义，使之实现新功能，因此，一个函数名就可以用来代表不同功能的函数，也就是”一名多用”。</li>
+<li>运算符也可以重载。实际上，我们已经在不知不觉之中使用了运算符重载。例如，大家都已习惯于用加法运算符”+”对整数、单精度数和双精度数进行加法运算，如5+8，5.8+3.67等，其实计算机对整数、单精度数和双精度数的加法操作过程是很不相同的，但由于C++已经对运算符”+”进行了重载，所以就能适用于int, float, doUble类型的运算。</li>
+<li>又如”&lt;&lt;”是C++的位运算中的位移运算符（左移)，但在输出操作中又是与流对象cout配合使用的流插入运算符，”&gt;&gt;“也是位移运算符(右移），但在输入操作中又是与流对象cin配合使用的流提取运算符。这就是运算符重载<br>(operator overloading)。C++系统对”&lt;&lt;“和”&gt;&gt;“进行了重载，用户在不同的场合下使用它们时，作用是不同的。对”&lt;&lt;“和”&gt;&gt;“的重载处理是放在头文件stream中的。因此，如果要在程序中用”&lt;&lt;”和”&gt;&gt;”作流插入运算符和流提取运算符，必须在本文件模块中包含头文件stream(当然还应当包括”using namespace std”)。现在要讨论的问题是∶用户能否根据自己的需要对C++已提供的运算符进行重载，赋予它们新的含义，使之一名多用.</li>
+<li>运算符重载的本质是函数重载。</li>
+<li>重载函数的一般格式如下:</li>
+</ul>
+<blockquote>
+<p>函数类型 operator 运算符名称(形参表列){<br>重载实体;<br>}</p>
+</blockquote>
+<ul>
+<li>operator 运算符名称在一起构成了新的函数名。比如</li>
+<li><code>const Complex operator+( const Complex &amp;c1,const Complex &amp;c2);</code></li>
+<li>我们会说,operator+重载了重载了运算符+。</li>
+</ul>
+<h4 id="友元重载"><a href="#友元重载" class="headerlink" title="友元重载"></a>友元重载</h4><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#include &lt;iostream&gt;
+using namespace std;
+class Complex
+&#123;
+	public:
+	Complex(float x&#x3D;0，float y&#x3D;0) :_x(x),_y(y)&#123;&#125;
+	void dis() &#123;
+	cout&lt;&lt;&quot; ( &quot;&lt;&lt;_x&lt;&lt;&quot; , &quot;&lt;&lt;_y&lt;&lt; &quot;)&quot;&lt;&lt;endl;
+&#125;
+friend const Complex operator+(const Complex &amp;c1,const Complex &amp;c2);
+    	private:
+	float _x;
+    float _y;
+&#125;;
+const Complex operator+(const Complex &amp;c1,const Complex &amp;c2) &#123;
+return Complex(c1._x + c2._x,c1._y + c2._y);
+&#125;
+int main() &#123;
+	complex c1(2,3);
+    complex c2(3,4);
+	c1.dis();
+    c2.dis();
+	complex c3 &#x3D; c1+c2;
+&#x2F;&#x2F; Complex c3 &#x3D; operator+(c1,c2);
+    c3.dis();
+return 0;
+&#125;
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="成员重载"><a href="#成员重载" class="headerlink" title="成员重载"></a>成员重载</h4><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#include &lt;iostream&gt;
+using namespace std;
+class Complex
+&#123;
+	public:
+	Complex( float x&#x3D;0,float y&#x3D;0):_x(×),_y(y)&#123;&#125;
+    void dis() &#123;
+	cout&lt;&lt;&quot;(&quot;&lt;&lt;_x&lt;&lt;&quot; ,&quot;&lt;&lt;_y&lt;&lt;&quot;)&quot;&lt;&lt;endl;
+	&#125;
+	friend const Complex operator+(const Complex &amp;c1,const Complex &amp;c2);
+	const complex operator+( const Complex &amp;another);
+	private:
+	float _x;
+    float _y ;
+&#125;;
+	const Complex operator+(const Complex &amp;c1,const Complex &amp;c2)&#123;
+	cout&lt;&lt;&quot;友元函数重载&quot;&lt;&lt;endl;
+	return Complex(c1._x +c2._x,c1._y + c2._y);
+&#125;
+	const Complex Complex::operator+( const Complex &amp; another)&#123;
+	cout&lt;&lt;&quot;成员函数重载&quot;&lt;&lt;endl;
+	return Complex(this-&gt;_x + another._x,this-&gt;_y + another._y);
+&#125;
+int main( )&#123;
+	complex c1(2,3);
+    complex c2(3,4);
+    c1.dis();
+	c2.dis();
+    &#x2F;&#x2F; Complex c3 &#x3D; c1+c2;
+	&#x2F;&#x2F; complex c3 &#x3D; operator+(c1,c2);complex c3 &#x3D; c1+c2;
+	c3.dis();
+	return 0;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="重载规则"><a href="#重载规则" class="headerlink" title="重载规则"></a>重载规则</h4><ol>
+<li><p>C++不允许用户自己定义新的运算符,只能对已有的C++运算符进行重载。</p>
+</li>
+<li><p>C+＋允许重载的运算符</p>
+<blockquote>
+<p>new new[] delete delete[] + - * / % ^ &amp; | ~ ! = &lt;  &gt;  += -=  *= /= %=</p>
+<p>^= &amp;= |= &lt;&lt; &gt;&gt; &lt;&lt;= &gt;&gt;= == != &lt;= &gt;= &amp;&amp; || ++ – , -&gt;* -&gt; () []</p>
+</blockquote>
+</li>
+</ol>
+<ul>
+<li><p>不能重载的运算符只有五个。</p>
+<blockquote>
+<p>? :    .    ::   sizeof   .* </p>
+</blockquote>
+</li>
+</ul>
+<ol start="3">
+<li>重载不能改变运算符运算对象(即操作数)的个数。<ul>
+<li>如,关系运算符“&gt;”和“&lt;”等是双目运算符,重载后仍为双目运算符,需要两个参数。运算符”+“,”-“，”*“,”&amp;“等既可以作为单目运算符,也可以作为双目运算符,可以分别将它们重载为单目运算符或双目运算符。</li>
+</ul>
+</li>
+<li>重载不能改变运算符的优先级别。<ul>
+<li>例如”*“和”/“优先级高于”＋“和”-“,不论怎样进行重载,各运算符之间的优先级不会改变。有时在程序中希望改变某运算符的优先级,也只能使用加括号的方法强制改变重载运算符的运算顺序。</li>
+</ul>
+</li>
+<li>重载不能改变运算符的结合性。<ul>
+<li>如,复制运算符”=“是右结合性(自右至左),重载后仍为右结合性。</li>
+</ul>
+</li>
+<li>重载运算符的函数不能有默认的参数<ul>
+<li>重载运算符的函数不能有默认的参数</li>
+</ul>
+</li>
+<li>重载的运算符必须和用户定义的自定义类型的对象一起使用,其参数至少应有一个是类对象(或类对象的引用)。<ul>
+<li>也就是说,参数不能全部是C++的标准类型,以防止用户修改用于标准类型数据成员的运算符的性质,如下面这样是不对的:</li>
+<li>代码如下:</li>
+<li><code>int operator + (int a,int b)&#123;return(a-b); &#125;</code></li>
+<li>原来运算符+的作用是对两个数相加,现在企图通过重载使它的作用改为两个数相减。如果允许这样重载的话,如果有表达式4+3,它的结果是7还是1呢?显然,这是绝对要禁止的。</li>
+</ul>
+</li>
+<li>用于类对象的运算符一般必须重载,但有两个例外,运算符”=“和运算符”&amp;“不必用户重载。<ul>
+<li>复制运算符”=“可以用于每一个类对象,可以用它在同类对象之间相互赋值。因为系统已为每一个新声明的类重载了一个赋值运算符,它的作用是逐个复制类中的数据成员地址运算符&amp;也不必重载,它能返回类对象在内存中的起始地址。</li>
+</ul>
+</li>
+<li>应当使重载运算符的功能类似于该运算符作用于标准类型数据时候时所实现的功能。</li>
+<li>运算符重载函数可以是类的成员函数,也可以是类的友元函数,还可以是既非类的成员函数也不是友元函数的普通函数</li>
+</ol>
+<h4 id="双目运算符重载"><a href="#双目运算符重载" class="headerlink" title="双目运算符重载"></a>双目运算符重载</h4><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#include &lt;iostream&gt;
+using namespace std;
+class Complex
+&#123;
+public:
+	Complex(float x&#x3D;0,float y&#x3D;0) :_x(x),_y(y)&#123;&#125;
+void dis()
+&#123;
+cout&lt;&lt;&quot;(&quot;&lt;&lt;_x&lt;&lt;&quot;, &quot;&lt;&lt;_y&lt;&lt;&quot; )&quot;&lt;&lt;endl;
+&#125;
+Complex&amp; operator+&#x3D;( const Complex &amp;c)
+&#123;
+this-&gt;_x+&#x3D; c._x; this-&gt;_y +&#x3D; c._y ;
+    return *this;
+&#125;
+private:
+	float _x;
+	float _y;
+&#125;;
+int main()&#123;
+	&#x2F;&#x2F; int a&#x3D;10,b&#x3D;20,c&#x3D;30;
+    &#x2F;&#x2F; a+&#x3D;b;
+	&#x2F;&#x2F;b+&#x3D;C;
+    &#x2F;&#x2F;cout&lt;&lt;&quot;a &#x3D; &quot;&lt;&lt;a&lt;&lt;endl;
+    &#x2F;&#x2F; cout&lt;&lt;&quot;b &#x3D; &quot;&lt;&lt;b&lt;&lt;endl;
+    &#x2F;&#x2F; cout&lt;&lt;&quot;c &#x3D; &quot;&lt;&lt;c&lt;&lt;endl;
+    &#x2F;&#x2F;complex a1( 10,0),b1(20,0), c1(30,0);
+    &#x2F;&#x2F;此时的+&#x3D;重载函数返回void
+    &#x2F;&#x2F; a1 +&#x3D; b1;
+    &#x2F;&#x2F; b1 +&#x3D; c1;l &#x2F; a1.dis();&#x2F;&#x2F; b1.dis();&#x2F; c1.dis();
+    &#x2F;&#x2F; --------------------
+    &#x2F;&#x2F;int a&#x3D;10, b&#x3D;20,c&#x3D;30;
+    &#x2F;&#x2F;a+&#x3D;b+&#x3D;c;
+    &#x2F;&#x2F;cout&lt;&lt;&quot;a &#x3D; &quot;&lt;&lt;a&lt;&lt;endl;
+    &#x2F;&#x2F; cout&lt;&lt;&quot;b &#x3D; &quot;&lt;b&lt;&lt;endl;
+    &#x2F;&#x2F; cout&lt;&lt; &quot;c &#x3D; &quot;&lt;&lt;c&lt;&lt;endl;
+    &#x2F;&#x2F; complex a1(10,0),b1(20,0), c1(30,0);
+    &#x2F;&#x2F;此时重载函数+&#x3D;返回的是Complex 
+    &#x2F;&#x2F; a1+&#x3D;b1+&#x3D;c1;
+    &#x2F;&#x2F; a1.dis();
+    &#x2F;&#x2F; b1.dis();
+    &#x2F;&#x2F; c1.dis();
+    &#x2F;&#x2F; -------------------------------
+    int a &#x3D; 10, b &#x3D; 20,c &#x3D; 30;
+    (a +&#x3D; b) +&#x3D; c;
+    cout&lt;&lt;&quot;a &#x3D; &quot;&lt;&lt;a&lt;&lt;endl;
+    cout&lt;&lt;&quot;b &#x3D; &quot;&lt;&lt;b&lt;&lt;endl;
+    cout&lt;&lt;&quot;c &#x3D; &quot;&lt;&lt;c&lt;&lt;endl;
+    Complex a1(10,0),b1(20,0), c1(30,0);
+    &#x2F;&#x2F;此时重载函数+&#x3D;返回的是Complex &amp;
+    &#x2F;&#x2F;一定要注意在连等式中,返回引用和返回对象的区别
+    (a1 +&#x3D; b1) +&#x3D; c1;
+	a1.dis();
+	b1.dis();
+    c1.dis();
+    return 0;
+&#125;
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="单目运算符重载"><a href="#单目运算符重载" class="headerlink" title="单目运算符重载"></a>单目运算符重载</h4><ul>
+<li>不可以被重载的操作符</li>
+</ul>
+<blockquote>
+<p>.    .*   ::   ?:</p>
+</blockquote>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">&#x2F;&#x2F;前++
+#include &lt;iostream&gt;
+using namespace std;
+class Complex
+&#123;
+	public:
+	Complex(float x&#x3D;0,float y&#x3D;0):_x(x),_y(y)&#123;&#125;
+	void dis()
+    &#123;
+	cout&lt;&lt;&quot;( &quot;&lt;&lt;_x&lt;&lt;&quot;, &quot;&lt;&lt;_y&lt;&lt;&quot;)&quot;&lt;&lt;endl;
+    &#125;
+	friend Complex &amp; operator++(Complex&amp; c);
+    private:
+		float _x;
+    	float _y;
+&#125;;
+	Complex &amp; operator++(Complex&amp; c)&#123;
+		c._x++;
+       	c._y++;
+		return c;
+&#125;
+int main()
+&#123;
+	int n &#x3D; 10;
+	cout&lt;&lt;n&lt;&lt;endl;&#x2F;&#x2F;10
+    cout&lt;&lt;++n&lt;&lt;endl;&#x2F;&#x2F;11
+	cout&lt;&lt;n&lt;&lt;endl;&#x2F;&#x2F;11
+	cout&lt;&lt;++++n&lt;&lt;endl;&#x2F;&#x2F;13
+    cout&lt;&lt;n&lt;&lt;endl;
+	
+	Complex c( 10,10);
+    	c.dis();&#x2F;&#x2F;10 10
+	Complex c2&#x3D;++c;
+	c2.dis( );	&#x2F;&#x2F;11 11
+	c.dis();&#x2F;&#x2F;11 11
+	c2 &#x3D; ++++c;
+	c2.dis();&#x2F;&#x2F;13 13
+	c.dis();&#x2F;&#x2F;13 13
+return 0;
+&#125;
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">&#x2F;&#x2F;后++
+#include &lt;iostream&gt;
+using namespace std;
+class Complex&#123;
+public:
+Complex(float x&#x3D;0,float y&#x3D;0):_x(x),_y(y)&#123;&#125;
+void dis()
+&#123;
+cout&lt;&lt;&quot;( &quot;&lt;&lt;_x&lt;&lt;&quot;, &quot;&lt;&lt;_y&lt;&lt;&quot;) &quot;&lt;&lt;endl;
+&#125;
+#if 0
+const Complex operator++(int)&#123;
+	Complex t &#x3D; *this;
+    _x++;
+    _y++;
+return t;
+&#125;
+#endif
+	friend const Complex operator++(Complex &amp;c ,int);
+    private:
+	float _x;
+    float y ;
+&#125;;
+const Complex operator++(Complex &amp;c,int)
+	Complex t(c._x,c._y); 
+	c._x++;
+	c._y++;
+	return t;
+&#125;
+int main()&#123;
+	int n &#x3D; 10;
+    cout&lt;&lt;n&lt;&lt;endl;
+&#x2F;&#x2F;10
+	cout&lt;&lt;n++&lt;&lt;endl;
+&#x2F;&#x2F;10
+	cout&lt;&lt;n&lt;&lt;endl;
+&#x2F;&#x2F;11
+&#x2F;&#x2F;cout&lt;&lt;n++++&lt;&lt;endl;&#x2F;&#x2F;13后++表达式不能连用
+    cout&lt;&lt;n&lt;&lt;endl; &#x2F;&#x2F;11
+	Complex c(10);
+	c.dis();
+	Complex c2 &#x3D;C++;
+    c2.dis();
+	c.dis();
+&#x2F;&#x2F;c2 &#x3D; C++十+;&#x2F;&#x2F; c2.dis();
+    c.dis();
+return 0;
+&#125;
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="输入输出运算符重载"><a href="#输入输出运算符重载" class="headerlink" title="输入输出运算符重载"></a>输入输出运算符重载</h4><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">istream &amp; operator&gt;&gt;(istream &amp;,自定义类&amp;);
+ostream &amp; operator&lt;&lt;(ostream &amp;,自定义类&amp;);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<ul>
+<li>通过友元函数来实现，避免修改C++的标准库</li>
+</ul>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#include &lt;iostream&gt;
+using namespace std;
+class Complex &#123;
+public:
+	Complex(float x&#x3D;0，float y&#x3D;0):_×(×),_y(y)&#123;&#125;
+	void dis() &#123;
+	cout&lt;&lt; &quot; ( &quot;&lt;&lt;_x&lt;&lt;&quot; , &quot;&lt;&lt;_y&lt;&lt;&quot;) &quot;&lt;&lt;endl;&#125;
+	friend ostream &amp; operator&lt;&lt;(ostream &amp;os, const Complex &amp; c);
+    friend istream &amp; operator&gt;&gt;(istream &amp;is，Complex &amp;c);
+private:
+	float _x;
+    float _y;&#125;;
+ostream &amp; operator&lt;&lt;(ostream &amp;os,const Complex &amp; c)
+&#123;
+	os&lt;&lt;&quot;( &quot;&lt;&lt;c._x&lt;&lt;&quot;,&quot;&lt;&lt;c._y&lt;&lt;&quot;)&quot;;
+    return os;
+&#125;
+istream &amp; operator&gt;&gt;(istream &amp;is, Complex &amp;c)&#123;
+is&gt;&gt;c._x&gt;&gt;c._y;
+    return is;
+&#125;
+int main()&#123;
+	Complex c(2,3);
+    cout&lt;&lt;c&lt;&lt;endl;cin&gt;&gt;c;
+	cout&lt;&lt;c&lt;&lt;endl;
+	return 0;
+&#125;
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="友元还是成员"><a href="#友元还是成员" class="headerlink" title="友元还是成员"></a>友元还是成员</h4><ul>
+<li>假设,我们有类Sender类和Mail类,实现发送邮件的功能。sender&lt;&lt; mail;</li>
+<li>sender左操作数,决定了operator&lt;&lt;为Sender的成员函数,而mail决定了operator&lt;&lt;要作Mail类的友员。</li>
+</ul>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#include &lt;iostream&gt;
+using namespace std;
+class Mail;
+class Sender&#123;
+	public:
+	Sender(string s):_addr(s)&#123;&#125;
+	Sender&amp; operator&lt;&lt;( const Mail &amp; mail);&#x2F;&#x2F;成员
+	private:
+	string _addr;
+&#125;;
+class Maili&#123;
+	public:
+Mail(string _t,string _c ):_title(_t),_content(_c)&#123;&#125;
+    friend Sender&amp; Sender::operator&lt;&lt;(const Mail &amp; mail);
+    private:
+	string _title;
+    string _content;&#125;;
+Sender&amp; Sender::operator&lt;&lt; ( const Mail &amp; mail)
+cout&lt;&lt; &quot;Address: &quot;&lt;&lt;_addr&lt;&lt;endl;
+cout&lt;&lt;&quot;Title : &quot;&lt;&lt;mail._title&lt;&lt;endl;
+cout&lt;&lt;&quot;Content: &quot;&lt;&lt;mail._content&lt;&lt;endl;
+return *this;
+&#125;
+int main( )
+Sender sender( &quot;danbing_at@gmail.com&quot; );
+Mail mail( &quot;note&quot; , &quot;meeting at 3:00 pm&quot; ) ;
+Mail mail2( &quot;tour&quot; , &quot;One night in beijing&quot; );
+sender&lt;&lt;mail&lt;&lt;mail2;
+return 0;
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<blockquote>
+<p>结论:<br>1,一个操作符的左右操作数不一定是相同类型的对象,这就涉及到将该操作符函数定义为谁的友元,谁的成员问题。<br>2,一个操作符函数,被声明为哪个类的成员,取决于该函数的调用对象(通常是左操作数)。<br>3,一个操作符函数,被声明为哪个类的友员,取决于该函数的参数对象(通常是右操作数)。</p>
+</blockquote>
+<h4 id="运算符重载提高"><a href="#运算符重载提高" class="headerlink" title="运算符重载提高"></a>运算符重载提高</h4><ol>
+<li>赋值运算符重载（operator=)<ul>
+<li>用一个己有对象,给另外一个己有对象赋值。两个对象均己创建结束后,发生的赋值行为。</li>
+</ul>
+</li>
+</ol>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">类名&#123;
+	类名&amp; operator&#x3D;(const 类名&amp; 源对象）拷贝体
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">class A&#123;
+	A&amp; operator&#x3D;( const A&amp; another)&#123;
+		&#x2F;&#x2F;函数体
+		return *this;
+	&#125;
+&#125;;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<blockquote>
+<p>规则<br>1系统提供默认的赋值运算符重载,一经实现,不复存在。</p>
+<p>2系统提供的也是等位拷贝,也就浅拷贝,一个内存泄漏,重析构。</p>
+<p>3要实再深深的赋值,必须自定义。</p>
+<p>4自定义面临的问题有三个:</p>
+<p>​        1,自赋值</p>
+<p>​        2,内存泄漏</p>
+<p>​        3,重析构。</p>
+<p>5返回引用,且不能用const 修饰。其目的是实现连等式。</p>
+</blockquote>
+<ol start="2">
+<li>数组下标运算符（operator[]）</li>
+</ol>
+<blockquote>
+<p>类型 类   : :  operator[] (  类 型  ) ;</p>
+</blockquote>
+<blockquote>
+<p>设×是类×的一个对象，则表达式<br>x [ y ]可被解释为x. operator [] ( y )</p>
+</blockquote>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">int &amp; operator[](int i)&#123;return v[i];&#125;&#x2F;&#x2F;返回元素的引用 this-&gt;v[i]
+a[2]&#x3D;12;&#x2F;&#x2F;返回引用的函数调用作左值<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<blockquote>
+<p>自定义一个数组类要有&lt;&lt; &gt;&gt;操作符重载</p>
+</blockquote>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">&#x2F;&#x2F;MyArray.h
+#pragma once
+#include &lt;iostream&gt;
+
+using namespace std;
+
+class MyArray
+&#123;
+public:
+	MyArray();
+	MyArray(int len);
+	MyArray(const MyArray &amp;another);
+	~MyArray();
+
+	void setData(int index, int data);
+	int getData(int index);
+	int getLen() const ;
+
+	MyArray&amp; operator&#x3D;(const MyArray&amp; another);
+
+	int &amp; operator[](int index) const;
+
+	friend ostream &amp;operator&lt;&lt;(ostream &amp;os,const MyArray &amp;array);
+	friend istream &amp;operator&gt;&gt;(istream &amp;is, MyArray &amp;array);
+
+	friend bool operator&#x3D;&#x3D;(MyArray &amp;array1, MyArray &amp;array2);
+	bool operator!&#x3D;(MyArray &amp;another);
+private:
+	int len;
+	int *space;
+&#125;;
+
+&#x2F;&#x2F;MyArray.cpp
+#include &quot;MyArray.h&quot;
+
+
+MyArray::MyArray()
+&#123;
+	cout &lt;&lt; &quot;MyArray()...&quot; &lt;&lt; endl;
+	this-&gt;len &#x3D; 0;
+	this-&gt;space &#x3D; NULL;
+&#125;
+
+MyArray::MyArray(int len)
+&#123;
+	if (len &lt;&#x3D; 0) &#123;
+		this-&gt;len &#x3D; 0;
+		return;
+	&#125;
+	else &#123;
+		this-&gt;len &#x3D; len;
+
+		&#x2F;&#x2F;给space开辟空间
+		this-&gt;space &#x3D; new int[this-&gt;len];
+		cout &lt;&lt; &quot;MyArray::MyArray(int len) ...&quot; &lt;&lt; endl;
+	&#125;
+&#125;
+MyArray::MyArray(const MyArray &amp;another)
+&#123;
+	if (another.len &gt;&#x3D; 0) &#123;
+		this-&gt;len &#x3D; another.len;
+
+		&#x2F;&#x2F;深拷贝
+		this-&gt;space &#x3D; new int[this-&gt;len];
+		for (int i &#x3D; 0; i &lt; this-&gt;len; i++) &#123;
+			this-&gt;space[i] &#x3D; another.space[i];
+		&#125;
+		cout &lt;&lt; &quot;MyArray::MyArray(const MyArray &amp;another) ...&quot; &lt;&lt; endl;
+
+	&#125;
+&#125;
+MyArray::~MyArray()
+&#123;
+	if (this-&gt;space !&#x3D; NULL) &#123;
+		delete[]this-&gt;space;
+		this-&gt;space &#x3D; NULL;
+		len &#x3D; 0;
+		cout &lt;&lt; &quot;MyArray::~MyArray() ...&quot; &lt;&lt; endl;
+	&#125;
+&#125;
+
+void MyArray::setData(int index, int data)
+&#123;
+	if (this-&gt;space !&#x3D; NULL) &#123;
+		this-&gt;space[index] &#x3D; data;
+	&#125;
+&#125;
+int MyArray::getData(int index)
+&#123;
+	return this-&gt;space[index];
+&#125;
+int MyArray::getLen() const
+&#123;
+	return this-&gt;len;
+&#125;
+
+MyArray&amp;  MyArray::operator&#x3D;(const MyArray&amp; another)
+&#123;
+	if (this &#x3D;&#x3D; &amp;another) &#123;
+		return *this;
+	&#125;
+
+	if (this-&gt;space !&#x3D; NULL) &#123;
+		delete[]this-&gt;space;
+		this-&gt;space &#x3D; NULL; 
+		this-&gt;len &#x3D; 0;
+	&#125;
+
+	if (another.len &gt;&#x3D; 0) &#123;
+		this-&gt;len &#x3D; another.len;
+
+		&#x2F;&#x2F;深拷贝
+		this-&gt;space &#x3D; new int[this-&gt;len];
+		for (int i &#x3D; 0; i &lt; this-&gt;len; i++) &#123;
+			this-&gt;space[i] &#x3D; another.space[i];
+		&#125;
+		cout &lt;&lt; &quot;MyArray::operator&#x3D;(const MyArray&amp; another) ...&quot; &lt;&lt; endl;
+
+	&#125;
+
+	return *this;
+&#125;
+
+int &amp; MyArray::operator[](int index) const
+&#123;
+	return this-&gt;space[index];
+&#125;
+
+
+ostream &amp;operator&lt;&lt;(ostream &amp;os,const MyArray &amp;array)
+&#123;
+	os &lt;&lt; &quot;遍历整个数组 &quot; &lt;&lt; endl;
+	&#x2F;&#x2F;array.getLen(); &#x2F;&#x2F;getLen(&amp;array);
+	for (int i &#x3D; 0; i &lt; array.getLen(); i++) &#123;
+		os &lt;&lt; array[i] &lt;&lt;&quot; &quot;;&#x2F;&#x2F;array.operator[]( i)
+	&#125;
+
+	os &lt;&lt; &quot;调用的&lt;&lt;操作符重载&quot; &lt;&lt; endl;
+
+	return os;
+&#125;
+
+istream &amp;operator&gt;&gt;(istream &amp;is, MyArray &amp;array)
+&#123;
+	cout &lt;&lt; &quot;请输入&quot; &lt;&lt; array.getLen() &lt;&lt; &quot;个数&quot; &lt;&lt; endl;
+	for (int i &#x3D; 0; i &lt; array.getLen(); i++) &#123;
+		cin &gt;&gt; array[i];
+	&#125;
+	return is;
+&#125;
+
+
+bool operator&#x3D;&#x3D;(MyArray &amp;array1, MyArray &amp;array2)
+&#123;
+	if (array1.len !&#x3D; array2.len) &#123;
+		return false;
+	&#125;
+
+	for (int i &#x3D; 0; i &lt; array1.len; i++) &#123;
+		if (array1.space[i] !&#x3D; array2.space[i]) &#123;
+			return false;
+		&#125;
+	&#125;
+
+	return true;
+&#125;
+bool MyArray::operator!&#x3D;(MyArray &amp;another)
+&#123;
+	return !(*this &#x3D;&#x3D; another);
+&#125;
+
+&#x2F;&#x2F;main.cpp
+#define _CRT_SECURE_NO_WARNINGS
+#include &lt;iostream&gt;
+#include &quot;MyArray.h&quot;
+
+using namespace std;
+
+
+
+int main(void)
+&#123;
+
+ MyArray array1(10);&#x2F;&#x2F;开辟10元素的数组
+
+	&#x2F;&#x2F;赋值操作
+	for (int i &#x3D; 0; i &lt; 10; i++) &#123;
+		&#x2F;&#x2F;array1.setData(i, i + 10);
+		array1[i] &#x3D; i + 10;&#x2F;&#x2F;space[1] &#x3D; 1+10
+	&#125;
+
+	cout &lt;&lt; &quot;--------&quot; &lt;&lt; endl;
+
+	cout &lt;&lt; &quot;array1:&quot; &lt;&lt; endl;
+	for (int i &#x3D; 0; i &lt; 10; i++) &#123;
+		cout &lt;&lt; array1[i] &lt;&lt; &quot; &quot;;
+	&#125;
+	cout &lt;&lt; endl;
+
+	MyArray array2 &#x3D; array1;
+	cout &lt;&lt; &quot;array2:&quot; &lt;&lt; endl;
+	for (int i &#x3D; 0; i &lt; array2.getLen(); i++) &#123;
+		cout &lt;&lt; array2[i] &lt;&lt; &quot; &quot;;
+	&#125;
+	cout &lt;&lt; endl;
+	
+
+	cout &lt;&lt; &quot; ------------&quot; &lt;&lt; endl;
+	MyArray array3(5);
+
+	cin &gt;&gt; array3;
+
+
+	cout &lt;&lt; &quot;array3:&quot; &lt;&lt; endl;
+	cout &lt;&lt; array3 &lt;&lt; endl;
+	cout &lt;&lt; endl;
+
+	
+	if (array3 !&#x3D; array1)  &#123;
+		cout &lt;&lt; &quot;不相等&quot; &lt;&lt; endl;
+	&#125;
+	else &#123;
+		cout &lt;&lt; &quot;相等 &quot; &lt;&lt; endl;
+	&#125;
+
+	return 0;
+&#125;
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+
+<ol start="3">
+<li>函数调用符号（operator())<ul>
+<li>把类对象像函数名一样使用。</li>
+<li>仿函数(functor),就是使一个类的使用看上去象一个函数。其实现就是类中实现一个operator(),这个类就有了类似函数的行为,就是一个仿函数类了。</li>
+</ul>
+</li>
+</ol>
+<blockquote>
+<p>class类名{<br>返值类型 operator()(参数类型)  函数体<br>}</p>
+</blockquote>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#include &lt;iostream&gt;
+using namespace std;
+class Sqr
+&#123;
+	public:
+		int operator()(int i)&#123;
+			return i*i;
+		&#125;
+		double operator ()(double d)&#123;
+			return d*d;
+		&#125;
+&#125;;
+int main()&#123;
+	Sqr sqr;
+	int i &#x3D; sqr(4);
+	double d &#x3D; sqr(5.5);
+	cout&lt;&lt;i&lt;&lt;endl;
+	cout&lt;&lt;d&lt;&lt;endl;
+	return 0;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<ol start="4">
+<li>不可重载&amp;&amp;和||操作符</li>
+</ol>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#include &lt;iostream&gt;
+using namespace std;
+class Test&#123;
+	public:
+	Test( int i &#x3D; 0)&#123;
+	this-&gt;i &#x3D; i;
+	&#125;
+	Test operator+ ( const Test&amp; obj)&#123;
+		cout&lt;&lt;&quot;执行+号重载函数&quot;&lt;&lt;endl;
+        Test ret;
+		ret.i &#x3D; i + obj.i;
+        return ret;
+&#125;
+	bool operator&amp;&amp;( const Test&amp; obj)&#123;
+		cout&lt;&lt;&quot;执行&amp;&amp;重载函数&quot;&lt;&lt;endl;
+        return i &amp;&amp; obj.i;
+&#125;
+	private:
+    int i;
+&#125;;
+int main()&#123;
+	int a1 &#x3D; 0;
+    int a2 &#x3D; 1;
+	cout&lt;&lt;&quot;注意:&amp;&amp;操作符的结合顺序是从左向右&quot;&lt;&lt;endl;
+    if( a1 &amp;&amp; (a1 + a2) )
+    &#123;
+	cout&lt;&lt;&quot;有一个是假，则不在执行下一个表达式的计算&quot;&lt;&lt;endl;
+	&#125;
+	Test t1(0);
+    Test t2(1);
+	if ( t1 &amp;&amp;(t1 + t2) )&#123;
+&#x2F;&#x2F;t1 &amp;&amp; t1.operator(t2)
+&#x2F;&#x2F; t1.operator&amp;&amp;(t1.operator+(t2))
+	cout&lt;&lt;&quot;两个函数都被执行了，而且是先执行了+&quot;&lt;&lt;endl;
+&#125;
+return 0
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<blockquote>
+<p>C+＋如果重载&amp;&amp;或||将无法实现短路规则</p>
+</blockquote>
+<blockquote>
+<p>实现一个字符串类</p>
+<p>构造函数要求：</p>
+<p>MyString a;</p>
+<p>MyString a(“dddd”);</p>
+<p>MyString b = a;</p>
+<p>常用的操作符</p>
+<p>&lt;&lt;    &gt;&gt;   !=    ==   &gt;  &lt;=  []</p>
+</blockquote>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">&#x2F;&#x2F;MyString.h
+#pragma once
+#define _CRT_SECURE_NO_WARNINGS
+#include &lt;iostream&gt;
+using namespace std;
+
+class MyString
+&#123;
+public:
+	MyString();
+	&#x2F;&#x2F;MyString(int len); &#x2F;&#x2F;创建一个长度是len的string对象
+	MyString(const char *str);
+	MyString(const MyString &amp;another);
+	~MyString();
+
+	&#x2F;&#x2F;重载操作符[]
+	char &amp;operator[](int index);
+
+
+
+	&#x2F;&#x2F;重载操作符&gt;&gt;
+	friend istream &amp; operator&gt;&gt;(istream &amp;is, MyString &amp;s);
+
+	&#x2F;&#x2F;重载&#x3D;操作符
+	MyString &amp; operator&#x3D;(const MyString &amp;another);
+
+	&#x2F;&#x2F;重载&#x3D;&#x3D;操作符
+
+	&#x2F;&#x2F;重载!&#x3D;操作符
+
+
+	&#x2F;&#x2F;重载+操作符
+	MyString operator+(MyString &amp;another);
+
+
+	&#x2F;&#x2F;重载操作符&lt;&lt;
+	friend ostream &amp; operator&lt;&lt;(ostream &amp;os, MyString&amp;s);
+
+private:
+	int len;
+	char *str;
+&#125;;
+
+&#x2F;&#x2F;MyString.cpp
+#include &quot;MyString.h&quot;
+
+
+MyString::MyString()
+&#123;
+	this-&gt;len &#x3D; 0;
+	this-&gt;str &#x3D;NULL;
+&#125;
+
+MyString::MyString(const char *str)
+&#123;
+	if (str &#x3D;&#x3D; NULL) &#123;
+		this-&gt;len &#x3D; 0;
+		this-&gt;str &#x3D; new char[0 + 1];
+		strcpy(this-&gt;str, &quot;&quot;);
+	&#125;
+	else &#123;
+		int len &#x3D; strlen(str);
+		this-&gt;len &#x3D; len;
+
+		this-&gt;str &#x3D; new char[len + 1];
+		strcpy(this-&gt;str, str);
+	&#125;
+&#125;
+
+&#x2F;&#x2F;初始化时候被调用的
+MyString::MyString(const MyString &amp;another)
+&#123;
+	this-&gt;len &#x3D; another.len;
+	this-&gt;str &#x3D; new char[this-&gt;len + 1];
+	strcpy(this-&gt;str, another.str);
+&#125;
+
+
+
+MyString::~MyString()
+&#123;
+	if (this-&gt;str !&#x3D; NULL) &#123;
+		cout &lt;&lt; this-&gt;str &lt;&lt; &quot;执行了析构函数&quot; &lt;&lt; endl;
+		delete this-&gt;str;
+		this-&gt;str &#x3D; NULL; 
+		this-&gt;len &#x3D; 0;
+	&#125;
+&#125;
+
+char &amp; MyString::operator[](int index)
+&#123;
+	return this-&gt;str[index];
+&#125;
+
+MyString &amp;  MyString::operator&#x3D;(const MyString &amp;another)
+&#123;
+	if (this &#x3D;&#x3D; &amp;another) &#123;
+		return *this;
+	&#125;
+
+	if (this-&gt;str !&#x3D; NULL) &#123;
+		delete[] this-&gt;str;
+		this-&gt;str &#x3D; NULL;
+		this-&gt;len &#x3D; 0;
+	&#125;
+
+	this-&gt;len &#x3D; another.len;
+	this-&gt;str &#x3D; new char[this-&gt;len + 1];
+	strcpy(this-&gt;str, another.str);
+
+	return *this;
+&#125;
+
+ostream &amp; operator&lt;&lt;(ostream &amp;os, MyString&amp;s)
+&#123;
+	os &lt;&lt; s.str;
+	return os;
+&#125;
+
+istream &amp; operator&gt;&gt;(istream &amp;is, MyString &amp;s)
+&#123;
+	&#x2F;&#x2F;1 将s之前的字符串释放掉
+	if (s.str !&#x3D; NULL) &#123;
+		delete[] s.str;
+		s.str &#x3D; NULL;
+		s.len &#x3D; 0;
+	&#125;
+
+	&#x2F;&#x2F;2 通过cin添加新的字符串
+	char temp_str[4096] &#x3D; &#123; 0 &#125;;
+	cin &gt;&gt; temp_str;
+
+	int len &#x3D; strlen(temp_str);
+	s.str &#x3D; new char[len + 1];
+	strcpy(s.str, temp_str);
+	s.len &#x3D; len;
+
+	return is;
+&#125;
+
+MyString MyString::operator+(MyString &amp;another)
+&#123;
+	MyString temp;
+
+	int len &#x3D; this-&gt;len + another.len;
+
+	temp.len &#x3D; len;
+
+	temp.str &#x3D; new char[len + 1];
+	memset(temp.str, 0, len + 1);
+	strcat(temp.str, this-&gt;str);
+	strcat(temp.str, another.str);
+
+	return temp;
+&#125;
+&#x2F;&#x2F;main.c
+#define _CRT_SECURE_NO_WARNINGS
+#include &lt;iostream&gt;
+#include &lt;string&gt;
+#include &quot;MyString.h&quot;
+
+using namespace std;
+
+int main(void)
+&#123;
+	string s1;
+	MyString s1(&quot;abc&quot;);
+	MyString s2(&quot;123&quot;);
+
+	&#x2F;&#x2F;cout &lt;&lt; s1 + s2 &lt;&lt; endl;
+
+	cout &lt;&lt; s1 &lt;&lt; endl;
+	cout &lt;&lt; s2 &lt;&lt; endl;
+
+
+#if 0
+	MyString s1(&quot;abc&quot;);
+	MyString s2(s1);
+	MyString s3 &#x3D; &quot;123&quot;;
+
+
+	cout &lt;&lt; s1 &lt;&lt; endl;
+	cout &lt;&lt; s2 &lt;&lt; endl;
+
+	s1[1] &#x3D; &#39;x&#39;;
+
+	cout &lt;&lt; s1 &lt;&lt; endl;
+
+	s1 &#x3D; s3;
+
+	cout &lt;&lt; s1 &lt;&lt; endl;
+
+#endif
+	return 0;
+&#125;
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="解引用与智能指针"><a href="#解引用与智能指针" class="headerlink" title="解引用与智能指针"></a>解引用与智能指针</h4><ul>
+<li>常规意义上讲,new或是malloc出来的堆上的空间,都需要手动delete和free的。但在其它高级语言中,只需申请无需释放的功能是存在的。</li>
+<li>c++中也提供了这样的机制。我们先来探究一下实现原理。</li>
+<li>常规</li>
+</ul>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">void foo()&#123;
+A*p &#x3D; new A;
+&#x2F;&#x2F;do something
+delete p;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<ul>
+<li>智能指针</li>
+</ul>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#include &lt;iostream&gt;
+#include &lt;memory&gt;
+using namespace std;
+class A&#123;
+    public:
+		A() &#123;
+			cout&lt;&lt;&quot;A constructor&quot;&lt;&lt;endl;
+			&#125;
+		~A() &#123;
+			cout&lt;&lt;&quot;A destructor&quot;&lt;&lt;endl;
+			&#125;
+		void dis() &#123;
+			cout &lt;&lt;&quot;class A&#39;s dis() &quot; &lt;&lt;endl;
+		&#125;
+&#125;;
+int main()&#123;
+&#x2F;&#x2F;使用智能指针auto_ptr 
+    auto_ptr&lt;A&gt; p (new A);
+	p-&gt;dis();
+	return 0;
+&#125;
+
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<ul>
+<li>自定义智能指针</li>
+</ul>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#include &lt;iostream&gt;
+#include &lt;memory&gt;
+using namespace std;
+class A
+&#123;
+	public:
+		A()&#123;
+		cout&lt;&lt;&quot;A constructor&quot;&lt;&lt;endl;
+		&#125;
+		~A()&#123;
+		cout&lt;&lt;&quot;A destructor&quot;&lt;&lt;endl;
+		&#125;
+		void dis()&#123;
+		cout&lt;&lt; &quot;in class A&#39;s dis&quot;&lt;&lt;endl;
+		&#125;
+&#125;;
+class PMA&#123;
+	public:
+		PMA(A *p) :_p(p)&#123;&#125;
+		~PMA()&#123;
+		delete _p;
+		&#125;
+		A&amp; operator*()&#123;
+		return *_p;
+		&#125;
+		A*operator-&gt;()&#123;
+		return _p;
+&#125;
+		private:
+		A*_p;
+&#125;;
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
     </div>
@@ -2695,7 +4238,7 @@ struct s2
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%BC%E8%BF%B0"><span class="nav-number">2.</span> <span class="nav-text">综述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#C-%E5%AF%B9C%E8%AF%AD%E8%A8%80%E7%9A%84%E5%8A%A0%E5%BC%BA"><span class="nav-number">3.</span> <span class="nav-text">C++对C语言的加强</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#namespace%E5%91%BD%E5%90%8D%E7%A9%BA%E9%97%B4"><span class="nav-number">3.1.</span> <span class="nav-text">namespace命名空间</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#C-%E5%91%BD%E5%90%8D%E7%A9%BA%E9%97%B4%E5%9F%BA%E6%9C%AC%E5%B8%B8%E8%AF%86"><span class="nav-number">3.1.1.</span> <span class="nav-text">C++命名空间基本常识</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#C-%E5%91%BD%E5%90%8D%E7%A9%BA%E9%97%B4%E5%AE%9A%E4%B9%89%E4%BB%A5%E5%8F%8A%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95"><span class="nav-number">3.1.2.</span> <span class="nav-text">C++命名空间定义以及使用方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#C-%E5%91%BD%E5%90%8D%E7%A9%BA%E9%97%B4%E7%BC%96%E7%A8%8B%E5%AE%9E%E8%B7%B5"><span class="nav-number">3.1.3.</span> <span class="nav-text">C++命名空间编程实践</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%BB%93%E8%AE%BA"><span class="nav-number">3.1.4.</span> <span class="nav-text">结论</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9E%E7%94%A8%E6%80%A7%E5%A2%9E%E5%BC%BA"><span class="nav-number">3.2.</span> <span class="nav-text">实用性增强</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%98%E9%87%8F%E6%A3%80%E6%B5%8B%E5%A2%9E%E5%BC%BA"><span class="nav-number">3.3.</span> <span class="nav-text">变量检测增强</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#struct-%E7%B1%BB%E5%9E%8B%E5%A2%9E%E5%BC%BA"><span class="nav-number">3.4.</span> <span class="nav-text">struct 类型增强</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#C-%E4%B8%AD%E6%89%80%E6%9C%89%E5%8F%98%E9%87%8F%E5%92%8C%E5%87%BD%E6%95%B0%E9%83%BD%E5%BF%85%E9%A1%BB%E6%9C%89%E7%B1%BB%E5%9E%8B"><span class="nav-number">3.5.</span> <span class="nav-text">C++中所有变量和函数都必须有类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%B0%E5%A2%9Ebool%E7%B1%BB%E5%9E%8B%E5%85%B3%E9%94%AE%E5%AD%97"><span class="nav-number">3.6.</span> <span class="nav-text">新增bool类型关键字</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%89%E7%9B%AE%E8%BF%90%E7%AE%97%E7%AC%A6%E5%8A%9F%E8%83%BD%E5%A2%9E%E5%BC%BA"><span class="nav-number">3.7.</span> <span class="nav-text">三目运算符功能增强</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#const%E5%A2%9E%E5%BC%BA"><span class="nav-number">3.8.</span> <span class="nav-text">const增强</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#const%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86"><span class="nav-number">3.8.1.</span> <span class="nav-text">const基础知识</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#C%E8%AF%AD%E8%A8%80%E4%B8%AD%E7%9A%84%E2%80%9C%E5%86%92%E7%89%8C%E8%B4%A7%E2%80%9D"><span class="nav-number">3.8.2.</span> <span class="nav-text">C语言中的“冒牌货”</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#const-%E5%92%8C-define%E7%9A%84%E7%9B%B8%E5%90%8C"><span class="nav-number">3.8.3.</span> <span class="nav-text">const 和#define的相同</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#const%E5%92%8C-define%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-number">3.8.4.</span> <span class="nav-text">const和#define的区别</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9C%9F%E6%AD%A3%E7%9A%84%E6%9E%9A%E4%B8%BE"><span class="nav-number">3.9.</span> <span class="nav-text">真正的枚举</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#C-%E5%AF%B9C%E8%AF%AD%E8%A8%80%E7%9A%84%E6%8B%93%E5%B1%95"><span class="nav-number">4.</span> <span class="nav-text">C++对C语言的拓展</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BC%95%E7%94%A8"><span class="nav-number">4.1.</span> <span class="nav-text">引用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%98%E9%87%8F%E5%90%8D"><span class="nav-number">4.1.1.</span> <span class="nav-text">变量名</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%BC%95%E7%94%A8%E7%9A%84%E6%A6%82%E5%BF%B5"><span class="nav-number">4.1.2.</span> <span class="nav-text">引用的概念</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%A7%84%E5%88%99"><span class="nav-number">4.1.3.</span> <span class="nav-text">规则</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%BC%95%E7%94%A8%E4%BD%9C%E4%B8%BA%E5%87%BD%E6%95%B0%E5%8F%82%E6%95%B0"><span class="nav-number">4.1.4.</span> <span class="nav-text">引用作为函数参数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%BC%95%E7%94%A8%E7%9A%84%E6%84%8F%E4%B9%89"><span class="nav-number">4.1.5.</span> <span class="nav-text">引用的意义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%BC%95%E7%94%A8%E7%9A%84%E6%9C%AC%E8%B4%A8"><span class="nav-number">4.1.6.</span> <span class="nav-text">引用的本质</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%BC%95%E7%94%A8%E4%BD%9C%E4%B8%BA%E5%87%BD%E6%95%B0%E7%9A%84%E8%BF%94%E5%9B%9E%E5%80%BC%EF%BC%88%E5%BC%95%E7%94%A8%E5%BD%93%E5%B7%A6%E5%80%BC%EF%BC%89"><span class="nav-number">4.1.7.</span> <span class="nav-text">引用作为函数的返回值（引用当左值）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%8C%87%E9%92%88%E5%BC%95%E7%94%A8"><span class="nav-number">4.1.8.</span> <span class="nav-text">指针引用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#const%E5%BC%95%E7%94%A8"><span class="nav-number">4.1.9.</span> <span class="nav-text">const引用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#const%E5%BC%95%E7%94%A8%E7%9A%84%E5%8E%9F%E7%90%86"><span class="nav-number">4.1.10.</span> <span class="nav-text">const引用的原理</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#inline%E5%86%85%E8%81%94%E5%87%BD%E6%95%B0"><span class="nav-number">4.2.</span> <span class="nav-text">inline内联函数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%86%85%E8%81%94%E5%87%BD%E6%95%B0%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="nav-number">4.2.1.</span> <span class="nav-text">内联函数基本概念</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%86%85%E8%81%94%E5%87%BD%E6%95%B0VS%E5%AE%8F%E5%87%BD%E6%95%B0"><span class="nav-number">4.2.2.</span> <span class="nav-text">内联函数VS宏函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%86%85%E8%81%94%E5%87%BD%E6%95%B0%E6%80%BB%E7%BB%93"><span class="nav-number">4.2.3.</span> <span class="nav-text">内联函数总结</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%BB%98%E8%AE%A4%E5%8F%82%E6%95%B0%E5%92%8C%E5%8D%A0%E4%BD%8D%E5%8F%82%E6%95%B0"><span class="nav-number">4.3.</span> <span class="nav-text">默认参数和占位参数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8D%95%E4%B8%AA%E9%BB%98%E8%AE%A4%E5%8F%82%E6%95%B0"><span class="nav-number">4.3.1.</span> <span class="nav-text">单个默认参数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%A4%9A%E4%B8%AA%E9%BB%98%E8%AE%A4%E5%8F%82%E6%95%B0"><span class="nav-number">4.3.2.</span> <span class="nav-text">多个默认参数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%BB%98%E8%AE%A4%E5%8F%82%E6%95%B0%E8%A7%84%E5%88%99"><span class="nav-number">4.3.3.</span> <span class="nav-text">默认参数规则</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8D%A0%E4%BD%8D%E5%8F%82%E6%95%B0"><span class="nav-number">4.3.4.</span> <span class="nav-text">占位参数</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%87%BD%E6%95%B0%E9%87%8D%E8%BD%BD"><span class="nav-number">4.4.</span> <span class="nav-text">函数重载</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%87%BD%E6%95%B0%E9%87%8D%E8%BD%BD%E8%A7%84%E5%88%99"><span class="nav-number">4.4.1.</span> <span class="nav-text">函数重载规则</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%B0%83%E7%94%A8%E5%87%86%E5%88%99"><span class="nav-number">4.4.2.</span> <span class="nav-text">调用准则</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%87%8D%E8%BD%BD%E7%9A%84%E5%BA%95%E5%B1%82%E5%AE%9E%E7%8E%B0"><span class="nav-number">4.4.3.</span> <span class="nav-text">重载的底层实现</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%87%BD%E6%95%B0%E9%87%8D%E8%BD%BD%E4%B8%8E%E5%87%BD%E6%95%B0%E9%BB%98%E8%AE%A4%E5%8F%82%E6%95%B0"><span class="nav-number">4.4.4.</span> <span class="nav-text">函数重载与函数默认参数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%87%BD%E6%95%B0%E9%87%8D%E8%BD%BD%E4%B8%8E%E5%87%BD%E6%95%B0%E6%8C%87%E9%92%88%E7%9B%B8%E7%BB%93%E5%90%88"><span class="nav-number">4.4.5.</span> <span class="nav-text">函数重载与函数指针相结合</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%87%BD%E6%95%B0%E6%8C%87%E9%92%88%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95"><span class="nav-number">4.4.6.</span> <span class="nav-text">函数指针基本语法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%87%BD%E6%95%B0%E9%87%8D%E8%BD%BD%E6%80%BB%E7%BB%93"><span class="nav-number">4.4.7.</span> <span class="nav-text">函数重载总结</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%B1%BB%E5%92%8C%E5%AF%B9%E8%B1%A1"><span class="nav-number">5.</span> <span class="nav-text">类和对象</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="nav-number">5.1.</span> <span class="nav-text">基本概念</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%B1%BB%E4%B8%8E%E5%AF%B9%E8%B1%A1"><span class="nav-number">5.1.1.</span> <span class="nav-text">类与对象</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%88%90%E5%91%98%E5%8F%98%E9%87%8F%E4%B8%8E%E6%88%90%E5%91%98%E5%87%BD%E6%95%B0"><span class="nav-number">5.1.2.</span> <span class="nav-text">成员变量与成员函数</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B0%81%E8%A3%85%E4%B8%8E%E8%AE%BF%E9%97%AE%E6%8E%A7%E5%88%B6"><span class="nav-number">5.2.</span> <span class="nav-text">封装与访问控制</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BB%8Estruct%E8%AF%B4%E8%B5%B7"><span class="nav-number">5.2.1.</span> <span class="nav-text">从struct说起</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%B0%81%E8%A3%85%E7%9A%84%E8%AE%BF%E9%97%AE%E5%B1%9E%E6%80%A7"><span class="nav-number">5.2.2.</span> <span class="nav-text">封装的访问属性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%94%A8class%E5%8E%BB%E5%B0%81%E8%A3%85%E5%B8%A6%E8%A1%8C%E4%B8%BA%E7%9A%84%E7%B1%BB"><span class="nav-number">5.2.3.</span> <span class="nav-text">用class去封装带行为的类</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B%E6%A1%88%E4%BE%8B%E7%BB%83%E4%B9%A0"><span class="nav-number">5.3.</span> <span class="nav-text">面向对象编程案例练习</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%B1%82%E5%9C%86%E7%9A%84%E5%91%A8%E9%95%BF%E5%92%8C%E9%9D%A2%E7%A7%AF"><span class="nav-number">5.3.1.</span> <span class="nav-text">求圆的周长和面积</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#C%E8%AF%AD%E8%A8%80%E5%92%8CC-%E8%AF%AD%E8%A8%80%E7%9A%84%E5%85%B3%E7%B3%BB"><span class="nav-number">5.3.2.</span> <span class="nav-text">C语言和C++语言的关系</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%BB%BC%E5%90%88%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90"><span class="nav-number">5.3.3.</span> <span class="nav-text">综合面向对象案例分析</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AF%B9%E8%B1%A1%E7%9A%84%E6%9E%84%E9%80%A0%E5%92%8C%E6%9E%90%E6%9E%84"><span class="nav-number">5.4.</span> <span class="nav-text">对象的构造和析构</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%A6%82%E6%9E%9C%E6%B2%A1%E6%9C%89%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0"><span class="nav-number">5.4.1.</span> <span class="nav-text">如果没有构造函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0"><span class="nav-number">5.4.2.</span> <span class="nav-text">构造函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9E%90%E6%9E%84%E5%87%BD%E6%95%B0"><span class="nav-number">5.4.3.</span> <span class="nav-text">析构函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E7%9A%84%E5%88%86%E7%B1%BB%E5%8F%8A%E8%B0%83%E7%94%A8"><span class="nav-number">5.4.4.</span> <span class="nav-text">构造函数的分类及调用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E8%A7%84%E5%88%99"><span class="nav-number">5.4.5.</span> <span class="nav-text">构造函数规则</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%B5%85%E6%8B%B7%E8%B4%9D%E5%92%8C%E6%B7%B1%E6%8B%B7%E8%B4%9D"><span class="nav-number">5.4.6.</span> <span class="nav-text">浅拷贝和深拷贝</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E5%88%9D%E5%A7%8B%E5%8C%96%E5%88%97%E8%A1%A8"><span class="nav-number">5.4.7.</span> <span class="nav-text">构造函数初始化列表</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%BC%BA%E5%8C%96%E8%AE%AD%E7%BB%83"><span class="nav-number">5.4.8.</span> <span class="nav-text">强化训练</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AF%B9%E8%B1%A1%E5%8A%A8%E6%80%81%E5%BB%BA%E7%AB%8B%E5%92%8C%E9%87%8A%E6%94%BEnew%E5%92%8Cdelete"><span class="nav-number">5.5.</span> <span class="nav-text">对象动态建立和释放new和delete</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9D%99%E6%80%81%E6%88%90%E5%91%98%E5%8F%98%E9%87%8F%E5%92%8C%E6%88%90%E5%91%98%E5%87%BD%E6%95%B0"><span class="nav-number">5.6.</span> <span class="nav-text">静态成员变量和成员函数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%9D%99%E6%80%81%E6%88%90%E5%91%98%E5%8F%98%E9%87%8F"><span class="nav-number">5.6.1.</span> <span class="nav-text">静态成员变量</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%9D%99%E6%80%81%E6%88%90%E5%91%98%E5%87%BD%E6%95%B0"><span class="nav-number">5.6.2.</span> <span class="nav-text">静态成员函数</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BC%96%E8%AF%91%E5%99%A8%E5%AF%B9%E5%B1%9E%E6%80%A7%E5%92%8C%E6%96%B9%E6%B3%95%E7%9A%84%E5%A4%84%E7%90%86%E6%9C%BA%E5%88%B6"><span class="nav-number">5.7.</span> <span class="nav-text">编译器对属性和方法的处理机制</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%9D%99%E6%80%81%E6%88%90%E5%91%98%E5%8D%A0%E5%A4%9A%E5%A4%A7"><span class="nav-number">5.7.1.</span> <span class="nav-text">静态成员占多大</span></a></li></ol></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%BC%E8%BF%B0"><span class="nav-number">2.</span> <span class="nav-text">综述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#C-%E5%AF%B9C%E8%AF%AD%E8%A8%80%E7%9A%84%E5%8A%A0%E5%BC%BA"><span class="nav-number">3.</span> <span class="nav-text">C++对C语言的加强</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#namespace%E5%91%BD%E5%90%8D%E7%A9%BA%E9%97%B4"><span class="nav-number">3.1.</span> <span class="nav-text">namespace命名空间</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#C-%E5%91%BD%E5%90%8D%E7%A9%BA%E9%97%B4%E5%9F%BA%E6%9C%AC%E5%B8%B8%E8%AF%86"><span class="nav-number">3.1.1.</span> <span class="nav-text">C++命名空间基本常识</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#C-%E5%91%BD%E5%90%8D%E7%A9%BA%E9%97%B4%E5%AE%9A%E4%B9%89%E4%BB%A5%E5%8F%8A%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95"><span class="nav-number">3.1.2.</span> <span class="nav-text">C++命名空间定义以及使用方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#C-%E5%91%BD%E5%90%8D%E7%A9%BA%E9%97%B4%E7%BC%96%E7%A8%8B%E5%AE%9E%E8%B7%B5"><span class="nav-number">3.1.3.</span> <span class="nav-text">C++命名空间编程实践</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%BB%93%E8%AE%BA"><span class="nav-number">3.1.4.</span> <span class="nav-text">结论</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9E%E7%94%A8%E6%80%A7%E5%A2%9E%E5%BC%BA"><span class="nav-number">3.2.</span> <span class="nav-text">实用性增强</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%98%E9%87%8F%E6%A3%80%E6%B5%8B%E5%A2%9E%E5%BC%BA"><span class="nav-number">3.3.</span> <span class="nav-text">变量检测增强</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#struct-%E7%B1%BB%E5%9E%8B%E5%A2%9E%E5%BC%BA"><span class="nav-number">3.4.</span> <span class="nav-text">struct 类型增强</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#C-%E4%B8%AD%E6%89%80%E6%9C%89%E5%8F%98%E9%87%8F%E5%92%8C%E5%87%BD%E6%95%B0%E9%83%BD%E5%BF%85%E9%A1%BB%E6%9C%89%E7%B1%BB%E5%9E%8B"><span class="nav-number">3.5.</span> <span class="nav-text">C++中所有变量和函数都必须有类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%B0%E5%A2%9Ebool%E7%B1%BB%E5%9E%8B%E5%85%B3%E9%94%AE%E5%AD%97"><span class="nav-number">3.6.</span> <span class="nav-text">新增bool类型关键字</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%89%E7%9B%AE%E8%BF%90%E7%AE%97%E7%AC%A6%E5%8A%9F%E8%83%BD%E5%A2%9E%E5%BC%BA"><span class="nav-number">3.7.</span> <span class="nav-text">三目运算符功能增强</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#const%E5%A2%9E%E5%BC%BA"><span class="nav-number">3.8.</span> <span class="nav-text">const增强</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#const%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86"><span class="nav-number">3.8.1.</span> <span class="nav-text">const基础知识</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#C%E8%AF%AD%E8%A8%80%E4%B8%AD%E7%9A%84%E2%80%9C%E5%86%92%E7%89%8C%E8%B4%A7%E2%80%9D"><span class="nav-number">3.8.2.</span> <span class="nav-text">C语言中的“冒牌货”</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#const-%E5%92%8C-define%E7%9A%84%E7%9B%B8%E5%90%8C"><span class="nav-number">3.8.3.</span> <span class="nav-text">const 和#define的相同</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#const%E5%92%8C-define%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-number">3.8.4.</span> <span class="nav-text">const和#define的区别</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9C%9F%E6%AD%A3%E7%9A%84%E6%9E%9A%E4%B8%BE"><span class="nav-number">3.9.</span> <span class="nav-text">真正的枚举</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#C-%E5%AF%B9C%E8%AF%AD%E8%A8%80%E7%9A%84%E6%8B%93%E5%B1%95"><span class="nav-number">4.</span> <span class="nav-text">C++对C语言的拓展</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BC%95%E7%94%A8"><span class="nav-number">4.1.</span> <span class="nav-text">引用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%98%E9%87%8F%E5%90%8D"><span class="nav-number">4.1.1.</span> <span class="nav-text">变量名</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%BC%95%E7%94%A8%E7%9A%84%E6%A6%82%E5%BF%B5"><span class="nav-number">4.1.2.</span> <span class="nav-text">引用的概念</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%A7%84%E5%88%99"><span class="nav-number">4.1.3.</span> <span class="nav-text">规则</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%BC%95%E7%94%A8%E4%BD%9C%E4%B8%BA%E5%87%BD%E6%95%B0%E5%8F%82%E6%95%B0"><span class="nav-number">4.1.4.</span> <span class="nav-text">引用作为函数参数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%BC%95%E7%94%A8%E7%9A%84%E6%84%8F%E4%B9%89"><span class="nav-number">4.1.5.</span> <span class="nav-text">引用的意义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%BC%95%E7%94%A8%E7%9A%84%E6%9C%AC%E8%B4%A8"><span class="nav-number">4.1.6.</span> <span class="nav-text">引用的本质</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%BC%95%E7%94%A8%E4%BD%9C%E4%B8%BA%E5%87%BD%E6%95%B0%E7%9A%84%E8%BF%94%E5%9B%9E%E5%80%BC%EF%BC%88%E5%BC%95%E7%94%A8%E5%BD%93%E5%B7%A6%E5%80%BC%EF%BC%89"><span class="nav-number">4.1.7.</span> <span class="nav-text">引用作为函数的返回值（引用当左值）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%8C%87%E9%92%88%E5%BC%95%E7%94%A8"><span class="nav-number">4.1.8.</span> <span class="nav-text">指针引用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#const%E5%BC%95%E7%94%A8"><span class="nav-number">4.1.9.</span> <span class="nav-text">const引用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#const%E5%BC%95%E7%94%A8%E7%9A%84%E5%8E%9F%E7%90%86"><span class="nav-number">4.1.10.</span> <span class="nav-text">const引用的原理</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#inline%E5%86%85%E8%81%94%E5%87%BD%E6%95%B0"><span class="nav-number">4.2.</span> <span class="nav-text">inline内联函数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%86%85%E8%81%94%E5%87%BD%E6%95%B0%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="nav-number">4.2.1.</span> <span class="nav-text">内联函数基本概念</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%86%85%E8%81%94%E5%87%BD%E6%95%B0VS%E5%AE%8F%E5%87%BD%E6%95%B0"><span class="nav-number">4.2.2.</span> <span class="nav-text">内联函数VS宏函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%86%85%E8%81%94%E5%87%BD%E6%95%B0%E6%80%BB%E7%BB%93"><span class="nav-number">4.2.3.</span> <span class="nav-text">内联函数总结</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%BB%98%E8%AE%A4%E5%8F%82%E6%95%B0%E5%92%8C%E5%8D%A0%E4%BD%8D%E5%8F%82%E6%95%B0"><span class="nav-number">4.3.</span> <span class="nav-text">默认参数和占位参数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8D%95%E4%B8%AA%E9%BB%98%E8%AE%A4%E5%8F%82%E6%95%B0"><span class="nav-number">4.3.1.</span> <span class="nav-text">单个默认参数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%A4%9A%E4%B8%AA%E9%BB%98%E8%AE%A4%E5%8F%82%E6%95%B0"><span class="nav-number">4.3.2.</span> <span class="nav-text">多个默认参数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%BB%98%E8%AE%A4%E5%8F%82%E6%95%B0%E8%A7%84%E5%88%99"><span class="nav-number">4.3.3.</span> <span class="nav-text">默认参数规则</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8D%A0%E4%BD%8D%E5%8F%82%E6%95%B0"><span class="nav-number">4.3.4.</span> <span class="nav-text">占位参数</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%87%BD%E6%95%B0%E9%87%8D%E8%BD%BD"><span class="nav-number">4.4.</span> <span class="nav-text">函数重载</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%87%BD%E6%95%B0%E9%87%8D%E8%BD%BD%E8%A7%84%E5%88%99"><span class="nav-number">4.4.1.</span> <span class="nav-text">函数重载规则</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%B0%83%E7%94%A8%E5%87%86%E5%88%99"><span class="nav-number">4.4.2.</span> <span class="nav-text">调用准则</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%87%8D%E8%BD%BD%E7%9A%84%E5%BA%95%E5%B1%82%E5%AE%9E%E7%8E%B0"><span class="nav-number">4.4.3.</span> <span class="nav-text">重载的底层实现</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%87%BD%E6%95%B0%E9%87%8D%E8%BD%BD%E4%B8%8E%E5%87%BD%E6%95%B0%E9%BB%98%E8%AE%A4%E5%8F%82%E6%95%B0"><span class="nav-number">4.4.4.</span> <span class="nav-text">函数重载与函数默认参数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%87%BD%E6%95%B0%E9%87%8D%E8%BD%BD%E4%B8%8E%E5%87%BD%E6%95%B0%E6%8C%87%E9%92%88%E7%9B%B8%E7%BB%93%E5%90%88"><span class="nav-number">4.4.5.</span> <span class="nav-text">函数重载与函数指针相结合</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%87%BD%E6%95%B0%E6%8C%87%E9%92%88%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95"><span class="nav-number">4.4.6.</span> <span class="nav-text">函数指针基本语法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%87%BD%E6%95%B0%E9%87%8D%E8%BD%BD%E6%80%BB%E7%BB%93"><span class="nav-number">4.4.7.</span> <span class="nav-text">函数重载总结</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%B1%BB%E5%92%8C%E5%AF%B9%E8%B1%A1"><span class="nav-number">5.</span> <span class="nav-text">类和对象</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="nav-number">5.1.</span> <span class="nav-text">基本概念</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%B1%BB%E4%B8%8E%E5%AF%B9%E8%B1%A1"><span class="nav-number">5.1.1.</span> <span class="nav-text">类与对象</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%88%90%E5%91%98%E5%8F%98%E9%87%8F%E4%B8%8E%E6%88%90%E5%91%98%E5%87%BD%E6%95%B0"><span class="nav-number">5.1.2.</span> <span class="nav-text">成员变量与成员函数</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B0%81%E8%A3%85%E4%B8%8E%E8%AE%BF%E9%97%AE%E6%8E%A7%E5%88%B6"><span class="nav-number">5.2.</span> <span class="nav-text">封装与访问控制</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BB%8Estruct%E8%AF%B4%E8%B5%B7"><span class="nav-number">5.2.1.</span> <span class="nav-text">从struct说起</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%B0%81%E8%A3%85%E7%9A%84%E8%AE%BF%E9%97%AE%E5%B1%9E%E6%80%A7"><span class="nav-number">5.2.2.</span> <span class="nav-text">封装的访问属性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%94%A8class%E5%8E%BB%E5%B0%81%E8%A3%85%E5%B8%A6%E8%A1%8C%E4%B8%BA%E7%9A%84%E7%B1%BB"><span class="nav-number">5.2.3.</span> <span class="nav-text">用class去封装带行为的类</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B%E6%A1%88%E4%BE%8B%E7%BB%83%E4%B9%A0"><span class="nav-number">5.3.</span> <span class="nav-text">面向对象编程案例练习</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%B1%82%E5%9C%86%E7%9A%84%E5%91%A8%E9%95%BF%E5%92%8C%E9%9D%A2%E7%A7%AF"><span class="nav-number">5.3.1.</span> <span class="nav-text">求圆的周长和面积</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#C%E8%AF%AD%E8%A8%80%E5%92%8CC-%E8%AF%AD%E8%A8%80%E7%9A%84%E5%85%B3%E7%B3%BB"><span class="nav-number">5.3.2.</span> <span class="nav-text">C语言和C++语言的关系</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%BB%BC%E5%90%88%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90"><span class="nav-number">5.3.3.</span> <span class="nav-text">综合面向对象案例分析</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AF%B9%E8%B1%A1%E7%9A%84%E6%9E%84%E9%80%A0%E5%92%8C%E6%9E%90%E6%9E%84"><span class="nav-number">5.4.</span> <span class="nav-text">对象的构造和析构</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%A6%82%E6%9E%9C%E6%B2%A1%E6%9C%89%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0"><span class="nav-number">5.4.1.</span> <span class="nav-text">如果没有构造函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0"><span class="nav-number">5.4.2.</span> <span class="nav-text">构造函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9E%90%E6%9E%84%E5%87%BD%E6%95%B0"><span class="nav-number">5.4.3.</span> <span class="nav-text">析构函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E7%9A%84%E5%88%86%E7%B1%BB%E5%8F%8A%E8%B0%83%E7%94%A8"><span class="nav-number">5.4.4.</span> <span class="nav-text">构造函数的分类及调用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E8%A7%84%E5%88%99"><span class="nav-number">5.4.5.</span> <span class="nav-text">构造函数规则</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%B5%85%E6%8B%B7%E8%B4%9D%E5%92%8C%E6%B7%B1%E6%8B%B7%E8%B4%9D"><span class="nav-number">5.4.6.</span> <span class="nav-text">浅拷贝和深拷贝</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E5%88%9D%E5%A7%8B%E5%8C%96%E5%88%97%E8%A1%A8"><span class="nav-number">5.4.7.</span> <span class="nav-text">构造函数初始化列表</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%BC%BA%E5%8C%96%E8%AE%AD%E7%BB%83"><span class="nav-number">5.4.8.</span> <span class="nav-text">强化训练</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AF%B9%E8%B1%A1%E5%8A%A8%E6%80%81%E5%BB%BA%E7%AB%8B%E5%92%8C%E9%87%8A%E6%94%BEnew%E5%92%8Cdelete"><span class="nav-number">5.5.</span> <span class="nav-text">对象动态建立和释放new和delete</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9D%99%E6%80%81%E6%88%90%E5%91%98%E5%8F%98%E9%87%8F%E5%92%8C%E6%88%90%E5%91%98%E5%87%BD%E6%95%B0"><span class="nav-number">5.6.</span> <span class="nav-text">静态成员变量和成员函数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%9D%99%E6%80%81%E6%88%90%E5%91%98%E5%8F%98%E9%87%8F"><span class="nav-number">5.6.1.</span> <span class="nav-text">静态成员变量</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%9D%99%E6%80%81%E6%88%90%E5%91%98%E5%87%BD%E6%95%B0"><span class="nav-number">5.6.2.</span> <span class="nav-text">静态成员函数</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BC%96%E8%AF%91%E5%99%A8%E5%AF%B9%E5%B1%9E%E6%80%A7%E5%92%8C%E6%96%B9%E6%B3%95%E7%9A%84%E5%A4%84%E7%90%86%E6%9C%BA%E5%88%B6"><span class="nav-number">5.7.</span> <span class="nav-text">编译器对属性和方法的处理机制</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%9D%99%E6%80%81%E6%88%90%E5%91%98%E5%8D%A0%E5%A4%9A%E5%A4%A7"><span class="nav-number">5.7.1.</span> <span class="nav-text">静态成员占多大</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%A4%84%E7%90%86%E6%9C%BA%E5%88%B6"><span class="nav-number">5.7.2.</span> <span class="nav-text">处理机制</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#this%E6%8C%87%E9%92%88"><span class="nav-number">5.7.3.</span> <span class="nav-text">this指针</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%85%A8%E5%B1%80%E5%87%BD%E6%95%B0%E4%B8%8E%E6%88%90%E5%91%98%E5%87%BD%E6%95%B0"><span class="nav-number">5.7.4.</span> <span class="nav-text">全局函数与成员函数</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BC%BA%E5%8C%96%E7%BB%83%E4%B9%A0"><span class="nav-number">5.8.</span> <span class="nav-text">强化练习</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%8B%E5%85%83"><span class="nav-number">5.9.</span> <span class="nav-text">友元</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%8B%E5%85%83%E5%87%BD%E6%95%B0"><span class="nav-number">5.9.1.</span> <span class="nav-text">友元函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%8B%E5%85%83%E5%AF%B9%E8%B1%A1"><span class="nav-number">5.9.2.</span> <span class="nav-text">友元对象</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%AE%BA%E5%8F%8B%E5%85%83"><span class="nav-number">5.9.3.</span> <span class="nav-text">论友元</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BF%90%E7%AE%97%E7%AC%A6%E9%87%8D%E8%BD%BD"><span class="nav-number">5.9.4.</span> <span class="nav-text">运算符重载</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%8B%E5%85%83%E9%87%8D%E8%BD%BD"><span class="nav-number">5.9.5.</span> <span class="nav-text">友元重载</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%88%90%E5%91%98%E9%87%8D%E8%BD%BD"><span class="nav-number">5.9.6.</span> <span class="nav-text">成员重载</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%87%8D%E8%BD%BD%E8%A7%84%E5%88%99"><span class="nav-number">5.9.7.</span> <span class="nav-text">重载规则</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%8C%E7%9B%AE%E8%BF%90%E7%AE%97%E7%AC%A6%E9%87%8D%E8%BD%BD"><span class="nav-number">5.9.8.</span> <span class="nav-text">双目运算符重载</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8D%95%E7%9B%AE%E8%BF%90%E7%AE%97%E7%AC%A6%E9%87%8D%E8%BD%BD"><span class="nav-number">5.9.9.</span> <span class="nav-text">单目运算符重载</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E8%BF%90%E7%AE%97%E7%AC%A6%E9%87%8D%E8%BD%BD"><span class="nav-number">5.9.10.</span> <span class="nav-text">输入输出运算符重载</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%8B%E5%85%83%E8%BF%98%E6%98%AF%E6%88%90%E5%91%98"><span class="nav-number">5.9.11.</span> <span class="nav-text">友元还是成员</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BF%90%E7%AE%97%E7%AC%A6%E9%87%8D%E8%BD%BD%E6%8F%90%E9%AB%98"><span class="nav-number">5.9.12.</span> <span class="nav-text">运算符重载提高</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%A7%A3%E5%BC%95%E7%94%A8%E4%B8%8E%E6%99%BA%E8%83%BD%E6%8C%87%E9%92%88"><span class="nav-number">5.9.13.</span> <span class="nav-text">解引用与智能指针</span></a></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -2767,12 +4310,12 @@ struct s2
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">301k</span>
+    <span title="站点总字数">330k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">9:07</span>
+    <span title="站点阅读时长">10:01</span>
 </div>
 
         
