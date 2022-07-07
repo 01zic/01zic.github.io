@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.2">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/orange.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/orange.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/orange.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"01zic.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="UML统一建模语言">
+<meta property="og:type" content="article">
+<meta property="og:title" content="UML">
+<meta property="og:url" content="https://01zic.github.io/2022/07/07/UML/index.html">
+<meta property="og:site_name" content="orangeWBlog">
+<meta property="og:description" content="UML统一建模语言">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://qiniu.orangew.cn/img/wpsEE3A.tmp.jpg">
+<meta property="og:image" content="http://qiniu.orangew.cn/img/wpsEE3B.tmp.jpg">
+<meta property="og:image" content="http://qiniu.orangew.cn/img/wpsEE3C.tmp.jpg">
+<meta property="og:image" content="e:/Computer/myblog/hexo/source_posts/UML/wpsEE3D.tmp.jpg">
+<meta property="og:image" content="e:/Computer/myblog/hexo/source_posts/UML/wpsEE4E.tmp.png">
+<meta property="og:image" content="e:/Computer/myblog/hexo/source_posts/UML/wpsEE4F.tmp.png">
+<meta property="og:image" content="e:/Computer/myblog/hexo/source_posts/UML/wpsEE50.tmp.png">
+<meta property="og:image" content="http://qiniu.orangew.cn/img/wpsEE60.tmp.png">
+<meta property="og:image" content="http://qiniu.orangew.cn/img/wpsEE61.tmp.png">
+<meta property="og:image" content="http://qiniu.orangew.cn/img/wpsEE62.tmp.png">
+<meta property="og:image" content="http://qiniu.orangew.cn/img/wpsEE73.tmp.png">
+<meta property="og:image" content="http://qiniu.orangew.cn/img/wpsEE74.tmp.png">
+<meta property="og:image" content="http://qiniu.orangew.cn/img/wpsEE75.tmp.png">
+<meta property="og:image" content="http://qiniu.orangew.cn/img/wpsEE76.tmp.png">
+<meta property="og:image" content="http://qiniu.orangew.cn/img/wpsEE77.tmp.jpg">
+<meta property="og:image" content="http://qiniu.orangew.cn/img/wpsEE88.tmp.png">
+<meta property="og:image" content="e:/Computer/myblog/hexo/source_posts/UML/wpsEE89.tmp.png">
+<meta property="og:image" content="http://qiniu.orangew.cn/img/wpsEE8A.tmp.png">
+<meta property="og:image" content="http://qiniu.orangew.cn/img/wpsEE9A.tmp.jpg">
+<meta property="og:image" content="http://qiniu.orangew.cn/img/wpsEEAB.tmp.jpg">
+<meta property="og:image" content="http://qiniu.orangew.cn/img/wpsEEAC.tmp.png">
+<meta property="og:image" content="http://qiniu.orangew.cn/img/wpsEEAD.tmp.jpg">
+<meta property="og:image" content="http://qiniu.orangew.cn/img/wpsEEBD.tmp.jpg">
+<meta property="og:image" content="http://qiniu.orangew.cn/img/wpsEEBE.tmp.jpg">
+<meta property="og:image" content="e:/Computer/myblog/hexo/source_posts/UML/wpsEECF.tmp.jpg">
+<meta property="og:image" content="e:/Computer/myblog/hexo/source_posts/UML/wpsEED0.tmp.jpg">
+<meta property="og:image" content="http://qiniu.orangew.cn/img/wpsEEE1.tmp.jpg">
+<meta property="article:published_time" content="2022-07-07T14:53:17.000Z">
+<meta property="article:modified_time" content="2022-07-07T15:44:08.298Z">
+<meta property="article:author" content="OrangeW">
+<meta property="article:tag" content="c++">
+<meta property="article:tag" content="UML">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://qiniu.orangew.cn/img/wpsEE3A.tmp.jpg">
+
+<link rel="canonical" href="https://01zic.github.io/2022/07/07/UML/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>UML | orangeWBlog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">orangeWBlog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">blog</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://01zic.github.io/2022/07/07/UML/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/orange.png">
+      <meta itemprop="name" content="OrangeW">
+      <meta itemprop="description" content="demo_study record">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="orangeWBlog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          UML
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2022-07-07 22:53:17 / 修改时间：23:44:08" itemprop="dateCreated datePublished" datetime="2022-07-07T22:53:17+08:00">2022-07-07</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/c/" itemprop="url" rel="index"><span itemprop="name">c++</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>4.1k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>8 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="UML统一建模语言"><a href="#UML统一建模语言" class="headerlink" title="UML统一建模语言"></a><strong>UML统一建模语言</strong></h1><h2 id="1-软件建模概述"><a href="#1-软件建模概述" class="headerlink" title="1.软件建模概述"></a><strong>1.软件建模概述</strong></h2><h3 id="1-1什么是建模"><a href="#1-1什么是建模" class="headerlink" title="1.1什么是建模"></a><strong>1.1什么是建模</strong></h3><ul>
+<li><p>任何事情都要先想清楚了才能做，软件开发更是如此！软件开发过程不可能一上来就开始盲目写代码，写代码之前必须搞清楚下面一些基本问题：</p>
+</li>
+<li><p>要做什么？</p>
+</li>
+<li><p>做成什么样？</p>
+</li>
+<li><p>怎么去做？</p>
+</li>
+</ul>
+<h3 id="1-2建模原则"><a href="#1-2建模原则" class="headerlink" title="1.2建模原则"></a><strong>1.2建模原则</strong></h3><ul>
+<li><p>选择建立什么样的模型对如何发现和解决问题具有重要的影响。正确的模型有助于提高开发者的洞察力。<img src="http://qiniu.orangew.cn/img/wpsEE3A.tmp.jpg" alt="img"></p>
+</li>
+<li><p>每个模型可以有多种表达方式. 使用者的身份和使用的原因是评判模型好坏的关键。</p>
+</li>
+<li><p>最好的模型总是能够切合实际. 模型是现实的简化，必须保证简化过程不会掩盖任何重要的细节。</p>
+</li>
+</ul>
+<h3 id="1-3软件建模的实现过程"><a href="#1-3软件建模的实现过程" class="headerlink" title="1.3软件建模的实现过程"></a><strong>1.3软件建模的实现过程</strong></h3><ul>
+<li><p><strong>软件建模的作用</strong>是把源于现实世界的问题转化为计算机可以理解和实现的过程<img src="http://qiniu.orangew.cn/img/wpsEE3B.tmp.jpg" alt="img"> </p>
+</li>
+<li><p><strong>软件建模的实现过程</strong>是从需求入手, 用模型表达分析设计过程, 最终将模型映射成软件实现.</p>
+</li>
+</ul>
+<p><img src="http://qiniu.orangew.cn/img/wpsEE3C.tmp.jpg" alt="img"> </p>
+<h2 id="2-UML"><a href="#2-UML" class="headerlink" title="2.UML"></a><strong>2.UML</strong></h2><p>（1）UML(United Modeling Language, 统一建模语言): 是一种基于<strong>面向对象的可视化建模语言.</strong> </p>
+<p>（2）<strong>UML 采用了一组形象化的图形(如类图)符号作为建模语言</strong>, 使用这些符号可以形象地描述系统的各个方面</p>
+<p>（3）UML 通过建立图形之间的各种关系(如类与类之间的关系)来描述模型.</p>
+<h3 id="2-1-UML一共有10种图。"><a href="#2-1-UML一共有10种图。" class="headerlink" title="2.1 UML一共有10种图。"></a><strong>2.1 UML一共有10种图。</strong></h3><h3 id="2-2-UML中的关系"><a href="#2-2-UML中的关系" class="headerlink" title="2.2 UML中的关系"></a><strong>2.2 UML中的关系</strong></h3><ul>
+<li><p>UML中的关系主要包括4种：</p>
+</li>
+<li><p>  <strong>关联关系</strong>(association)</p>
+</li>
+<li><p>  <strong>依赖关系</strong>(dependency)</p>
+</li>
+<li><p>  <strong>泛化关系</strong>(generalization)</p>
+</li>
+<li><p>  <strong>实现关系</strong>(realization)</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>重要性</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>类图</td>
+<td>★★★★★</td>
+</tr>
+<tr>
+<td>对象图</td>
+<td>★★★☆☆</td>
+</tr>
+<tr>
+<td>包图</td>
+<td>★☆☆☆☆</td>
+</tr>
+<tr>
+<td>组件图</td>
+<td>★☆☆☆☆</td>
+</tr>
+<tr>
+<td>部署图</td>
+<td>★☆☆☆☆</td>
+</tr>
+<tr>
+<td>用例图</td>
+<td>★★★☆☆</td>
+</tr>
+<tr>
+<td>时序图</td>
+<td>★★★☆☆</td>
+</tr>
+<tr>
+<td>协作图</td>
+<td>★☆☆☆☆</td>
+</tr>
+<tr>
+<td>状态图</td>
+<td>★★☆☆☆</td>
+</tr>
+<tr>
+<td>活动图</td>
+<td>★★☆☆☆</td>
+</tr>
+</tbody></table>
+<h2 id="3-用例图"><a href="#3-用例图" class="headerlink" title="3.用例图"></a><strong>3.用例图</strong></h2><p>（1）用例图(Use Case Diagram): 也称为用户模型图, 是从软件需求分析到最终实现的第一步, 它是从客户的角度来描述系统功能. </p>
+<p>（2）用例图包含 3 个基本组件: </p>
+<ul>
+<li><p>​    参与者(Actor): 与系统打交道的人或其他系统即使用该系统的人或事物. 在 UML 中参与者用人形图标表示</p>
+</li>
+<li><p>​    用例(Use Case): 代表系统的某项完整的功能. 在 UML 中使用一个椭圆来表示</p>
+</li>
+<li><p>​    关系: 定义用例之间的关系 —— 泛化关系, 扩展关系, 包含关系</p>
+</li>
+</ul>
+<p><img src="E:\Computer\myblog\hexo\source_posts\UML\wpsEE3D.tmp.jpg" alt="img"> </p>
+<h3 id="3-1用例之间的关系——泛化关系"><a href="#3-1用例之间的关系——泛化关系" class="headerlink" title="3.1用例之间的关系——泛化关系"></a><strong>3.1用例之间的关系——泛化关系</strong></h3><ul>
+<li>泛化关系: 表示同一业务目的(父用例)的不同技术实现(各个子用例). 在 UML 中, 用例泛化用一个三角箭头从子用例指向父用例. 以下是某购物网站为用户提供不同的支付方式</li>
+</ul>
+<p><img src="E:\Computer\myblog\hexo\source_posts\UML\wpsEE4E.tmp.png" alt="img"> </p>
+<h3 id="3-2用例之间的关系——包含关系"><a href="#3-2用例之间的关系——包含关系" class="headerlink" title="3.2用例之间的关系——包含关系"></a><strong>3.2用例之间的关系——包含关系</strong></h3><ul>
+<li>一个用例可以包含其他用例具有的行为, 并把它包含的用例行为作为自身行为的一部分. 在 UML 中包含关系用虚线箭头加 “&lt;<include>&gt;”, 箭头指向被包含的用例.</li>
+</ul>
+<p><img src="E:\Computer\myblog\hexo\source_posts\UML\wpsEE4F.tmp.png" alt="img"> </p>
+<h3 id="3-3用例之间的关系——扩展关系"><a href="#3-3用例之间的关系——扩展关系" class="headerlink" title="3.3用例之间的关系——扩展关系"></a><strong>3.3用例之间的关系——扩展关系</strong></h3><ul>
+<li>如果在完成某个功能的时候偶尔会执行另外一个功能, 则用扩展关系表示.在 UML 中扩展关系用虚线箭头加 “&lt;<extend>&gt;”, 箭头指向被扩展的用例.</li>
+</ul>
+<p><img src="E:\Computer\myblog\hexo\source_posts\UML\wpsEE50.tmp.png" alt="img"> </p>
+<h2 id="4-类图"><a href="#4-类图" class="headerlink" title="4.类图"></a><strong>4.类图</strong></h2><ul>
+<li><p>类图是面向对象系统建模中最常用的图. 是定义其他图的基础.</p>
+</li>
+<li><p>类图主要是用来显示系统中的类, 接口以及它们之间的关系.</p>
+</li>
+<li><p>类图包含的主要元素有类, 接口和关系. 其中关系有泛化关系,关联关系, 依赖关系和实现关系. 在类图中也可以包含注释和约束.</p>
+</li>
+</ul>
+<h3 id="4-1类的表示法"><a href="#4-1类的表示法" class="headerlink" title="4.1类的表示法"></a><strong>4.1类的表示法</strong></h3><ol>
+<li>类是类图的主要组件, 由3部分组成: 类名, 属性和方法. 在 UML 中, 类用矩形来表示, 顶端部分存放类的名称, 中间部分存放类的属性, 属性的类型及值, 底部部分存放类的方法, 方法的参数和返回类型.</li>
+</ol>
+<p>​    2.在 UML 中可以根据实际情况有选择的隐藏属性部分或方法部分或两者都隐藏</p>
+<p>​    3.在 UML 中, 共有类型有 + 表示, 私有类型用 – 表示, 保护类型用 # 表示. UML 的工具开发商可以使用自己定义的符号表示不同的可见性</p>
+<p><img src="http://qiniu.orangew.cn/img/wpsEE60.tmp.png" alt="img"> </p>
+<h3 id="4-2类之间的关系-泛化关系"><a href="#4-2类之间的关系-泛化关系" class="headerlink" title="4.2类之间的关系-泛化关系"></a><strong>4.2类之间的关系-泛化关系</strong></h3><ol>
+<li> 在 UML 中, 泛化关系用来表示类与类, 接口与接口之间的继承关系. 泛化关系有时也称为”is a kind of“关系.</li>
+<li>在 UML 中泛化关系用一条实线空心箭头有子类指向父类.</li>
+</ol>
+<p><img src="http://qiniu.orangew.cn/img/wpsEE61.tmp.png" alt="img"> </p>
+<h3 id="4-3-类之间的关系-实现关系"><a href="#4-3-类之间的关系-实现关系" class="headerlink" title="4.3 类之间的关系-实现关系"></a><strong>4.3</strong> 类之间的关系-实现关系</h3><ul>
+<li><p>在 UML 中, 实现关系用来表示类与接口之间的实现关系. </p>
+</li>
+<li><p>在 UML 中实现关系用一条虚线空心箭头由子类指向父类</p>
+</li>
+</ul>
+<p><img src="http://qiniu.orangew.cn/img/wpsEE62.tmp.png" alt="img"> </p>
+<h3 id="4-4-类之间的关系-依赖关系"><a href="#4-4-类之间的关系-依赖关系" class="headerlink" title="4.4 类之间的关系-依赖关系"></a><strong>4.4</strong> <strong>类之间的关系-依赖关系</strong></h3><ul>
+<li>对于两个相对独立的系统，当一个系统负责构造另一个系统的实例，或者依赖另一个系统的服务时，这两个系统之间体现为依赖关系. 例如生产零件的机器和零件，机器负责构造零件对象; 充电电池和充电器，充电电池通过充电器来充电;自行车Bicycle和打气筒Pump，自行车通过打气筒来充气。</li>
+</ul>
+<p><img src="http://qiniu.orangew.cn/img/wpsEE73.tmp.png" alt="img"> </p>
+<h3 id="4-5-类之间的关系-关联关系"><a href="#4-5-类之间的关系-关联关系" class="headerlink" title="4.5 类之间的关系-关联关系"></a><strong>4.5</strong> <strong>类之间的关系-关联关系</strong></h3><ul>
+<li>对于两个相对独立的系统，当一个系统的实例与另一个系统的一些特定实例存在固定的对应关系时，这两个系统之间为关联关系。例如客户和订单，每个订单对应特定的客户，每个客户对应一些特定的订单；公司和员工，每个公司对应一些特定的员工，每个员工对应一特定的公司；自行车和主人，每辆自行车属于特定的主人，每个主人有特定的自行车。而充电电池和充电器之间就不存在固定的对应关系，同样自行车和打气筒之间也不存在固定的对应关系。</li>
+</ul>
+<p><img src="http://qiniu.orangew.cn/img/wpsEE74.tmp.png" alt="img"> </p>
+<h3 id="4-6-关联关系的名称"><a href="#4-6-关联关系的名称" class="headerlink" title="4.6 关联关系的名称"></a><strong>4.6</strong> <strong>关联关系的名称</strong></h3><ul>
+<li>关联关系的名称: 关联关系可以有一个名称, 用于描述该关系的性质. 此关联名称应该是动词短语, 因为它表明源对象正在目标对象上执行动作.</li>
+</ul>
+<p><img src="http://qiniu.orangew.cn/img/wpsEE75.tmp.png" alt="img"> </p>
+<h3 id="4-7-关联关系的角色"><a href="#4-7-关联关系的角色" class="headerlink" title="4.7 关联关系的角色"></a><strong>4.7</strong> <strong>关联关系的角色</strong></h3><ul>
+<li>当一个类处于关联的某一端时, 该类就在这个关系中扮演一个特定的角色. 具体来说, 角色就是关联关系中一个类对另一个类所表现的职责. 角色名称是名词或名称短语.</li>
+</ul>
+<p><img src="http://qiniu.orangew.cn/img/wpsEE76.tmp.png" alt="img"> </p>
+<h3 id="4-8-关联关系的多重性"><a href="#4-8-关联关系的多重性" class="headerlink" title="4.8 关联关系的多重性"></a><strong>4.8</strong> <strong>关联关系的多重性</strong></h3><ul>
+<li>关联关系的多重性是指有多少对象可以参与该关联, 多重性可以用来表达一个取值范围, 特定值, 无限定的范围.</li>
+</ul>
+<p><img src="http://qiniu.orangew.cn/img/wpsEE77.tmp.jpg" alt="img"> </p>
+<p><img src="http://qiniu.orangew.cn/img/wpsEE88.tmp.png" alt="img"> </p>
+<h3 id="4-9-类之间的关系关联-聚合"><a href="#4-9-类之间的关系关联-聚合" class="headerlink" title="4.9 类之间的关系关联-聚合"></a><strong>4.9</strong> <strong>类之间的关系关联-聚合</strong></h3><ol>
+<li><p>聚合关系是关联关系的一种，是更强的关联关系。</p>
+</li>
+<li><p>聚合是整体和部分之间的关系，例如汽车由引擎、轮胎以及其它零件组成。</p>
+</li>
+<li><p>聚合关系也是通过成员变量来实现的。但是，关联关系所涉及的两个类处在同一个层次上，而聚合关系中，两个类处于不同的层次上，一个代表整体，一个代表部分。</p>
+</li>
+</ol>
+<p><img src="E:\Computer\myblog\hexo\source_posts\UML\wpsEE89.tmp.png" alt="img"> </p>
+<h3 id="4-10-类之间的关系关联—组合"><a href="#4-10-类之间的关系关联—组合" class="headerlink" title="4.10 类之间的关系关联—组合"></a><strong>4.10</strong> <strong>类之间的关系关联—组合</strong></h3><ol>
+<li><p>UML类图关系中合成关系是关联关系的一种，是比聚合关系还要强的关系。</p>
+</li>
+<li><p>代表整体的对象负责代表部分对象的生命周期。</p>
+</li>
+</ol>
+<p><img src="http://qiniu.orangew.cn/img/wpsEE8A.tmp.png" alt="img"> </p>
+<h3 id="4-11类图练习题"><a href="#4-11类图练习题" class="headerlink" title="4.11类图练习题"></a><strong>4.11类图练习题</strong></h3><h4 id="4-11-1-类图练习题一"><a href="#4-11-1-类图练习题一" class="headerlink" title="4.11.1 类图练习题一"></a><strong>4.11.1 类图练习题一</strong></h4><ul>
+<li>根据以下网友描述出艺人之间关系的”类：</li>
+</ul>
+<p><img src="http://qiniu.orangew.cn/img/wpsEE9A.tmp.jpg" alt="img"> </p>
+<p><img src="http://qiniu.orangew.cn/img/wpsEEAB.tmp.jpg" alt="img"> </p>
+<h4 id="4-11-2-类图练习题二"><a href="#4-11-2-类图练习题二" class="headerlink" title="4.11.2 类图练习题二"></a><strong>4.11.2 类图练习题二</strong></h4><ul>
+<li>汽车和自行车都是交通工具(vehicle). 一辆自行车(bicycle)只归一个人(person)所有, 但一辆汽车(auto)可归一个人或两个人所有. 一个人可能没有自行车或汽车, 也可能有多辆自行车或汽车. 人分为男人(male)和女人(female). 每个人都有年龄(age)和名字(name). 每辆交通工具都有自己的颜色(color)和商标(brand). 每辆汽车都只有两个前灯(headlight)和一台发动机(motor)。</li>
+</ul>
+<h2 id="5-对象图"><a href="#5-对象图" class="headerlink" title="5.对象图"></a><strong>5.对象图</strong></h2><ol>
+<li><p>对象图是类图的一个实例, 用于显示系统执行时的一个可能的快照. 即在某一个时间上系统可能出现的样子. 对象图用带下划线的对象名称来表示对象.</p>
+</li>
+<li><p>表现对象的特征</p>
+</li>
+<li><p>对象图展现了多个对象的特征及对象之间的交互</p>
+</li>
+</ol>
+<p><img src="http://qiniu.orangew.cn/img/wpsEEAC.tmp.png" alt="img"> </p>
+<h2 id="6-时序图"><a href="#6-时序图" class="headerlink" title="6.时序图"></a><strong>6.时序图</strong></h2><ol>
+<li><p>时序图用于描述对象之间的传递消息的时间顺序, 即用例中的行为顺序. </p>
+</li>
+<li><p>当执行一个用例时, 时序图中的每条消息对应了一个类操作或者引起转换的触发事件.</p>
+</li>
+<li><p>在 UML 中, 时序图表示为一个二维的关系图, 其中, 纵轴是时间轴, 时间延竖线向下延伸. 横轴代表在协作中各个独立的对象. 当对象存在时, 生命线用一条虚线表示, 消息用从一个对象的生命线到另一个对象的生命线的箭头表示. 箭头以时间的顺序在图中上下排列.</p>
+</li>
+</ol>
+<h3 id="6-1-借书时序图"><a href="#6-1-借书时序图" class="headerlink" title="6.1 借书时序图"></a><strong>6.1</strong> <strong>借书时序图</strong></h3><p><img src="http://qiniu.orangew.cn/img/wpsEEAD.tmp.jpg" alt="img"> </p>
+<h3 id="6-2-ATM-用户成功登陆的时序图"><a href="#6-2-ATM-用户成功登陆的时序图" class="headerlink" title="6.2 ATM 用户成功登陆的时序图"></a><strong>6.2</strong> <strong>ATM</strong> <strong>用户成功登陆的时序图</strong></h3><h2 id=""><a href="#" class="headerlink" title=""></a><img src="http://qiniu.orangew.cn/img/wpsEEBD.tmp.jpg" alt="img"></h2><h3 id="6-3-时序图中的基本概念"><a href="#6-3-时序图中的基本概念" class="headerlink" title="6.3 时序图中的基本概念"></a><strong>6.3</strong> <strong>时序图中的基本概念</strong></h3><p><strong>对象</strong>: 时序图中对象使用矩形表示, 并且对象名称下有下划线. 将对象置于时序图的顶部说明在交互开始时对象就已经存在了. 如果对象的位置不在顶部, 表示对象是在交互的过程中被创建的.</p>
+<p><strong>生命线:</strong> 生命线是一条垂直的虚线. 表示时序图中的对象在一段生命周期内的存在. 每个对象底部中心的位置都带有生命线. </p>
+<p><strong>消息</strong>: 两个对象之间的单路通信. 从发送方指向接收方. 在时序图中很少使用返回消息. </p>
+<p><strong>激活</strong>: 时序图可以描述对象的激活和钝化. 激活表示该对象被占用已完成某个任务. 钝化指对象处于空闲状态, 等待消息. 在 UML 中, 对象的激活时将对象的生命线拓宽为矩形来表示的. 矩形称为计划条或控制期. 对象就是在激活条的顶部被激活的. 对象在完成自己的工作后被钝化.</p>
+<p><strong>对象的创建和销毁</strong>: 在时序图中, 对象的默认位置是在图的顶部. 这说明对象在交互开始之前就已经存在了. 如果对象是在交互过程中创建的, 那么就应该将对象放到中间部分. 如果要撤销一个对象, 在其生命线终止点处放置 “ X” 符号.</p>
+<p><img src="http://qiniu.orangew.cn/img/wpsEEBE.tmp.jpg" alt="img">  </p>
+<p><img src="E:\Computer\myblog\hexo\source_posts\UML\wpsEECF.tmp.jpg" alt="img"> </p>
+<h3 id="6-4时序图练习题"><a href="#6-4时序图练习题" class="headerlink" title="6.4时序图练习题"></a><strong>6.4时序图练习题</strong></h3><ul>
+<li>画出三层架构登录的时序图.</li>
+</ul>
+<h2 id="7-活动图"><a href="#7-活动图" class="headerlink" title="7.活动图"></a><strong>7.活动图</strong></h2><ul>
+<li>在 UML 中, 活动图本质上就是流程图. 它用于描述系统的活动, 判定点和分支等.</li>
+</ul>
+<p><img src="E:\Computer\myblog\hexo\source_posts\UML\wpsEED0.tmp.jpg" alt="img"> </p>
+<h3 id="7-1-活动图中的基本概念"><a href="#7-1-活动图中的基本概念" class="headerlink" title="7.1 活动图中的基本概念"></a><strong>7.1</strong> <strong>活动图中的基本概念</strong></h3><p><strong>动作状态</strong>: 原子的,不可中断的动作,并在此动作完成之后向另一个动作转变. 在 UML 中动作状态用圆角矩形表示,动作状态所表示的动作写在圆角矩形内部.</p>
+<p><strong>分支与合并</strong>: 分支在软件系统中很常见. 一般用于表示对象类所具有的条件行为. 用一个布尔型表达式的真假来判定动作的流向. 条件行为用分支和合并表达.在活动图中, 分支用空心小菱形表示. 分支包括一个入转换和两个带条件的出转换, 出转换的条件应该是互斥的, 须保证只有一条出转换能够被触发. 合并包含两个带条件的入转换和一个出转换. </p>
+<p><strong>分叉与汇合:</strong> 分叉用来描述并发线程, 每个分叉可以有一个输入转换和两个或多个输出转换. 每个转换都可以是独立的控制流. 汇合代表两个或多个并发控制流同步发生, 当所有的控制流都达到汇合点后, 控制才能继续往下进行. 每个汇合可以有两个或多个输入转换和一个输出转换. 在 UML 中分叉和汇合用一条粗直线表示.</p>
+<p><strong>泳道</strong>: 泳道将活动图中的活动划分为若干组, 并将每一组指定给负责这组活动的业务组织. 泳道区分负责活动的对象, 明确地表示哪些活动是由哪些对象进行的. 每个活动指定明确地属于一个泳道. 在活动图中, 泳道用垂直实线绘出, 垂直线分隔的区域即为泳道. </p>
+<h3 id="7-2-用户登录活动图"><a href="#7-2-用户登录活动图" class="headerlink" title="7.2 用户登录活动图"></a><strong>7.2</strong> <strong>用户登录活动图</strong></h3><p> <img src="http://qiniu.orangew.cn/img/wpsEEE1.tmp.jpg" alt="img"></p>
+<h3 id="7-3活动图练习题"><a href="#7-3活动图练习题" class="headerlink" title="7.3活动图练习题"></a><strong>7.3活动图练习题</strong></h3><ul>
+<li>某公司销售人员接到订单后, 将订单传给财务人员和仓库人员. 财务人员开具发票, 并收款. 仓库人员准备货物, 并查看是否货物加急, 若是加急采用 EMS 方式发货, 否则采用普通包裹方式发货. 完成之后由销售人员关闭该订单. 根据上面描述画出该公司销售过程的活动图.</li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/tags/c/" rel="tag"><i class="fa fa-tag"></i> c++</a>
+              <a href="/tags/UML/" rel="tag"><i class="fa fa-tag"></i> UML</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2022/07/07/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E8%AE%B2%E4%B9%89/" rel="prev" title="设计模式讲义">
+      <i class="fa fa-chevron-left"></i> 设计模式讲义
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#UML%E7%BB%9F%E4%B8%80%E5%BB%BA%E6%A8%A1%E8%AF%AD%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">UML统一建模语言</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E8%BD%AF%E4%BB%B6%E5%BB%BA%E6%A8%A1%E6%A6%82%E8%BF%B0"><span class="nav-number">1.1.</span> <span class="nav-text">1.软件建模概述</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1%E4%BB%80%E4%B9%88%E6%98%AF%E5%BB%BA%E6%A8%A1"><span class="nav-number">1.1.1.</span> <span class="nav-text">1.1什么是建模</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2%E5%BB%BA%E6%A8%A1%E5%8E%9F%E5%88%99"><span class="nav-number">1.1.2.</span> <span class="nav-text">1.2建模原则</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3%E8%BD%AF%E4%BB%B6%E5%BB%BA%E6%A8%A1%E7%9A%84%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B"><span class="nav-number">1.1.3.</span> <span class="nav-text">1.3软件建模的实现过程</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-UML"><span class="nav-number">1.2.</span> <span class="nav-text">2.UML</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-UML%E4%B8%80%E5%85%B1%E6%9C%8910%E7%A7%8D%E5%9B%BE%E3%80%82"><span class="nav-number">1.2.1.</span> <span class="nav-text">2.1 UML一共有10种图。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-UML%E4%B8%AD%E7%9A%84%E5%85%B3%E7%B3%BB"><span class="nav-number">1.2.2.</span> <span class="nav-text">2.2 UML中的关系</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E7%94%A8%E4%BE%8B%E5%9B%BE"><span class="nav-number">1.3.</span> <span class="nav-text">3.用例图</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1%E7%94%A8%E4%BE%8B%E4%B9%8B%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB%E2%80%94%E2%80%94%E6%B3%9B%E5%8C%96%E5%85%B3%E7%B3%BB"><span class="nav-number">1.3.1.</span> <span class="nav-text">3.1用例之间的关系——泛化关系</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2%E7%94%A8%E4%BE%8B%E4%B9%8B%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB%E2%80%94%E2%80%94%E5%8C%85%E5%90%AB%E5%85%B3%E7%B3%BB"><span class="nav-number">1.3.2.</span> <span class="nav-text">3.2用例之间的关系——包含关系</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3%E7%94%A8%E4%BE%8B%E4%B9%8B%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB%E2%80%94%E2%80%94%E6%89%A9%E5%B1%95%E5%85%B3%E7%B3%BB"><span class="nav-number">1.3.3.</span> <span class="nav-text">3.3用例之间的关系——扩展关系</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-%E7%B1%BB%E5%9B%BE"><span class="nav-number">1.4.</span> <span class="nav-text">4.类图</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1%E7%B1%BB%E7%9A%84%E8%A1%A8%E7%A4%BA%E6%B3%95"><span class="nav-number">1.4.1.</span> <span class="nav-text">4.1类的表示法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2%E7%B1%BB%E4%B9%8B%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB-%E6%B3%9B%E5%8C%96%E5%85%B3%E7%B3%BB"><span class="nav-number">1.4.2.</span> <span class="nav-text">4.2类之间的关系-泛化关系</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-3-%E7%B1%BB%E4%B9%8B%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB-%E5%AE%9E%E7%8E%B0%E5%85%B3%E7%B3%BB"><span class="nav-number">1.4.3.</span> <span class="nav-text">4.3 类之间的关系-实现关系</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-4-%E7%B1%BB%E4%B9%8B%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB-%E4%BE%9D%E8%B5%96%E5%85%B3%E7%B3%BB"><span class="nav-number">1.4.4.</span> <span class="nav-text">4.4 类之间的关系-依赖关系</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-5-%E7%B1%BB%E4%B9%8B%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB-%E5%85%B3%E8%81%94%E5%85%B3%E7%B3%BB"><span class="nav-number">1.4.5.</span> <span class="nav-text">4.5 类之间的关系-关联关系</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-6-%E5%85%B3%E8%81%94%E5%85%B3%E7%B3%BB%E7%9A%84%E5%90%8D%E7%A7%B0"><span class="nav-number">1.4.6.</span> <span class="nav-text">4.6 关联关系的名称</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-7-%E5%85%B3%E8%81%94%E5%85%B3%E7%B3%BB%E7%9A%84%E8%A7%92%E8%89%B2"><span class="nav-number">1.4.7.</span> <span class="nav-text">4.7 关联关系的角色</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-8-%E5%85%B3%E8%81%94%E5%85%B3%E7%B3%BB%E7%9A%84%E5%A4%9A%E9%87%8D%E6%80%A7"><span class="nav-number">1.4.8.</span> <span class="nav-text">4.8 关联关系的多重性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-9-%E7%B1%BB%E4%B9%8B%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB%E5%85%B3%E8%81%94-%E8%81%9A%E5%90%88"><span class="nav-number">1.4.9.</span> <span class="nav-text">4.9 类之间的关系关联-聚合</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-10-%E7%B1%BB%E4%B9%8B%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB%E5%85%B3%E8%81%94%E2%80%94%E7%BB%84%E5%90%88"><span class="nav-number">1.4.10.</span> <span class="nav-text">4.10 类之间的关系关联—组合</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-11%E7%B1%BB%E5%9B%BE%E7%BB%83%E4%B9%A0%E9%A2%98"><span class="nav-number">1.4.11.</span> <span class="nav-text">4.11类图练习题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#4-11-1-%E7%B1%BB%E5%9B%BE%E7%BB%83%E4%B9%A0%E9%A2%98%E4%B8%80"><span class="nav-number">1.4.11.1.</span> <span class="nav-text">4.11.1 类图练习题一</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-11-2-%E7%B1%BB%E5%9B%BE%E7%BB%83%E4%B9%A0%E9%A2%98%E4%BA%8C"><span class="nav-number">1.4.11.2.</span> <span class="nav-text">4.11.2 类图练习题二</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-%E5%AF%B9%E8%B1%A1%E5%9B%BE"><span class="nav-number">1.5.</span> <span class="nav-text">5.对象图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-%E6%97%B6%E5%BA%8F%E5%9B%BE"><span class="nav-number">1.6.</span> <span class="nav-text">6.时序图</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#6-1-%E5%80%9F%E4%B9%A6%E6%97%B6%E5%BA%8F%E5%9B%BE"><span class="nav-number">1.6.1.</span> <span class="nav-text">6.1 借书时序图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-2-ATM-%E7%94%A8%E6%88%B7%E6%88%90%E5%8A%9F%E7%99%BB%E9%99%86%E7%9A%84%E6%97%B6%E5%BA%8F%E5%9B%BE"><span class="nav-number">1.6.2.</span> <span class="nav-text">6.2 ATM 用户成功登陆的时序图</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">1.7.</span> <span class="nav-text"></span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#6-3-%E6%97%B6%E5%BA%8F%E5%9B%BE%E4%B8%AD%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="nav-number">1.7.1.</span> <span class="nav-text">6.3 时序图中的基本概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-4%E6%97%B6%E5%BA%8F%E5%9B%BE%E7%BB%83%E4%B9%A0%E9%A2%98"><span class="nav-number">1.7.2.</span> <span class="nav-text">6.4时序图练习题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-%E6%B4%BB%E5%8A%A8%E5%9B%BE"><span class="nav-number">1.8.</span> <span class="nav-text">7.活动图</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#7-1-%E6%B4%BB%E5%8A%A8%E5%9B%BE%E4%B8%AD%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="nav-number">1.8.1.</span> <span class="nav-text">7.1 活动图中的基本概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-2-%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95%E6%B4%BB%E5%8A%A8%E5%9B%BE"><span class="nav-number">1.8.2.</span> <span class="nav-text">7.2 用户登录活动图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-3%E6%B4%BB%E5%8A%A8%E5%9B%BE%E7%BB%83%E4%B9%A0%E9%A2%98"><span class="nav-number">1.8.3.</span> <span class="nav-text">7.3活动图练习题</span></a></li></ol></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="OrangeW"
+      src="/images/orange.png">
+  <p class="site-author-name" itemprop="name">OrangeW</p>
+  <div class="site-description" itemprop="description">demo_study record</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">10</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+<!-- CloudCalendar -->
+<div class="widget-wrap" style="width: 90%;margin-left: auto;margin-right: auto; opacity: 0.97;">
+	<div class="widget" id="CloudCalendar"></div>
+</div>
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">OrangeW</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="站点总字数">537k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">16:17</span>
+</div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script size="300" alpha="0.6" zIndex="-1" src="/lib/canvas-ribbon/canvas-ribbon.js"></script>
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+<script src="/js/bookmark.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+<script>
+if (document.querySelectorAll('pre.mermaid').length) {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js', () => {
+    mermaid.initialize({
+      theme    : 'forest',
+      logLevel : 3,
+      flowchart: { curve     : 'linear' },
+      gantt    : { axisFormat: '%m/%d/%Y' },
+      sequence : { actorMargin: 50 }
+    });
+  }, window.mermaid);
+}
+</script>
+
+
+  
+
+  
+<!-- calendar widget -->
+
+    <script src="//cdn.jsdelivr.net/gh/theme-next/theme-next-calendar/calendar.min.js"></script>
+    <script src="//cdn.jsdelivr.net/gh/theme-next/theme-next-calendar/languages.min.js"></script>
+    <script>
+    $(function() {
+        $('#CloudCalendar').aCalendar('zh-CN',
+            $.extend(
+                '', {
+                    single:true,
+                    root:'/calendar/'
+                }
+            )
+        );
+    });
+    </script>
+
+
+</body>
+</html>
