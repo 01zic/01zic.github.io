@@ -20,12 +20,12 @@
     var CONFIG = {"hostname":"01zic.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="**1.**设计模式概述">
+  <meta name="description" content="1.设计模式概述">
 <meta property="og:type" content="article">
 <meta property="og:title" content="设计模式讲义">
 <meta property="og:url" content="https://01zic.github.io/2022/07/07/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E8%AE%B2%E4%B9%89/index.html">
 <meta property="og:site_name" content="orangeWBlog">
-<meta property="og:description" content="**1.**设计模式概述">
+<meta property="og:description" content="1.设计模式概述">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://qiniu.orangew.cn/img/wpsB07E.tmp.jpg">
 <meta property="og:image" content="http://qiniu.orangew.cn/img/wpsB07F.tmp.jpg">
@@ -80,7 +80,7 @@
 <meta property="og:image" content="http://qiniu.orangew.cn/img/wpsB228.tmp.jpg">
 <meta property="og:image" content="http://qiniu.orangew.cn/img/wpsB239.tmp.png">
 <meta property="article:published_time" content="2022-07-07T09:16:22.000Z">
-<meta property="article:modified_time" content="2022-07-07T14:46:51.265Z">
+<meta property="article:modified_time" content="2022-07-07T16:00:24.722Z">
 <meta property="article:author" content="OrangeW">
 <meta property="article:tag" content="c++">
 <meta property="article:tag" content="设计模式">
@@ -269,10 +269,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2022-07-07 17:16:22 / 修改时间：22:46:51" itemprop="dateCreated datePublished" datetime="2022-07-07T17:16:22+08:00">2022-07-07</time>
+              <time title="创建时间：2022-07-07 17:16:22" itemprop="dateCreated datePublished" datetime="2022-07-07T17:16:22+08:00">2022-07-07</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-07-08 00:00:24" itemprop="dateModified" datetime="2022-07-08T00:00:24+08:00">2022-07-08</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -289,14 +295,14 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>58k</span>
+              <span>65k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1:45</span>
+              <span>1:59</span>
             </span>
 
         </div>
@@ -308,7 +314,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h2 id="1-设计模式概述"><a href="#1-设计模式概述" class="headerlink" title="**1.**设计模式概述"></a>**1.**设计模式概述</h2><ul>
+        <h2 id="1-设计模式概述"><a href="#1-设计模式概述" class="headerlink" title="1.设计模式概述"></a><strong>1.设计模式概述</strong></h2><ul>
 <li>如果把修习软件开发当做武功修炼的话，那么可以分为招式和内功。</li>
 </ul>
 <p><img src="http://qiniu.orangew.cn/img/wpsB07E.tmp.jpg" alt="img"> <img src="http://qiniu.orangew.cn/img/wpsB07F.tmp.jpg" alt="img"> </p>
@@ -324,9 +330,9 @@
 <li><p>内功： 数据结构、算法、设计模式、重构、软件工程</p>
 </li>
 </ul>
-<h3 id="1-1-设计模式从何而来"><a href="#1-1-设计模式从何而来" class="headerlink" title="1.1 设计模式从何而来"></a><strong>1.1</strong> <strong>设计模式从何而来</strong></h3><p>模式之父——</p>
+<h3 id="1-1设计模式从何而来"><a href="#1-1设计模式从何而来" class="headerlink" title="1.1设计模式从何而来"></a><strong>1.1设计模式从何而来</strong></h3><p>模式之父——</p>
 <p>Christopher Alexander（克里斯托弗.亚历山大）———哈佛大学建筑学博士、美国加州大学伯克利分校建筑学教授、加州大学伯克利分校环境结构研究所所长、美国艺术和科学院院士。 </p>
-<h3 id="1-2-软件设计模式又从何而来"><a href="#1-2-软件设计模式又从何而来" class="headerlink" title="1.2 软件设计模式又从何而来"></a><strong>1.2</strong> <strong>软件设计模式又从何而来</strong></h3><p><img src="http://qiniu.orangew.cn/img/wpsB091.tmp.jpg" alt="img"> </p>
+<h3 id="1-2软件设计模式又从何而来"><a href="#1-2软件设计模式又从何而来" class="headerlink" title="1.2软件设计模式又从何而来"></a><strong>1.2软件设计模式又从何而来</strong></h3><p><img src="http://qiniu.orangew.cn/img/wpsB091.tmp.jpg" alt="img"> </p>
 <ul>
 <li>  四人组（Gang of Four），简称GoF。Ralph Johnson，Richard Helm，Erich Gamma，John Vlissides</li>
 </ul>
@@ -338,7 +344,7 @@
 <li><p>我们可用一句大白话：“<strong>在一定环境下，用固定套路解决问题。</strong>”</p>
 </li>
 </ul>
-<h3 id="1-3-软件设计模式的种类"><a href="#1-3-软件设计模式的种类" class="headerlink" title="1.3 软件设计模式的种类"></a><strong>1.3</strong> <strong>软件设计模式的种类</strong></h3><ul>
+<h3 id="1-3软件设计模式的种类"><a href="#1-3软件设计模式的种类" class="headerlink" title="1.3软件设计模式的种类"></a><strong>1.3软件设计模式的种类</strong></h3><ul>
 <li>GoF提出的设计模式有23个，包括：</li>
 </ul>
 <ul>
@@ -352,7 +358,7 @@
 <li> 有一个“简单工厂模式”不属于GoF 23种设计模式，但大部分的设计模式书籍都会对它进行专门的介绍。</li>
 <li>设计模式目前种类： GoF的23种  + “简单工厂模式” = 24种。</li>
 </ul>
-<h3 id="1-4-软件设计模式有什么用？"><a href="#1-4-软件设计模式有什么用？" class="headerlink" title="1.4 软件设计模式有什么用？"></a><strong>1.4</strong> <strong>软件设计模式有什么用？</strong></h3><ul>
+<h3 id="1-4软件设计模式有什么用？"><a href="#1-4软件设计模式有什么用？" class="headerlink" title="1.4软件设计模式有什么用？"></a><strong>1.4软件设计模式有什么用？</strong></h3><ul>
 <li> 从高端来讲的话，那么作用大了去了，这里我们也体会不到，那么对于初学者来说，<strong>学习设计模式将有助于更加深入地理解面向对象思想</strong>, 让你知道：</li>
 </ul>
 <p>​    1. 如何将代码分散在几个不同的类中？</p>
@@ -364,7 +370,7 @@
 <ul>
 <li>学习设计模式会让你早点脱离面向对象编程的“菜鸟期”。</li>
 </ul>
-<h3 id="1-5-如何学好设计模式"><a href="#1-5-如何学好设计模式" class="headerlink" title="1.5 如何学好设计模式"></a><strong>1.5</strong> <strong>如何学好设计模式</strong></h3><ul>
+<h3 id="1-5如何学好设计模式"><a href="#1-5如何学好设计模式" class="headerlink" title="1.5如何学好设计模式"></a><strong>1.5如何学好设计模式</strong></h3><ul>
 <li>设计模式的基础是：<strong>多态</strong>。</li>
 </ul>
 <ul>
@@ -376,7 +382,7 @@
 <ul>
 <li>中级开发人员：合适的开发环境，寻找合适的设计模式来解决问题。多应用， 对经典则组合设计模式的大量，自由的运用。要不断的追求。</li>
 </ul>
-<h3 id="1-6-设计模式总览表"><a href="#1-6-设计模式总览表" class="headerlink" title="1.6 设计模式总览表"></a><strong>1.6</strong> <strong>设计模式总览表</strong></h3><table>
+<h3 id="1-6设计模式总览表"><a href="#1-6设计模式总览表" class="headerlink" title="1.6设计模式总览表"></a><strong>1.6设计模式总览表</strong></h3><table>
 <thead>
 <tr>
 <th>模式名称</th>
@@ -523,14 +529,14 @@
 <td></td>
 </tr>
 </tbody></table>
-<h2 id="2-面向对象设计原则"><a href="#2-面向对象设计原则" class="headerlink" title="**2.**面向对象设计原则"></a>**2.**面向对象设计原则</h2><ul>
+<h2 id="2-面向对象设计原则"><a href="#2-面向对象设计原则" class="headerlink" title="2.面向对象设计原则"></a><strong>2.面向对象设计原则</strong></h2><ul>
 <li>对于面向对象软件系统的设计而言，在支持可维护性的同时，提高系统的可复用性是一个至关重要的问题，如何同时提高一个软件系统的可维护性和可复用性是面向对象设计需要解决的核心问题之一。在面向对象设计中，可维护性的复用是以设计原则为基础的。每一个原则都蕴含一些面向对象设计的思想，可以从不同的角度提升一个软件结构的设计水平。</li>
 </ul>
 <ul>
 <li>面向对象设计原则为支持可维护性复用而诞生，这些原则蕴含在很多设计模式中，它们是从许多设计方案中总结出的指导性原则。面向对象设计原则也是我们用于评价一个设计模式的使用效果的重要指标之一。</li>
 <li>原则的目的： 高内聚，低耦合</li>
 </ul>
-<h3 id="2-1面向对象设计原创表"><a href="#2-1面向对象设计原创表" class="headerlink" title="2.1面向对象设计原创表"></a><strong>2.1</strong>面向对象设计原创表</h3><table>
+<h3 id="2-1面向对象设计原创表"><a href="#2-1面向对象设计原创表" class="headerlink" title="2.1面向对象设计原创表"></a><strong>2.1面向对象设计原创表</strong></h3><table>
 <thead>
 <tr>
 <th>名称</th>
@@ -943,7 +949,7 @@ int main()&#123;
 
 
 
-<h2 id="3-创建型模型"><a href="#3-创建型模型" class="headerlink" title="**3.**创建型模型"></a>**3.**创建型模型</h2><h3 id="3-1-简单工厂模式"><a href="#3-1-简单工厂模式" class="headerlink" title="3.1 简单工厂模式"></a><strong>3.1</strong> <strong>简单工厂模式</strong></h3><ul>
+<h2 id="3-创建型模型"><a href="#3-创建型模型" class="headerlink" title="3.创建型模型"></a><strong>3.创建型模型</strong></h2><h3 id="3-1简单工厂模式"><a href="#3-1简单工厂模式" class="headerlink" title="3.1简单工厂模式"></a><strong>3.1简单工厂模式</strong></h3><ul>
 <li>简单工厂模式并不属于GoF的23种设计模式。    </li>
 </ul>
 <ul>
@@ -993,7 +999,7 @@ int main()&#123;
 <li>Fruit类的职责过重，它负责初始化和显示所有的水果对象，将各种水果对象的初始化代码和显示代码集中在一个类中实现，违反了“单一职责原则”，不利于类的重用和维护；  </li>
 <li>当需要增加新类型的水果时，必须修改Fruit类的源代码，违反了“开闭原则”。</li>
 </ul>
-<h4 id="3-1-1-模式中的角色和职责"><a href="#3-1-1-模式中的角色和职责" class="headerlink" title="*3.1.1*模式中的角色和职责"></a>*<em>3.1.<strong>1</strong></em>*模式中的角色和职责</h4><table>
+<h4 id="3-1-1模式中的角色和职责"><a href="#3-1-1模式中的角色和职责" class="headerlink" title="3.1.1模式中的角色和职责"></a><strong>3.1.1模式中的角色和职责</strong></h4><table>
 <thead>
 <tr>
 <th></th>
@@ -1014,7 +1020,7 @@ int main()&#123;
 <ul>
 <li>具体产品（Concrete Product）角色：简单工厂模式所创建的具体实例对象。</li>
 </ul>
-<h4 id="3-1-2-简单工厂模式案例"><a href="#3-1-2-简单工厂模式案例" class="headerlink" title="3.1.2 简单工厂模式案例"></a><strong>3.1.2</strong> <strong>简单工厂模式案例</strong></h4><p><img src="http://qiniu.orangew.cn/img/wpsB0C4.tmp.png" alt="img"> </p>
+<h4 id="3-1-2简单工厂模式案例"><a href="#3-1-2简单工厂模式案例" class="headerlink" title="3.1.2简单工厂模式案例"></a><strong>3.1.2简单工厂模式案例</strong></h4><p><img src="http://qiniu.orangew.cn/img/wpsB0C4.tmp.png" alt="img"> </p>
 <pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#define _CRT_SECURE_NO_WARNINGS
 #include&lt;iostream&gt;
 #include&lt;string&gt;
@@ -1093,15 +1099,15 @@ int main()&#123;
 	return EXIT_SUCCESS;
 &#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h4 id="3-1-3-简单工厂模式的优缺点"><a href="#3-1-3-简单工厂模式的优缺点" class="headerlink" title="3.1.3 简单工厂模式的优缺点"></a><strong>3.1.3</strong> <strong>简单工厂模式的优缺点</strong></h4><p><strong>优点：</strong> </p>
+<h4 id="3-1-3简单工厂模式的优缺点"><a href="#3-1-3简单工厂模式的优缺点" class="headerlink" title="3.1.3简单工厂模式的优缺点"></a><strong>3.1.3简单工厂模式的优缺点</strong></h4><p><strong>优点：</strong> </p>
 <p>(1)实现了对象创建和使用的分离。(2)不需要记住具体类名，记住参数即可，减少使用者记忆量。</p>
 <p><strong>缺点：</strong> </p>
 <p>(1)对工厂类职责过重，一旦不能工作，系统受到影响。(2)增加系统中类的个数，复杂度和理解度增加。(3)违反“开闭原则”，添加新产品需要修改工厂逻辑，工厂越来越复杂。</p>
-<h4 id="3-1-4-适用场景"><a href="#3-1-4-适用场景" class="headerlink" title="3.1.4 适用场景"></a><strong>3.1.4</strong> <strong>适用场景</strong></h4><ol>
+<h4 id="3-1-4适用场景"><a href="#3-1-4适用场景" class="headerlink" title="3.1.4适用场景"></a><strong>3.1.4适用场景</strong></h4><ol>
 <li> 工厂类负责创建的对象比较少，由于创建的对象较少，不会造成工厂方法中的业务逻辑太过复杂。</li>
 <li>客户端只知道传入工厂类的参数，对于如何创建对象并不关心。</li>
 </ol>
-<h3 id="3-2-工厂方法模式"><a href="#3-2-工厂方法模式" class="headerlink" title="3.2 工厂方法模式"></a><strong>3.2</strong> <strong>工厂方法模式</strong></h3><ul>
+<h3 id="3-2工厂方法模式"><a href="#3-2工厂方法模式" class="headerlink" title="3.2工厂方法模式"></a><strong>3.2工厂方法模式</strong></h3><ul>
 <li>工厂方法(Factory Method)模式的意义是定义一个创建产品对象的工厂接口，将实际创建工作推迟到子类当中。核心工厂类不再负责产品的创建，这样核心类成为一个抽象工厂角色，仅负责具体工厂子类必须实现的接口，这样进一步抽象化的好处是使得工厂方法模式可以使系统在不修改具体工厂角色的情况下引进新的产品。</li>
 <li>工厂方法模式是简单工厂模式的衍生，解决了许多简单工厂模式的问题。首先完全实现‘开－闭 原则’，实现了可扩展。</li>
 </ul>
@@ -1132,7 +1138,7 @@ int main()&#123;
 <ul>
 <li>简单工厂模式 + “开闭原则” =  工厂方法模式</li>
 </ul>
-<h3 id="3-2-2工厂方法模式案例"><a href="#3-2-2工厂方法模式案例" class="headerlink" title="3.2.2工厂方法模式案例"></a><strong>3.2.2工厂方法模式案例</strong></h3><table>
+<h4 id="3-2-2工厂方法模式案例"><a href="#3-2-2工厂方法模式案例" class="headerlink" title="3.2.2工厂方法模式案例"></a><strong>3.2.2工厂方法模式案例</strong></h4><table>
 <thead>
 <tr>
 <th></th>
@@ -1248,18 +1254,18 @@ int main()&#123;
 
 
 
-<h4 id="3-1-3工厂方法模式的优缺点"><a href="#3-1-3工厂方法模式的优缺点" class="headerlink" title="3.1.3工厂方法模式的优缺点"></a><strong>3.1.3</strong>工厂方法模式的优缺点</h4><p><strong>优点：</strong>    </p>
+<h4 id="3-1-3工厂方法模式的优缺点"><a href="#3-1-3工厂方法模式的优缺点" class="headerlink" title="3.1.3工厂方法模式的优缺点"></a><strong>3.1.3工厂方法模式的优缺点</strong></h4><p><strong>优点：</strong>    </p>
 <p>(1)不需要记住具体类名，甚至连具体参数都不用记忆。</p>
 <p>(2)实现了对象创建和使用的分离。</p>
 <p>(3)系统的可扩展性也就变得非常好，无需修改接口和原类。</p>
 <p><strong>缺点</strong>： </p>
 <p>(1)增加系统中类的个数，复杂度和理解度增加。</p>
 <p>(2)增加了系统的抽象性和理解难度。</p>
-<h4 id="3-1-4适用场景"><a href="#3-1-4适用场景" class="headerlink" title="3.1.4适用场景"></a><strong>3.1.4适用场景</strong></h4><ol>
+<h4 id="3-1-4适用场景-1"><a href="#3-1-4适用场景-1" class="headerlink" title="3.1.4适用场景"></a><strong>3.1.4适用场景</strong></h4><ol>
 <li>客户端不知道它所需要的对象的类。</li>
 <li>抽象工厂类通过其子类来指定创建哪个对象。</li>
 </ol>
-<h3 id="3-3-抽象工厂模式"><a href="#3-3-抽象工厂模式" class="headerlink" title="3.3 抽象工厂模式"></a><strong>3.3</strong> <strong>抽象工厂模式</strong></h3><ul>
+<h3 id="3-3抽象工厂模式"><a href="#3-3抽象工厂模式" class="headerlink" title="3.3抽象工厂模式"></a><strong>3.3抽象工厂模式</strong></h3><ul>
 <li>工厂方法模式通过引入工厂等级结构，解决了简单工厂模式中工厂类职责太重的问题，但由于工厂方法模式中的每个工厂只生产一类产品，可能会导致系统中存在大量的工厂类，势必会增加系统的开销。此时，我们可以考虑将一些相关的产品组成一个“产品族，由同一个工厂来统一生产，这就是我们本文将要学习的抽象工厂模式的基本思想。</li>
 </ul>
 <table>
@@ -1279,7 +1285,7 @@ int main()&#123;
 </ul>
 <p>1.当我们想添加一个新产品的时候，比如葡萄，虽然不用修改代码，但是我们需要添加大量的类，而且还需要添加相对的工厂。（系统开销，维护成本）</p>
 <p>2.如果我们使用同一地域的水果（日本，日本，日本），那么我们需要分别创建具体的工厂，如果选择出现失误，将会造成混乱，虽然可以加一些约束，但是代码实现变得复杂。</p>
-<h3 id="3-3-1模式中的角色和职责"><a href="#3-3-1模式中的角色和职责" class="headerlink" title="3.3.1模式中的角色和职责"></a><strong>3.3.<strong>1</strong>模式中的角色和职责</strong></h3><table>
+<h4 id="3-3-1模式中的角色和职责"><a href="#3-3-1模式中的角色和职责" class="headerlink" title="3.3.1模式中的角色和职责"></a><strong>3.3.1模式中的角色和职责</strong></h4><table>
 <thead>
 <tr>
 <th></th>
@@ -1303,7 +1309,7 @@ int main()&#123;
 <ul>
 <li>具体产品（Concrete Product）角色：它定义具体工厂生产的具体产品对象，实现抽象产品接口中声明的业务方法。</li>
 </ul>
-<h4 id="3-3-2-抽象工厂模式案例"><a href="#3-3-2-抽象工厂模式案例" class="headerlink" title="*3.3.2*抽象工厂模式案例"></a>*<em>3.3.<strong>2</strong></em>*抽象工厂模式案例</h4><table>
+<h4 id="3-3-2抽象工厂模式案例"><a href="#3-3-2抽象工厂模式案例" class="headerlink" title="3.3.2抽象工厂模式案例"></a><strong>3.3.2抽象工厂模式案例</strong></h4><table>
 <thead>
 <tr>
 <th></th>
@@ -1520,7 +1526,7 @@ int main()&#123;
 	return EXIT_SUCCESS;
 &#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h4 id="3-3-3-抽象工厂模式的优缺点"><a href="#3-3-3-抽象工厂模式的优缺点" class="headerlink" title="*3.3.3*抽象工厂模式的优缺点"></a>*<em>3.3.<strong>3</strong></em>*抽象工厂模式的优缺点</h4><p><strong>优点：</strong></p>
+<h4 id="3-3-3抽象工厂模式的优缺点"><a href="#3-3-3抽象工厂模式的优缺点" class="headerlink" title="3.3.3抽象工厂模式的优缺点"></a><strong>3.3.3抽象工厂模式的优缺点</strong></h4><p><strong>优点：</strong></p>
 <p>(1)拥有工厂方法模式的优点</p>
 <p>(2)当一个产品族中的多个对象被设计成一起工作时，它能够保证客户端始终只使用同一个产品族中的对象。</p>
 <p>(3)增加新的产品族很方便，无须修改已有系统，符合“开闭原则”。 </p>
@@ -1528,7 +1534,7 @@ int main()&#123;
 <ul>
 <li>  增加新的产品等级结构麻烦，需要对原有系统进行较大的修改，甚至需要修改抽象层代码，这显然会带来较大的不便，违背了“开闭原则”。</li>
 </ul>
-<h4 id="3-3-4-适用场景"><a href="#3-3-4-适用场景" class="headerlink" title="*3.3.4*适用场景"></a>*<em>3.3.<strong>4</strong></em>*适用场景</h4><p>(1) 系统中有多于一个的产品族。而每次只使用其中某一产品族。可以通过配置文件等方式来使得用户可以动态改变产品族，也可以很方便地增加新的产品族。</p>
+<h4 id="3-3-4适用场景"><a href="#3-3-4适用场景" class="headerlink" title="3.3.4适用场景"></a><strong>3.3.4适用场景</strong></h4><p>(1) 系统中有多于一个的产品族。而每次只使用其中某一产品族。可以通过配置文件等方式来使得用户可以动态改变产品族，也可以很方便地增加新的产品族。</p>
 <p>(2) 产品等级结构稳定。设计完成之后，不会向系统中增加新的产品等级结构或者删除已有的产品等级结构。</p>
 <h4 id="3-3-5抽象工厂模式练习题"><a href="#3-3-5抽象工厂模式练习题" class="headerlink" title="3.3.5抽象工厂模式练习题"></a><strong>3.3.5抽象工厂模式练习题</strong></h4><p>​    设计一个电脑主板架构，电脑包括（显卡，内存，CPU）3个固定的插口，显卡具有显示功能（display，功能实现只要打印出意义即可）， 内存具有存储功能（storage），cpu具有计算功能（calculate）。</p>
 <p>​    现有Intel厂商，nvidia厂商，Kingston厂商，均会生产以上三种硬件。要求组装两台电脑：</p>
@@ -1759,10 +1765,10 @@ int main()&#123;
 
 
 
-<h3 id="3-4-单例模式"><a href="#3-4-单例模式" class="headerlink" title="3.4 单例模式"></a><strong>3.4</strong> <strong>单例模式</strong></h3><ul>
+<h3 id="3-4单例模式"><a href="#3-4单例模式" class="headerlink" title="3.4单例模式"></a><strong>3.4单例模式</strong></h3><ul>
 <li>单例模式是一种常用的软件设计模式。在它的核心结构中只包含一个被称为单例的特殊类。通过单例模式可以保证系统中一个类只有一个实例而且该实例易于外界访问，从而方便对实例个数的控制并节约系统资源。如果希望在系统中某个类的对象只能存在一个，单例模式是最好的解决方案。</li>
 </ul>
-<h3 id="3-4-1单例-模式中的角色和职责"><a href="#3-4-1单例-模式中的角色和职责" class="headerlink" title="*3.4.1单例*模式中的角色和职责"></a>*<em>3.4.<strong>1单例</strong></em>*模式中的角色和职责</h3><p><img src="http://qiniu.orangew.cn/img/wpsB118.tmp.png" alt="img"></p>
+<h4 id="3-4-1单例模式中的角色和职责"><a href="#3-4-1单例模式中的角色和职责" class="headerlink" title="3.4.1单例模式中的角色和职责"></a><strong>3.4.1单例模式中的角色和职责</strong></h4><p><img src="http://qiniu.orangew.cn/img/wpsB118.tmp.png" alt="img"></p>
 <ul>
 <li>Singleton（单例）：在单例类的内部实现只生成一个实例，同时它提供一个静态的getInstance()工厂方法，让客户可以访问它的唯一实例；为了防止在外部对其实例化，将其构造函数设计为私有；在单例类内部定义了一个Singleton类型的静态对象，作为外部共享的唯一实例。</li>
 </ul>
@@ -1842,7 +1848,7 @@ int main()&#123;
 
 
 
-<h4 id="3-4-2单例碰到多线程"><a href="#3-4-2单例碰到多线程" class="headerlink" title="**3.4.**2单例碰到多线程"></a>**3.4.**2单例碰到多线程</h4><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#define _CRT_SECURE_NO_WARNINGS
+<h4 id="3-4-2单例碰到多线程"><a href="#3-4-2单例碰到多线程" class="headerlink" title="3.4.2单例碰到多线程"></a><strong>3.4.2单例碰到多线程</strong></h4><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#define _CRT_SECURE_NO_WARNINGS
 #include&lt;iostream&gt;
 #include&lt;Windows.h&gt;
 using namespace std;
@@ -1983,7 +1989,7 @@ int main(void)&#123;
 <p><strong>缺点:</strong> </p>
 <p>(1) 扩展略难。单例模式中没有抽象层。</p>
 <p>(2) 单例类的职责过重。</p>
-<h3 id="3-4-4适用场景"><a href="#3-4-4适用场景" class="headerlink" title="3.4.4适用场景"></a><strong>3.4.4适用场景</strong></h3><p>(1) 系统只需要一个实例对象，如系统要求提供一个唯一的序列号生成器或资源管理器，或者需要考虑资源消耗太大而只允许创建一个对象。</p>
+<h4 id="3-4-4适用场景"><a href="#3-4-4适用场景" class="headerlink" title="3.4.4适用场景"></a><strong>3.4.4适用场景</strong></h4><p>(1) 系统只需要一个实例对象，如系统要求提供一个唯一的序列号生成器或资源管理器，或者需要考虑资源消耗太大而只允许创建一个对象。</p>
 <p>(2) 客户调用类的单个实例只允许使用一个公共访问点，除了该公共访问点，不能通过其他途径访问该实例。</p>
 <h2 id="4-结构型模式"><a href="#4-结构型模式" class="headerlink" title="4.结构型模式"></a><strong>4.结构型模式</strong></h2><ul>
 <li><strong>让类和类进行组合，获得更大的结构。</strong></li>
@@ -2012,7 +2018,8 @@ int main(void)&#123;
 <ul>
 <li>Proxy（代理主题角色）：含有对真实主题角色的引用，代理角色通常在将客户端调用传递给真是主题对象之前或者之后执行某些操作，而不是单纯返回真实的对象。</li>
 </ul>
-<h4 id="4-1-2-代理模式的案例"><a href="#4-1-2-代理模式的案例" class="headerlink" title="4.1.2 代理模式的案例"></a><img src="http://qiniu.orangew.cn/img/wpsB13B.tmp.jpg" alt="img"><strong>4.1.2</strong> <strong>代理模式的案例</strong></h4><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#define _CRT_SECURE_NO_WARNINGS
+<p><img src="http://qiniu.orangew.cn/img/wpsB13B.tmp.jpg" alt="img"></p>
+<h4 id="4-1-2代理模式的案例"><a href="#4-1-2代理模式的案例" class="headerlink" title="4.1.2代理模式的案例"></a><strong>4.1.2代理模式的案例</strong></h4><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#define _CRT_SECURE_NO_WARNINGS
 #include&lt;iostream&gt;
 #include&lt;string&gt;
 using namespace std;
@@ -2160,7 +2167,7 @@ int main()&#123;
 
 
 
-<h4 id="4-1-3-代理模式的优缺点"><a href="#4-1-3-代理模式的优缺点" class="headerlink" title="*4.1.3*代理模式的优缺点"></a>*<em>4.1.<strong>3</strong></em>*代理模式的优缺点</h4><p><strong>优点：</strong></p>
+<h4 id="4-1-3代理模式的优缺点"><a href="#4-1-3代理模式的优缺点" class="headerlink" title="4.1.3代理模式的优缺点"></a><strong>4.1.3代理模式的优缺点</strong></h4><p><strong>优点：</strong></p>
 <p> (1)能够协调调用者和被调用者，在一定程度上降低了系统的耦合度。  </p>
 <p> (2)客户端可以针对抽象主题角色进行编程，增加和更换代理类无须修改源代码，符合开闭原则，系统具有较好的灵活性和可扩展性。</p>
 <p><strong>缺点</strong>:</p>
@@ -2170,10 +2177,10 @@ int main()&#123;
 <h4 id="4-1-4适用场景"><a href="#4-1-4适用场景" class="headerlink" title="4.1.4适用场景"></a><strong>4.1.4适用场景</strong></h4><ul>
 <li>​    为其他对象提供一种代理以控制对这个对象的访问。</li>
 </ul>
-<h3 id="4-1-5-代理模式练习题"><a href="#4-1-5-代理模式练习题" class="headerlink" title="4.1.5 代理模式练习题"></a><strong>4.1.5 代理模式练习题</strong></h3><p>1 定义真实玩家(李逍遥)</p>
+<h4 id="4-1-5-代理模式练习题"><a href="#4-1-5-代理模式练习题" class="headerlink" title="4.1.5 代理模式练习题"></a><strong>4.1.5 代理模式练习题</strong></h4><p>1 定义真实玩家(李逍遥)</p>
 <p>2 定义代理玩家</p>
 <p>3 代理玩家代替李逍遥打怪升级</p>
-<h3 id="4-2-装饰模式"><a href="#4-2-装饰模式" class="headerlink" title="4.2 装饰模式"></a><strong>4.2</strong> <strong>装饰模式</strong></h3><ul>
+<h3 id="4-2装饰模式"><a href="#4-2装饰模式" class="headerlink" title="4.2装饰模式"></a><strong>4.2装饰模式</strong></h3><ul>
 <li>装饰模式又叫包装模式，通过一种对客户端透明的方式来扩展对象功能，是继承关系的一种替代。</li>
 </ul>
 <ul>
@@ -2328,7 +2335,7 @@ int main()&#123;
 <ul>
 <li>装饰器模式关注于在一个对象上动态的添加方法，然而代理模式关注于控制对对象的访问。换句话说，用代理模式，代理类（proxy class）可以对它的客户隐藏一个对象的具体信息。因此，当使用代理模式的时候，我们常常在一个代理类中创建一个对象的实例。并且，当我们使用装饰器模式的时候，我们通常的做法是将原始对象作为一个参数传给装饰者的构造器。</li>
 </ul>
-<h3 id="4-3-外观模式"><a href="#4-3-外观模式" class="headerlink" title="4.3 外观模式"></a><strong>4.3</strong> <strong>外观模式</strong></h3><ul>
+<h3 id="4-3外观模式"><a href="#4-3外观模式" class="headerlink" title="4.3外观模式"></a><strong>4.3外观模式</strong></h3><ul>
 <li>根据迪米特法则，如果两个类不必彼此直接通信，那么这两个类就不应当发生直接的相互作用。</li>
 </ul>
 <ul>
@@ -2638,7 +2645,8 @@ int main()&#123;
 <ul>
 <li>根据对象适配器模式结构图，在对象适配器中，客户端需要调用request()方法，而适配者类Adaptee没有该方法，但是它所提供的specificRequest()方法却是客户端所需要的。为了使客户端能够使用适配者类，需要提供一个包装类Adapter，即适配器类。这个包装类包装了一个适配者的实例，从而将客户端与适配者衔接起来，在适配器的request()方法中调用适配者specificRequest()方法。因为适配器类与适配者类是关联关系（也可称之为委派关系），所以这种适配器模式称为对象适配器模式。</li>
 </ul>
-<h4 id="4-4-2适配器模式的案例"><a href="#4-4-2适配器模式的案例" class="headerlink" title="4.4.2适配器模式的案例"></a><img src="http://qiniu.orangew.cn/img/wpsB192.tmp.jpg" alt="img"><strong>4.4.2适配器模式的案例</strong></h4><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#define _CRT_SECURE_NO_WARNINGS
+<p><img src="http://qiniu.orangew.cn/img/wpsB192.tmp.jpg" alt="img"></p>
+<h4 id="4-4-2适配器模式的案例"><a href="#4-4-2适配器模式的案例" class="headerlink" title="4.4.2适配器模式的案例"></a><strong>4.4.2适配器模式的案例</strong></h4><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#define _CRT_SECURE_NO_WARNINGS
 #include&lt;iostream&gt;
 #include&lt;list&gt;
 using namespace std;
@@ -3054,6 +3062,103 @@ int main()&#123;
 <h4 id="5-2-3命令模式练习题"><a href="#5-2-3命令模式练习题" class="headerlink" title="5.2.3命令模式练习题"></a><strong>5.2.3命令模式练习题</strong></h4><ul>
 <li>联想路边撸串烧烤场景， 有烤羊肉，烧鸡翅命令，有烤串师傅，和服务员MM。根据命令模式，设计烤串场景。</li>
 </ul>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#define _CRT_SECURE_NO_WARNINGS
+#include&lt;iostream&gt;
+#include&lt;list&gt;
+using namespace std;
+
+&#x2F;&#x2F;烤串大师
+class SkewerMaster&#123;
+public:
+	void MakeChickenWings()&#123;
+		cout &lt;&lt; &quot;烤鸡翅!&quot; &lt;&lt; endl;
+	&#125;
+	void MakeMutton()&#123;
+		cout &lt;&lt; &quot;烤羊肉!&quot; &lt;&lt; endl;
+	&#125;
+&#125;;
+
+
+&#x2F;&#x2F;抽象烤串命令
+class AbstractSkewerCommand&#123;
+public:
+	virtual void Make() &#x3D; 0;
+&#125;;
+
+&#x2F;&#x2F;烤鸡翅的命令
+class MakeChickenWingsCommand : public AbstractSkewerCommand&#123;
+public:
+	MakeChickenWingsCommand(SkewerMaster* master)&#123;
+		pMaster &#x3D; master;
+	&#125;
+	virtual void Make()&#123;
+		pMaster-&gt;MakeChickenWings();
+	&#125;
+private:
+	SkewerMaster* pMaster;
+&#125;;
+
+&#x2F;&#x2F;烤羊肉的命令
+class MakeMuttonCommand : public AbstractSkewerCommand&#123;
+public:
+	MakeMuttonCommand(SkewerMaster* master)&#123;
+		pMaster &#x3D; master;
+	&#125;
+	virtual void Make()&#123;
+		pMaster-&gt;MakeMutton();
+	&#125;
+private:
+	SkewerMaster* pMaster;
+&#125;;
+
+
+&#x2F;&#x2F;服务员
+class Waiter&#123;
+public:
+	void addCommand(AbstractSkewerCommand* command)&#123;
+		m_list.push_back(command);
+	&#125;
+	void submitCommand()&#123;
+		for (list&lt;AbstractSkewerCommand*&gt;::iterator it &#x3D; m_list.begin(); it !&#x3D; m_list.end(); it ++)&#123;
+			(*it)-&gt;Make();
+		&#125;
+	&#125;
+private:
+	list&lt;AbstractSkewerCommand*&gt; m_list;
+&#125;;
+
+&#x2F;&#x2F;测试
+void test01()&#123;
+	
+	&#x2F;&#x2F;创建烧烤师傅
+	SkewerMaster* master &#x3D; new SkewerMaster;
+	&#x2F;&#x2F;创建烧烤命令
+	AbstractSkewerCommand* command1 &#x3D; new MakeChickenWingsCommand(master);
+	AbstractSkewerCommand* command2 &#x3D; new MakeMuttonCommand(master);
+	&#x2F;&#x2F;创建服务员
+	Waiter* waiter &#x3D; new Waiter;
+	waiter-&gt;addCommand(command1);
+	waiter-&gt;addCommand(command2);
+	&#x2F;&#x2F;服务员批量提交命令
+	waiter-&gt;submitCommand();
+
+	delete waiter;
+	delete command2;
+	delete command1;
+	delete master;
+&#125;
+
+int main()&#123;
+
+	test01();
+
+	system(&quot;pause&quot;);
+	return EXIT_SUCCESS;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+
 <h4 id="5-2-4命令模式的优缺点"><a href="#5-2-4命令模式的优缺点" class="headerlink" title="5.2.4命令模式的优缺点"></a><strong>5.2.4命令模式的优缺点</strong></h4><p><strong>优点：</strong></p>
 <p>  (1)降低系统的耦合度。由于请求者与接收者之间不存在直接引用，因此请求者与接收者之间实现完全解耦，相同的请求者可以对应不同的接收者，同样，相同的接收者也可以供不同的请求者使用，两者之间具有良好的独立性。  </p>
 <p>(2)新的命令可以很容易地加入到系统中。由于增加新的具体命令类不会影响到其他类，因此增加新的具体命令类很容易，无须修改原有系统源代码，甚至客户类代码，满足“开闭原则”的要求。  </p>
@@ -3202,6 +3307,87 @@ int main()&#123;
 <h4 id="5-3-3策略模式练习题"><a href="#5-3-3策略模式练习题" class="headerlink" title="5.3.3策略模式练习题"></a><strong>5.3.3策略模式练习题</strong></h4><ul>
 <li>​    商场促销有策略A（0.8折） 策略B（消费满200，返现100），用策略模式模拟场景。</li>
 </ul>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#define _CRT_SECURE_NO_WARNINGS
+#include&lt;iostream&gt;
+using namespace std;
+
+&#x2F;&#x2F;抽象策略类
+class AbstractStrategy&#123;
+public:
+	virtual int CaculateMoney(int) &#x3D; 0;
+&#125;;
+
+&#x2F;&#x2F;8折策略
+class StrategySaleByEight : public AbstractStrategy&#123;
+public:
+	virtual int CaculateMoney(int money)&#123;
+		return money * 0.8;
+	&#125;
+&#125;;
+
+&#x2F;&#x2F;满200 返现100策略
+class StrategySale200Return100 : public AbstractStrategy&#123;
+public:
+	virtual int CaculateMoney(int money)&#123;
+		return money - (money &#x2F; 200) * 100;
+	&#125;
+&#125;;
+
+&#x2F;&#x2F;超市购物类
+class Shopping&#123;
+public:
+	Shopping()&#123;
+		pStrategy &#x3D; NULL;
+	&#125;
+	void setStrategy(AbstractStrategy* strategy)&#123;
+		pStrategy &#x3D; strategy;
+	&#125;
+	void PayMoney(int money)&#123;
+		int realMoney &#x3D; 0;
+		if (NULL &#x3D;&#x3D; pStrategy)&#123;
+			realMoney &#x3D; money;
+		&#125;
+		else&#123;
+			realMoney &#x3D; pStrategy-&gt;CaculateMoney(money);
+		&#125;
+		cout &lt;&lt; &quot;商品折前价格:&quot; &lt;&lt; money &lt;&lt; &quot;,折后价格:&quot; &lt;&lt; realMoney &lt;&lt; &quot;元!&quot; &lt;&lt; endl;
+	&#125;
+private:
+	AbstractStrategy* pStrategy;
+&#125;;
+
+void test01()&#123;
+	
+	Shopping* shopping &#x3D; new Shopping;
+	AbstractStrategy* strategy &#x3D; NULL;
+	cout &lt;&lt; &quot;逢活动 八折优惠&quot; &lt;&lt; endl;
+	strategy &#x3D; new StrategySaleByEight;
+	shopping-&gt;setStrategy(strategy); &#x2F;&#x2F;设置商场活动为8折优惠
+	shopping-&gt;PayMoney(600);
+
+	delete strategy;
+
+	cout &lt;&lt; &quot;再次逢活动 满200 返现100&quot; &lt;&lt; endl;
+	strategy &#x3D; new StrategySale200Return100;
+	shopping-&gt;setStrategy(strategy);
+	shopping-&gt;PayMoney(900);
+
+	delete strategy;
+	delete shopping;
+
+&#125;
+
+int main()&#123;
+
+	test01();
+
+	system(&quot;pause&quot;);
+	return EXIT_SUCCESS;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+
 <h4 id="5-3-4策略模式的优缺点"><a href="#5-3-4策略模式的优缺点" class="headerlink" title="5.3.4策略模式的优缺点"></a><strong>5.3.4策略模式的优缺点</strong></h4><p><strong>优点：</strong></p>
 <p>  (1)策略模式提供了对“开闭原则”的完美支持，用户可以在不修改原有系统的基础上选择算法或行为，也可以灵活地增加新的算法或行为。  </p>
 <p>(2)使用策略模式可以避免多重条件选择语句。多重条件选择语句不易维护，它把采取哪一种算法或行为的逻辑与算法或行为本身的实现逻辑混合在一起，将它们全部硬编码(Hard Coding)在一个庞大的多重条件选择语句中，比直接继承环境类的办法还要原始和落后。  </p>
@@ -3356,6 +3542,153 @@ int main()&#123;
 <h4 id="5-4-3观察者模式练习题"><a href="#5-4-3观察者模式练习题" class="headerlink" title="5.4.3观察者模式练习题"></a><strong>5.4.3观察者模式练习题</strong></h4><ul>
 <li>​    江湖中有多个帮派，还有一名无人不知，无事不晓的百晓生。当江湖中发生武林打斗事件，百晓生作为天生的大嘴巴会广播武林消息，每个帮派的门第对于事件的处理方式均不同，同帮派被欺负，要报仇，同帮派欺负别人，叫好。用观察者模式模拟场景。</li>
 </ul>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#define _CRT_SECURE_NO_WARNINGS
+#include&lt;iostream&gt;
+#include&lt;string&gt;
+#include&lt;list&gt;
+using namespace std;
+
+class Infomation;
+
+&#x2F;&#x2F;抽象观察者
+class AbstractGang&#123;
+public:
+	virtual void Update(Infomation*) &#x3D; 0;
+	virtual string GetGangName() &#x3D; 0;
+&#125;;
+
+&#x2F;&#x2F;江湖消息
+class Infomation&#123;
+public:
+	Infomation(AbstractGang* beat, AbstractGang* beaten)&#123;
+		this-&gt;Beat &#x3D; beat;
+		this-&gt;Beaten &#x3D; beaten;
+	&#125;
+	AbstractGang* Beat; &#x2F;&#x2F;打人的帮派
+	AbstractGang* Beaten; &#x2F;&#x2F;被打的帮派
+&#125;;
+
+&#x2F;&#x2F;华山派坐等百晓生的广播
+class HuashanGang : public AbstractGang&#123;
+public:
+	HuashanGang()&#123;
+		m_GangName &#x3D; &quot;华山派&quot;;
+	&#125;
+	virtual void Update(Infomation* info)&#123;
+		if (info-&gt;Beat &#x3D;&#x3D; this &amp;&amp; info-&gt;Beaten !&#x3D; this)&#123;
+			cout &lt;&lt; &quot;打死&quot; &lt;&lt; info-&gt;Beaten-&gt;GetGangName() &lt;&lt; &quot;,&quot; &lt;&lt; this-&gt;GetGangName() &lt;&lt; &quot;最厉害!&quot; &lt;&lt; endl;
+		&#125;
+		else if (info-&gt;Beat !&#x3D; this &amp;&amp; info-&gt;Beaten !&#x3D; this)&#123;
+			cout &lt;&lt; this-&gt;GetGangName()  &lt;&lt;&quot;坐看&quot; &lt;&lt; info-&gt;Beat-&gt;GetGangName() &lt;&lt; &quot;和&quot; &lt;&lt; info-&gt;Beaten-&gt;GetGangName() &lt;&lt; &quot;干架!&quot; &lt;&lt; endl;
+		&#125;
+		else if(info-&gt;Beat !&#x3D; this &amp;&amp; info-&gt;Beaten &#x3D;&#x3D; this)&#123;
+			cout &lt;&lt; info-&gt;Beat-&gt;GetGangName() &lt;&lt; &quot;干我们&quot; &lt;&lt; this-&gt;GetGangName() &lt;&lt; &quot;，我们要报仇!&quot; &lt;&lt; endl;
+		&#125;
+	&#125;
+	virtual string GetGangName()&#123;
+		return m_GangName;
+	&#125;
+private:
+	string m_GangName;
+&#125;;
+
+&#x2F;&#x2F;昆仑派坐等百晓生的广播
+class KunlunGang : public AbstractGang&#123;
+public:
+	KunlunGang()&#123;
+		m_GangName &#x3D; &quot;昆仑派&quot;;
+	&#125;
+	virtual void Update(Infomation* info)&#123;
+		if (info-&gt;Beat &#x3D;&#x3D; this &amp;&amp; info-&gt;Beaten !&#x3D; this)&#123;
+			cout &lt;&lt; &quot;打死&quot; &lt;&lt; info-&gt;Beaten-&gt;GetGangName() &lt;&lt; &quot;,&quot; &lt;&lt; this-&gt;GetGangName() &lt;&lt; &quot;最厉害!&quot; &lt;&lt; endl;
+		&#125;
+		else if (info-&gt;Beat !&#x3D; this &amp;&amp; info-&gt;Beaten !&#x3D; this)&#123;
+			cout &lt;&lt; this-&gt;GetGangName() &lt;&lt; &quot;坐看&quot; &lt;&lt; info-&gt;Beat-&gt;GetGangName() &lt;&lt; &quot;和&quot; &lt;&lt; info-&gt;Beaten-&gt;GetGangName() &lt;&lt; &quot;干架!&quot; &lt;&lt; endl;
+		&#125;
+		else if (info-&gt;Beat !&#x3D; this &amp;&amp; info-&gt;Beaten &#x3D;&#x3D; this)&#123;
+			cout &lt;&lt; info-&gt;Beat-&gt;GetGangName() &lt;&lt; &quot;干我们&quot; &lt;&lt; this-&gt;GetGangName() &lt;&lt; &quot;，我们要报仇!&quot; &lt;&lt; endl;
+		&#125;
+	&#125;
+	virtual string GetGangName()&#123;
+		return m_GangName;
+	&#125;
+private:
+	string m_GangName;
+&#125;;
+
+&#x2F;&#x2F;武当派坐等百晓生的广播
+class WudangGang : public AbstractGang&#123;
+public:
+	WudangGang()&#123;
+		m_GangName &#x3D; &quot;武当派&quot;;
+	&#125;
+	virtual void Update(Infomation* info)&#123;
+		if (info-&gt;Beat &#x3D;&#x3D; this &amp;&amp; info-&gt;Beaten !&#x3D; this)&#123;
+			cout &lt;&lt; &quot;打死&quot; &lt;&lt; info-&gt;Beaten-&gt;GetGangName() &lt;&lt; &quot;,&quot; &lt;&lt; this-&gt;GetGangName() &lt;&lt; &quot;最厉害!&quot; &lt;&lt; endl;
+		&#125;
+		else if (info-&gt;Beat !&#x3D; this &amp;&amp; info-&gt;Beaten !&#x3D; this)&#123;
+			cout &lt;&lt; this-&gt;GetGangName() &lt;&lt; &quot;坐看&quot; &lt;&lt; info-&gt;Beat-&gt;GetGangName() &lt;&lt; &quot;和&quot; &lt;&lt; info-&gt;Beaten-&gt;GetGangName() &lt;&lt; &quot;干架!&quot; &lt;&lt; endl;
+		&#125;
+		else if (info-&gt;Beat !&#x3D; this &amp;&amp; info-&gt;Beaten &#x3D;&#x3D; this)&#123;
+			cout &lt;&lt; info-&gt;Beat-&gt;GetGangName() &lt;&lt; &quot;干我们&quot; &lt;&lt; this-&gt;GetGangName() &lt;&lt; &quot;，我们要报仇!&quot; &lt;&lt; endl;
+		&#125;
+	&#125;
+	virtual string GetGangName()&#123;
+		return m_GangName;
+	&#125;
+private:
+	string m_GangName;
+&#125;;
+
+&#x2F;&#x2F;百晓生 - 大嘴巴子
+class Baixiaosheng&#123;
+public:
+	void addGang(AbstractGang* gang)&#123;
+		m_list.push_back(gang);
+	&#125;
+	void setInfomation(Infomation* info)&#123;
+		pInfo &#x3D; info;
+	&#125;
+	void Notify()&#123;
+		for (list&lt;AbstractGang*&gt;::iterator it &#x3D; m_list.begin(); it !&#x3D; m_list.end(); it ++)&#123;
+			(*it)-&gt;Update(pInfo);
+		&#125;
+	&#125;
+private:
+	list&lt;AbstractGang*&gt; m_list;
+	Infomation* pInfo;
+&#125;;
+
+void test01()&#123;
+	
+	AbstractGang* wudang &#x3D; new WudangGang; &#x2F;&#x2F;武当派
+	AbstractGang* kunlun &#x3D; new KunlunGang; &#x2F;&#x2F;昆仑派
+	AbstractGang* huashan &#x3D; new HuashanGang; &#x2F;&#x2F;华山派
+
+	Baixiaosheng* baixiaosheng &#x3D; new Baixiaosheng; &#x2F;&#x2F;百晓生 大嘴巴子
+	baixiaosheng-&gt;addGang(wudang);
+	baixiaosheng-&gt;addGang(kunlun);
+	baixiaosheng-&gt;addGang(huashan);
+
+	Infomation* pInfo &#x3D; new Infomation(wudang, huashan); &#x2F;&#x2F;创建江湖消息  武当打华山
+	baixiaosheng-&gt;setInfomation(pInfo); &#x2F;&#x2F;告诉百晓生武当打华山了
+
+	&#x2F;&#x2F;大嘴巴开始向各大门派发消息了
+	baixiaosheng-&gt;Notify();
+
+&#125;
+
+int main()&#123;
+
+	test01();
+
+	system(&quot;pause&quot;);
+	return EXIT_SUCCESS;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+
 <pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#define _CRT_SECURE_NO_WARNINGS
 #include &lt;iostream&gt;
 #include&lt;list&gt;
@@ -3585,7 +3918,7 @@ int main(void)&#123;
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E6%A6%82%E8%BF%B0"><span class="nav-number">1.</span> <span class="nav-text">**1.**设计模式概述</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%BB%8E%E4%BD%95%E8%80%8C%E6%9D%A5"><span class="nav-number">1.1.</span> <span class="nav-text">1.1 设计模式从何而来</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E5%8F%88%E4%BB%8E%E4%BD%95%E8%80%8C%E6%9D%A5"><span class="nav-number">1.2.</span> <span class="nav-text">1.2 软件设计模式又从何而来</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3-%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E7%9A%84%E7%A7%8D%E7%B1%BB"><span class="nav-number">1.3.</span> <span class="nav-text">1.3 软件设计模式的种类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-4-%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E6%9C%89%E4%BB%80%E4%B9%88%E7%94%A8%EF%BC%9F"><span class="nav-number">1.4.</span> <span class="nav-text">1.4 软件设计模式有什么用？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-5-%E5%A6%82%E4%BD%95%E5%AD%A6%E5%A5%BD%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F"><span class="nav-number">1.5.</span> <span class="nav-text">1.5 如何学好设计模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-6-%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E6%80%BB%E8%A7%88%E8%A1%A8"><span class="nav-number">1.6.</span> <span class="nav-text">1.6 设计模式总览表</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99"><span class="nav-number">2.</span> <span class="nav-text">**2.**面向对象设计原则</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%9B%E8%A1%A8"><span class="nav-number">2.1.</span> <span class="nav-text">2.1面向对象设计原创表</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-1%E5%BC%80%E9%97%AD%E5%8E%9F%E5%88%99%E6%A1%88%E4%BE%8B"><span class="nav-number">2.1.1.</span> <span class="nav-text">2.1.1开闭原则案例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-2%E8%BF%AA%E7%B1%B3%E7%89%B9%E6%B3%95%E5%88%99%E6%A1%88%E4%BE%8B"><span class="nav-number">2.1.2.</span> <span class="nav-text">2.1.2迪米特法则案例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-3%E5%90%88%E6%88%90%E5%A4%8D%E7%94%A8%E5%8E%9F%E5%88%99%E6%A1%88%E4%BE%8B"><span class="nav-number">2.1.3.</span> <span class="nav-text">2.1.3合成复用原则案例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-4%E4%BE%9D%E8%B5%96%E5%80%92%E8%BD%AC%E5%8E%9F%E5%88%99%E6%A1%88%E4%BE%8B"><span class="nav-number">2.1.4.</span> <span class="nav-text">2.1.4依赖倒转原则案例</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E5%88%9B%E5%BB%BA%E5%9E%8B%E6%A8%A1%E5%9E%8B"><span class="nav-number">3.</span> <span class="nav-text">**3.**创建型模型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-%E7%AE%80%E5%8D%95%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F"><span class="nav-number">3.1.</span> <span class="nav-text">3.1 简单工厂模式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1-1-%E6%A8%A1%E5%BC%8F%E4%B8%AD%E7%9A%84%E8%A7%92%E8%89%B2%E5%92%8C%E8%81%8C%E8%B4%A3"><span class="nav-number">3.1.1.</span> <span class="nav-text">*3.1.1*模式中的角色和职责</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1-2-%E7%AE%80%E5%8D%95%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F%E6%A1%88%E4%BE%8B"><span class="nav-number">3.1.2.</span> <span class="nav-text">3.1.2 简单工厂模式案例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1-3-%E7%AE%80%E5%8D%95%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F%E7%9A%84%E4%BC%98%E7%BC%BA%E7%82%B9"><span class="nav-number">3.1.3.</span> <span class="nav-text">3.1.3 简单工厂模式的优缺点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1-4-%E9%80%82%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="nav-number">3.1.4.</span> <span class="nav-text">3.1.4 适用场景</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-%E5%B7%A5%E5%8E%82%E6%96%B9%E6%B3%95%E6%A8%A1%E5%BC%8F"><span class="nav-number">3.2.</span> <span class="nav-text">3.2 工厂方法模式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-2-1-%E5%B7%A5%E5%8E%82%E6%96%B9%E6%B3%95%E6%A8%A1%E5%BC%8F%E4%B8%AD%E7%9A%84%E8%A7%92%E8%89%B2%E4%B8%8E%E8%81%8C%E8%B4%A3"><span class="nav-number">3.2.1.</span> <span class="nav-text">3.2.1 工厂方法模式中的角色与职责</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-2%E5%B7%A5%E5%8E%82%E6%96%B9%E6%B3%95%E6%A8%A1%E5%BC%8F%E6%A1%88%E4%BE%8B"><span class="nav-number">3.3.</span> <span class="nav-text">3.2.2工厂方法模式案例</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1-3%E5%B7%A5%E5%8E%82%E6%96%B9%E6%B3%95%E6%A8%A1%E5%BC%8F%E7%9A%84%E4%BC%98%E7%BC%BA%E7%82%B9"><span class="nav-number">3.3.1.</span> <span class="nav-text">3.1.3工厂方法模式的优缺点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1-4%E9%80%82%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="nav-number">3.3.2.</span> <span class="nav-text">3.1.4适用场景</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-%E6%8A%BD%E8%B1%A1%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F"><span class="nav-number">3.4.</span> <span class="nav-text">3.3 抽象工厂模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-1%E6%A8%A1%E5%BC%8F%E4%B8%AD%E7%9A%84%E8%A7%92%E8%89%B2%E5%92%8C%E8%81%8C%E8%B4%A3"><span class="nav-number">3.5.</span> <span class="nav-text">3.3.1模式中的角色和职责</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-3-2-%E6%8A%BD%E8%B1%A1%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F%E6%A1%88%E4%BE%8B"><span class="nav-number">3.5.1.</span> <span class="nav-text">*3.3.2*抽象工厂模式案例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-3-3-%E6%8A%BD%E8%B1%A1%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F%E7%9A%84%E4%BC%98%E7%BC%BA%E7%82%B9"><span class="nav-number">3.5.2.</span> <span class="nav-text">*3.3.3*抽象工厂模式的优缺点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-3-4-%E9%80%82%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="nav-number">3.5.3.</span> <span class="nav-text">*3.3.4*适用场景</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-3-5%E6%8A%BD%E8%B1%A1%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F%E7%BB%83%E4%B9%A0%E9%A2%98"><span class="nav-number">3.5.4.</span> <span class="nav-text">3.3.5抽象工厂模式练习题</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-4-%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F"><span class="nav-number">3.6.</span> <span class="nav-text">3.4 单例模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-4-1%E5%8D%95%E4%BE%8B-%E6%A8%A1%E5%BC%8F%E4%B8%AD%E7%9A%84%E8%A7%92%E8%89%B2%E5%92%8C%E8%81%8C%E8%B4%A3"><span class="nav-number">3.7.</span> <span class="nav-text">*3.4.1单例*模式中的角色和职责</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-4-2%E5%8D%95%E4%BE%8B%E7%A2%B0%E5%88%B0%E5%A4%9A%E7%BA%BF%E7%A8%8B"><span class="nav-number">3.7.1.</span> <span class="nav-text">**3.4.**2单例碰到多线程</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-4-3-%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F%E7%9A%84%E4%BC%98%E7%BC%BA%E7%82%B9"><span class="nav-number">3.7.2.</span> <span class="nav-text">3.4.3 单例模式的优缺点</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-4-4%E9%80%82%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="nav-number">3.8.</span> <span class="nav-text">3.4.4适用场景</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-%E7%BB%93%E6%9E%84%E5%9E%8B%E6%A8%A1%E5%BC%8F"><span class="nav-number">4.</span> <span class="nav-text">4.结构型模式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1%E4%BB%A3%E7%90%86%E6%A8%A1%E5%BC%8F"><span class="nav-number">4.1.</span> <span class="nav-text">4.1代理模式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#4-1-1%E6%A8%A1%E5%BC%8F%E4%B8%AD%E7%9A%84%E8%A7%92%E8%89%B2%E5%92%8C%E8%81%8C%E8%B4%A3"><span class="nav-number">4.1.1.</span> <span class="nav-text">4.1.1模式中的角色和职责</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-1-2-%E4%BB%A3%E7%90%86%E6%A8%A1%E5%BC%8F%E7%9A%84%E6%A1%88%E4%BE%8B"><span class="nav-number">4.1.2.</span> <span class="nav-text">4.1.2 代理模式的案例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-1-3-%E4%BB%A3%E7%90%86%E6%A8%A1%E5%BC%8F%E7%9A%84%E4%BC%98%E7%BC%BA%E7%82%B9"><span class="nav-number">4.1.3.</span> <span class="nav-text">*4.1.3*代理模式的优缺点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-1-4%E9%80%82%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="nav-number">4.1.4.</span> <span class="nav-text">4.1.4适用场景</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-5-%E4%BB%A3%E7%90%86%E6%A8%A1%E5%BC%8F%E7%BB%83%E4%B9%A0%E9%A2%98"><span class="nav-number">4.2.</span> <span class="nav-text">4.1.5 代理模式练习题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2-%E8%A3%85%E9%A5%B0%E6%A8%A1%E5%BC%8F"><span class="nav-number">4.3.</span> <span class="nav-text">4.2 装饰模式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#4-2-1%E8%A3%85%E9%A5%B0%E6%A8%A1%E5%BC%8F%E4%B8%AD%E7%9A%84%E8%A7%92%E8%89%B2%E5%92%8C%E8%81%8C%E8%B4%A3"><span class="nav-number">4.3.1.</span> <span class="nav-text">4.2.1装饰模式中的角色和职责</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-2-2%E8%A3%85%E9%A5%B0%E6%A8%A1%E5%BC%8F%E6%A1%88%E4%BE%8B"><span class="nav-number">4.3.2.</span> <span class="nav-text">4.2.2装饰模式案例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-2-3%E8%A3%85%E9%A5%B0%E6%A8%A1%E5%BC%8F%E7%9A%84%E4%BC%98%E7%BC%BA%E7%82%B9"><span class="nav-number">4.3.3.</span> <span class="nav-text">4.2.3装饰模式的优缺点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-2-4-%E9%80%82%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="nav-number">4.3.4.</span> <span class="nav-text">4.2.4 适用场景</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-3-%E5%A4%96%E8%A7%82%E6%A8%A1%E5%BC%8F"><span class="nav-number">4.4.</span> <span class="nav-text">4.3 外观模式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#4-3-1%E5%A4%96%E8%A7%82%E6%A8%A1%E5%BC%8F%E4%B8%AD%E8%A7%92%E8%89%B2%E5%92%8C%E8%81%8C%E8%B4%A3"><span class="nav-number">4.4.1.</span> <span class="nav-text">4.3.1外观模式中角色和职责</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-3-2%E5%A4%96%E8%A7%82%E6%A8%A1%E5%BC%8F%E6%A1%88%E4%BE%8B"><span class="nav-number">4.4.2.</span> <span class="nav-text">4.3.2外观模式案例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-3-3%E5%A4%96%E8%A7%82%E6%A8%A1%E5%BC%8F%E7%9A%84%E4%BC%98%E7%BC%BA%E7%82%B9"><span class="nav-number">4.4.3.</span> <span class="nav-text">4.3.3外观模式的优缺点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-3-4%E9%80%82%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="nav-number">4.4.4.</span> <span class="nav-text">4.3.4适用场景</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-4%E9%80%82%E9%85%8D%E5%99%A8%E6%A8%A1%E5%BC%8F"><span class="nav-number">4.5.</span> <span class="nav-text">4.4适配器模式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#4-4-1%E9%80%82%E9%85%8D%E5%99%A8%E6%A8%A1%E5%BC%8F%E4%B8%AD%E7%9A%84%E8%A7%92%E8%89%B2%E5%92%8C%E8%81%8C%E8%B4%A3"><span class="nav-number">4.5.1.</span> <span class="nav-text">4.4.1适配器模式中的角色和职责</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-4-2%E9%80%82%E9%85%8D%E5%99%A8%E6%A8%A1%E5%BC%8F%E7%9A%84%E6%A1%88%E4%BE%8B"><span class="nav-number">4.5.2.</span> <span class="nav-text">4.4.2适配器模式的案例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-4-3%E9%80%82%E9%85%8D%E5%99%A8%E6%A8%A1%E5%BC%8F%E4%BC%98%E7%BC%BA%E7%82%B9"><span class="nav-number">4.5.3.</span> <span class="nav-text">4.4.3适配器模式优缺点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-4-4%E9%80%82%E5%BA%94%E5%9C%BA%E6%99%AF"><span class="nav-number">4.5.4.</span> <span class="nav-text">4.4.4适应场景</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-%E8%A1%8C%E4%B8%BA%E5%9E%8B%E6%A8%A1%E5%BC%8F"><span class="nav-number">5.</span> <span class="nav-text">5.行为型模式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#5-1%E6%A8%A1%E6%9D%BF%E6%96%B9%E6%B3%95%E6%A8%A1%E5%BC%8F"><span class="nav-number">5.1.</span> <span class="nav-text">5.1模板方法模式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#5-1-1%E6%A8%A1%E6%9D%BF%E6%96%B9%E6%B3%95%E6%A8%A1%E5%BC%8F%E4%B8%AD%E7%9A%84%E8%A7%92%E8%89%B2%E5%92%8C%E8%81%8C%E8%B4%A3"><span class="nav-number">5.1.1.</span> <span class="nav-text">5.1.1模板方法模式中的角色和职责</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-1-2%E6%A8%A1%E6%9D%BF%E6%96%B9%E6%B3%95%E6%A8%A1%E5%BC%8F%E7%9A%84%E6%A1%88%E4%BE%8B"><span class="nav-number">5.1.2.</span> <span class="nav-text">5.1.2模板方法模式的案例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-1-3%E6%A8%A1%E6%9D%BF%E6%96%B9%E6%B3%95%E7%9A%84%E4%BC%98%E7%BC%BA%E7%82%B9"><span class="nav-number">5.1.3.</span> <span class="nav-text">5.1.3模板方法的优缺点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-1-4%E9%80%82%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="nav-number">5.1.4.</span> <span class="nav-text">5.1.4适用场景</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-2%E5%91%BD%E4%BB%A4%E6%A8%A1%E5%BC%8F"><span class="nav-number">5.2.</span> <span class="nav-text">5.2命令模式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#5-2-1%E5%91%BD%E4%BB%A4%E6%A8%A1%E5%BC%8F%E4%B8%AD%E7%9A%84%E8%A7%92%E8%89%B2%E5%92%8C%E8%81%8C%E8%B4%A3"><span class="nav-number">5.2.1.</span> <span class="nav-text">5.2.1命令模式中的角色和职责</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-2-2%E5%91%BD%E4%BB%A4%E6%A8%A1%E5%BC%8F%E7%9A%84%E6%A1%88%E4%BE%8B"><span class="nav-number">5.2.2.</span> <span class="nav-text">5.2.2命令模式的案例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-2-3%E5%91%BD%E4%BB%A4%E6%A8%A1%E5%BC%8F%E7%BB%83%E4%B9%A0%E9%A2%98"><span class="nav-number">5.2.3.</span> <span class="nav-text">5.2.3命令模式练习题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-2-4%E5%91%BD%E4%BB%A4%E6%A8%A1%E5%BC%8F%E7%9A%84%E4%BC%98%E7%BC%BA%E7%82%B9"><span class="nav-number">5.2.4.</span> <span class="nav-text">5.2.4命令模式的优缺点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-2-5%E9%80%82%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="nav-number">5.2.5.</span> <span class="nav-text">5.2.5适用场景</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-3%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F"><span class="nav-number">5.3.</span> <span class="nav-text">5.3策略模式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#5-3-1%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F%E4%B8%AD%E7%9A%84%E8%A7%92%E8%89%B2%E5%92%8C%E8%81%8C%E8%B4%A3"><span class="nav-number">5.3.1.</span> <span class="nav-text">5.3.1策略模式中的角色和职责</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-3-2%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F%E6%A1%88%E4%BE%8B"><span class="nav-number">5.3.2.</span> <span class="nav-text">5.3.2策略模式案例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-3-3%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F%E7%BB%83%E4%B9%A0%E9%A2%98"><span class="nav-number">5.3.3.</span> <span class="nav-text">5.3.3策略模式练习题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-3-4%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F%E7%9A%84%E4%BC%98%E7%BC%BA%E7%82%B9"><span class="nav-number">5.3.4.</span> <span class="nav-text">5.3.4策略模式的优缺点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-3-5%E9%80%82%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="nav-number">5.3.5.</span> <span class="nav-text">5.3.5适用场景</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-4%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F"><span class="nav-number">5.4.</span> <span class="nav-text">5.4观察者模式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#5-4-1%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F%E4%B8%AD%E7%9A%84%E8%A7%92%E8%89%B2%E5%92%8C%E8%81%8C%E8%B4%A3"><span class="nav-number">5.4.1.</span> <span class="nav-text">5.4.1观察者模式中的角色和职责</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-4-2%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F%E6%A1%88%E4%BE%8B"><span class="nav-number">5.4.2.</span> <span class="nav-text">5.4.2观察者模式案例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-4-3%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F%E7%BB%83%E4%B9%A0%E9%A2%98"><span class="nav-number">5.4.3.</span> <span class="nav-text">5.4.3观察者模式练习题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-4-3%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F%E7%9A%84%E4%BC%98%E7%BC%BA%E7%82%B9"><span class="nav-number">5.4.4.</span> <span class="nav-text">5.4.3观察者模式的优缺点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-4-4%E9%80%82%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="nav-number">5.4.5.</span> <span class="nav-text">5.4.4适用场景</span></a></li></ol></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E6%A6%82%E8%BF%B0"><span class="nav-number">1.</span> <span class="nav-text">1.设计模式概述</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%BB%8E%E4%BD%95%E8%80%8C%E6%9D%A5"><span class="nav-number">1.1.</span> <span class="nav-text">1.1设计模式从何而来</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E5%8F%88%E4%BB%8E%E4%BD%95%E8%80%8C%E6%9D%A5"><span class="nav-number">1.2.</span> <span class="nav-text">1.2软件设计模式又从何而来</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E7%9A%84%E7%A7%8D%E7%B1%BB"><span class="nav-number">1.3.</span> <span class="nav-text">1.3软件设计模式的种类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-4%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E6%9C%89%E4%BB%80%E4%B9%88%E7%94%A8%EF%BC%9F"><span class="nav-number">1.4.</span> <span class="nav-text">1.4软件设计模式有什么用？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-5%E5%A6%82%E4%BD%95%E5%AD%A6%E5%A5%BD%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F"><span class="nav-number">1.5.</span> <span class="nav-text">1.5如何学好设计模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-6%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E6%80%BB%E8%A7%88%E8%A1%A8"><span class="nav-number">1.6.</span> <span class="nav-text">1.6设计模式总览表</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99"><span class="nav-number">2.</span> <span class="nav-text">2.面向对象设计原则</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%9B%E8%A1%A8"><span class="nav-number">2.1.</span> <span class="nav-text">2.1面向对象设计原创表</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-1%E5%BC%80%E9%97%AD%E5%8E%9F%E5%88%99%E6%A1%88%E4%BE%8B"><span class="nav-number">2.1.1.</span> <span class="nav-text">2.1.1开闭原则案例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-2%E8%BF%AA%E7%B1%B3%E7%89%B9%E6%B3%95%E5%88%99%E6%A1%88%E4%BE%8B"><span class="nav-number">2.1.2.</span> <span class="nav-text">2.1.2迪米特法则案例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-3%E5%90%88%E6%88%90%E5%A4%8D%E7%94%A8%E5%8E%9F%E5%88%99%E6%A1%88%E4%BE%8B"><span class="nav-number">2.1.3.</span> <span class="nav-text">2.1.3合成复用原则案例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-4%E4%BE%9D%E8%B5%96%E5%80%92%E8%BD%AC%E5%8E%9F%E5%88%99%E6%A1%88%E4%BE%8B"><span class="nav-number">2.1.4.</span> <span class="nav-text">2.1.4依赖倒转原则案例</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E5%88%9B%E5%BB%BA%E5%9E%8B%E6%A8%A1%E5%9E%8B"><span class="nav-number">3.</span> <span class="nav-text">3.创建型模型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1%E7%AE%80%E5%8D%95%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F"><span class="nav-number">3.1.</span> <span class="nav-text">3.1简单工厂模式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1-1%E6%A8%A1%E5%BC%8F%E4%B8%AD%E7%9A%84%E8%A7%92%E8%89%B2%E5%92%8C%E8%81%8C%E8%B4%A3"><span class="nav-number">3.1.1.</span> <span class="nav-text">3.1.1模式中的角色和职责</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1-2%E7%AE%80%E5%8D%95%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F%E6%A1%88%E4%BE%8B"><span class="nav-number">3.1.2.</span> <span class="nav-text">3.1.2简单工厂模式案例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1-3%E7%AE%80%E5%8D%95%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F%E7%9A%84%E4%BC%98%E7%BC%BA%E7%82%B9"><span class="nav-number">3.1.3.</span> <span class="nav-text">3.1.3简单工厂模式的优缺点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1-4%E9%80%82%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="nav-number">3.1.4.</span> <span class="nav-text">3.1.4适用场景</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2%E5%B7%A5%E5%8E%82%E6%96%B9%E6%B3%95%E6%A8%A1%E5%BC%8F"><span class="nav-number">3.2.</span> <span class="nav-text">3.2工厂方法模式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-2-1-%E5%B7%A5%E5%8E%82%E6%96%B9%E6%B3%95%E6%A8%A1%E5%BC%8F%E4%B8%AD%E7%9A%84%E8%A7%92%E8%89%B2%E4%B8%8E%E8%81%8C%E8%B4%A3"><span class="nav-number">3.2.1.</span> <span class="nav-text">3.2.1 工厂方法模式中的角色与职责</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-2-2%E5%B7%A5%E5%8E%82%E6%96%B9%E6%B3%95%E6%A8%A1%E5%BC%8F%E6%A1%88%E4%BE%8B"><span class="nav-number">3.2.2.</span> <span class="nav-text">3.2.2工厂方法模式案例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1-3%E5%B7%A5%E5%8E%82%E6%96%B9%E6%B3%95%E6%A8%A1%E5%BC%8F%E7%9A%84%E4%BC%98%E7%BC%BA%E7%82%B9"><span class="nav-number">3.2.3.</span> <span class="nav-text">3.1.3工厂方法模式的优缺点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1-4%E9%80%82%E7%94%A8%E5%9C%BA%E6%99%AF-1"><span class="nav-number">3.2.4.</span> <span class="nav-text">3.1.4适用场景</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3%E6%8A%BD%E8%B1%A1%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F"><span class="nav-number">3.3.</span> <span class="nav-text">3.3抽象工厂模式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-3-1%E6%A8%A1%E5%BC%8F%E4%B8%AD%E7%9A%84%E8%A7%92%E8%89%B2%E5%92%8C%E8%81%8C%E8%B4%A3"><span class="nav-number">3.3.1.</span> <span class="nav-text">3.3.1模式中的角色和职责</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-3-2%E6%8A%BD%E8%B1%A1%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F%E6%A1%88%E4%BE%8B"><span class="nav-number">3.3.2.</span> <span class="nav-text">3.3.2抽象工厂模式案例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-3-3%E6%8A%BD%E8%B1%A1%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F%E7%9A%84%E4%BC%98%E7%BC%BA%E7%82%B9"><span class="nav-number">3.3.3.</span> <span class="nav-text">3.3.3抽象工厂模式的优缺点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-3-4%E9%80%82%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="nav-number">3.3.4.</span> <span class="nav-text">3.3.4适用场景</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-3-5%E6%8A%BD%E8%B1%A1%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F%E7%BB%83%E4%B9%A0%E9%A2%98"><span class="nav-number">3.3.5.</span> <span class="nav-text">3.3.5抽象工厂模式练习题</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-4%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F"><span class="nav-number">3.4.</span> <span class="nav-text">3.4单例模式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-4-1%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F%E4%B8%AD%E7%9A%84%E8%A7%92%E8%89%B2%E5%92%8C%E8%81%8C%E8%B4%A3"><span class="nav-number">3.4.1.</span> <span class="nav-text">3.4.1单例模式中的角色和职责</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-4-2%E5%8D%95%E4%BE%8B%E7%A2%B0%E5%88%B0%E5%A4%9A%E7%BA%BF%E7%A8%8B"><span class="nav-number">3.4.2.</span> <span class="nav-text">3.4.2单例碰到多线程</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-4-3-%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F%E7%9A%84%E4%BC%98%E7%BC%BA%E7%82%B9"><span class="nav-number">3.4.3.</span> <span class="nav-text">3.4.3 单例模式的优缺点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-4-4%E9%80%82%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="nav-number">3.4.4.</span> <span class="nav-text">3.4.4适用场景</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-%E7%BB%93%E6%9E%84%E5%9E%8B%E6%A8%A1%E5%BC%8F"><span class="nav-number">4.</span> <span class="nav-text">4.结构型模式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1%E4%BB%A3%E7%90%86%E6%A8%A1%E5%BC%8F"><span class="nav-number">4.1.</span> <span class="nav-text">4.1代理模式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#4-1-1%E6%A8%A1%E5%BC%8F%E4%B8%AD%E7%9A%84%E8%A7%92%E8%89%B2%E5%92%8C%E8%81%8C%E8%B4%A3"><span class="nav-number">4.1.1.</span> <span class="nav-text">4.1.1模式中的角色和职责</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-1-2%E4%BB%A3%E7%90%86%E6%A8%A1%E5%BC%8F%E7%9A%84%E6%A1%88%E4%BE%8B"><span class="nav-number">4.1.2.</span> <span class="nav-text">4.1.2代理模式的案例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-1-3%E4%BB%A3%E7%90%86%E6%A8%A1%E5%BC%8F%E7%9A%84%E4%BC%98%E7%BC%BA%E7%82%B9"><span class="nav-number">4.1.3.</span> <span class="nav-text">4.1.3代理模式的优缺点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-1-4%E9%80%82%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="nav-number">4.1.4.</span> <span class="nav-text">4.1.4适用场景</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-1-5-%E4%BB%A3%E7%90%86%E6%A8%A1%E5%BC%8F%E7%BB%83%E4%B9%A0%E9%A2%98"><span class="nav-number">4.1.5.</span> <span class="nav-text">4.1.5 代理模式练习题</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2%E8%A3%85%E9%A5%B0%E6%A8%A1%E5%BC%8F"><span class="nav-number">4.2.</span> <span class="nav-text">4.2装饰模式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#4-2-1%E8%A3%85%E9%A5%B0%E6%A8%A1%E5%BC%8F%E4%B8%AD%E7%9A%84%E8%A7%92%E8%89%B2%E5%92%8C%E8%81%8C%E8%B4%A3"><span class="nav-number">4.2.1.</span> <span class="nav-text">4.2.1装饰模式中的角色和职责</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-2-2%E8%A3%85%E9%A5%B0%E6%A8%A1%E5%BC%8F%E6%A1%88%E4%BE%8B"><span class="nav-number">4.2.2.</span> <span class="nav-text">4.2.2装饰模式案例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-2-3%E8%A3%85%E9%A5%B0%E6%A8%A1%E5%BC%8F%E7%9A%84%E4%BC%98%E7%BC%BA%E7%82%B9"><span class="nav-number">4.2.3.</span> <span class="nav-text">4.2.3装饰模式的优缺点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-2-4-%E9%80%82%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="nav-number">4.2.4.</span> <span class="nav-text">4.2.4 适用场景</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-3%E5%A4%96%E8%A7%82%E6%A8%A1%E5%BC%8F"><span class="nav-number">4.3.</span> <span class="nav-text">4.3外观模式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#4-3-1%E5%A4%96%E8%A7%82%E6%A8%A1%E5%BC%8F%E4%B8%AD%E8%A7%92%E8%89%B2%E5%92%8C%E8%81%8C%E8%B4%A3"><span class="nav-number">4.3.1.</span> <span class="nav-text">4.3.1外观模式中角色和职责</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-3-2%E5%A4%96%E8%A7%82%E6%A8%A1%E5%BC%8F%E6%A1%88%E4%BE%8B"><span class="nav-number">4.3.2.</span> <span class="nav-text">4.3.2外观模式案例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-3-3%E5%A4%96%E8%A7%82%E6%A8%A1%E5%BC%8F%E7%9A%84%E4%BC%98%E7%BC%BA%E7%82%B9"><span class="nav-number">4.3.3.</span> <span class="nav-text">4.3.3外观模式的优缺点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-3-4%E9%80%82%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="nav-number">4.3.4.</span> <span class="nav-text">4.3.4适用场景</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-4%E9%80%82%E9%85%8D%E5%99%A8%E6%A8%A1%E5%BC%8F"><span class="nav-number">4.4.</span> <span class="nav-text">4.4适配器模式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#4-4-1%E9%80%82%E9%85%8D%E5%99%A8%E6%A8%A1%E5%BC%8F%E4%B8%AD%E7%9A%84%E8%A7%92%E8%89%B2%E5%92%8C%E8%81%8C%E8%B4%A3"><span class="nav-number">4.4.1.</span> <span class="nav-text">4.4.1适配器模式中的角色和职责</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-4-2%E9%80%82%E9%85%8D%E5%99%A8%E6%A8%A1%E5%BC%8F%E7%9A%84%E6%A1%88%E4%BE%8B"><span class="nav-number">4.4.2.</span> <span class="nav-text">4.4.2适配器模式的案例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-4-3%E9%80%82%E9%85%8D%E5%99%A8%E6%A8%A1%E5%BC%8F%E4%BC%98%E7%BC%BA%E7%82%B9"><span class="nav-number">4.4.3.</span> <span class="nav-text">4.4.3适配器模式优缺点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-4-4%E9%80%82%E5%BA%94%E5%9C%BA%E6%99%AF"><span class="nav-number">4.4.4.</span> <span class="nav-text">4.4.4适应场景</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-%E8%A1%8C%E4%B8%BA%E5%9E%8B%E6%A8%A1%E5%BC%8F"><span class="nav-number">5.</span> <span class="nav-text">5.行为型模式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#5-1%E6%A8%A1%E6%9D%BF%E6%96%B9%E6%B3%95%E6%A8%A1%E5%BC%8F"><span class="nav-number">5.1.</span> <span class="nav-text">5.1模板方法模式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#5-1-1%E6%A8%A1%E6%9D%BF%E6%96%B9%E6%B3%95%E6%A8%A1%E5%BC%8F%E4%B8%AD%E7%9A%84%E8%A7%92%E8%89%B2%E5%92%8C%E8%81%8C%E8%B4%A3"><span class="nav-number">5.1.1.</span> <span class="nav-text">5.1.1模板方法模式中的角色和职责</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-1-2%E6%A8%A1%E6%9D%BF%E6%96%B9%E6%B3%95%E6%A8%A1%E5%BC%8F%E7%9A%84%E6%A1%88%E4%BE%8B"><span class="nav-number">5.1.2.</span> <span class="nav-text">5.1.2模板方法模式的案例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-1-3%E6%A8%A1%E6%9D%BF%E6%96%B9%E6%B3%95%E7%9A%84%E4%BC%98%E7%BC%BA%E7%82%B9"><span class="nav-number">5.1.3.</span> <span class="nav-text">5.1.3模板方法的优缺点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-1-4%E9%80%82%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="nav-number">5.1.4.</span> <span class="nav-text">5.1.4适用场景</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-2%E5%91%BD%E4%BB%A4%E6%A8%A1%E5%BC%8F"><span class="nav-number">5.2.</span> <span class="nav-text">5.2命令模式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#5-2-1%E5%91%BD%E4%BB%A4%E6%A8%A1%E5%BC%8F%E4%B8%AD%E7%9A%84%E8%A7%92%E8%89%B2%E5%92%8C%E8%81%8C%E8%B4%A3"><span class="nav-number">5.2.1.</span> <span class="nav-text">5.2.1命令模式中的角色和职责</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-2-2%E5%91%BD%E4%BB%A4%E6%A8%A1%E5%BC%8F%E7%9A%84%E6%A1%88%E4%BE%8B"><span class="nav-number">5.2.2.</span> <span class="nav-text">5.2.2命令模式的案例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-2-3%E5%91%BD%E4%BB%A4%E6%A8%A1%E5%BC%8F%E7%BB%83%E4%B9%A0%E9%A2%98"><span class="nav-number">5.2.3.</span> <span class="nav-text">5.2.3命令模式练习题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-2-4%E5%91%BD%E4%BB%A4%E6%A8%A1%E5%BC%8F%E7%9A%84%E4%BC%98%E7%BC%BA%E7%82%B9"><span class="nav-number">5.2.4.</span> <span class="nav-text">5.2.4命令模式的优缺点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-2-5%E9%80%82%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="nav-number">5.2.5.</span> <span class="nav-text">5.2.5适用场景</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-3%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F"><span class="nav-number">5.3.</span> <span class="nav-text">5.3策略模式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#5-3-1%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F%E4%B8%AD%E7%9A%84%E8%A7%92%E8%89%B2%E5%92%8C%E8%81%8C%E8%B4%A3"><span class="nav-number">5.3.1.</span> <span class="nav-text">5.3.1策略模式中的角色和职责</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-3-2%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F%E6%A1%88%E4%BE%8B"><span class="nav-number">5.3.2.</span> <span class="nav-text">5.3.2策略模式案例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-3-3%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F%E7%BB%83%E4%B9%A0%E9%A2%98"><span class="nav-number">5.3.3.</span> <span class="nav-text">5.3.3策略模式练习题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-3-4%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F%E7%9A%84%E4%BC%98%E7%BC%BA%E7%82%B9"><span class="nav-number">5.3.4.</span> <span class="nav-text">5.3.4策略模式的优缺点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-3-5%E9%80%82%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="nav-number">5.3.5.</span> <span class="nav-text">5.3.5适用场景</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-4%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F"><span class="nav-number">5.4.</span> <span class="nav-text">5.4观察者模式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#5-4-1%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F%E4%B8%AD%E7%9A%84%E8%A7%92%E8%89%B2%E5%92%8C%E8%81%8C%E8%B4%A3"><span class="nav-number">5.4.1.</span> <span class="nav-text">5.4.1观察者模式中的角色和职责</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-4-2%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F%E6%A1%88%E4%BE%8B"><span class="nav-number">5.4.2.</span> <span class="nav-text">5.4.2观察者模式案例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-4-3%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F%E7%BB%83%E4%B9%A0%E9%A2%98"><span class="nav-number">5.4.3.</span> <span class="nav-text">5.4.3观察者模式练习题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-4-3%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F%E7%9A%84%E4%BC%98%E7%BC%BA%E7%82%B9"><span class="nav-number">5.4.4.</span> <span class="nav-text">5.4.3观察者模式的优缺点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-4-4%E9%80%82%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="nav-number">5.4.5.</span> <span class="nav-text">5.4.4适用场景</span></a></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -3601,7 +3934,7 @@ int main(void)&#123;
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">10</span>
+          <span class="site-state-item-count">11</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -3657,12 +3990,12 @@ int main(void)&#123;
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">537k</span>
+    <span title="站点总字数">610k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">16:17</span>
+    <span title="站点阅读时长">18:29</span>
 </div>
 
         
